@@ -1,0 +1,71 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main id="main">
+  <section class="page-hero page-hero--plain">
+    <div class="container page-hero__inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol><li><a href="/">Home</a></li><li><span aria-current="page">Search</span></li></ol>
+      </nav>
+      <p class="eyebrow">Search Praivelle House</p>
+      <h1 class="page-hero__title"><% if (query) { %>Results for “<%= query %>”<% } else { %>Search the site<% } %></h1>
+      <p class="page-hero__intro">
+        <% if (query) { %><%= results.length %> result<%= results.length === 1 ? '' : 's' %> across our rooms, services and the Journal.<% } else { %>Find a room type, a service, a policy or an article from the Journal.<% } %>
+      </p>
+
+      <form class="search-form" method="get" action="/search" role="search">
+        <label class="sr-only" for="q">Search</label>
+        <span class="search-form__ico"><%- icon('search', 20) %></span>
+        <input type="search" id="q" name="q" value="<%= query || '' %>" placeholder="Try “suites”, “spa”, “weddings” or “parking”" autocomplete="off">
+        <button class="btn btn--primary" type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <% if (query && results.length) { %>
+      <ul class="results">
+        <% results.forEach(function (r, i) { %>
+        <li class="result reveal" style="--d:<%= i * 60 %>ms">
+          <a class="result__link" href="<%= r.path %>">
+            <span class="result__type"><%= r.type %></span>
+            <h2 class="result__title"><%= r.title %></h2>
+            <p class="result__text"><%= r.text %></p>
+            <span class="result__more">Open <%- icon('arrow-right', 16) %></span>
+          </a>
+        </li>
+        <% }); %>
+      </ul>
+      <% } else if (query) { %>
+      <div class="empty reveal">
+        <span class="empty__ico"><%- icon('search', 34) %></span>
+        <h2>No matches for “<%= query %>”</h2>
+        <p>Try a broader term such as <em>suites</em>, <em>spa</em>, <em>weddings</em> or <em>parking</em> — or browse the pages below.</p>
+        <div class="empty__links">
+          <a class="btn btn--outline" href="/services">Stay &amp; services</a>
+          <a class="btn btn--outline" href="/faq">FAQ</a>
+          <a class="btn btn--outline" href="/blog">The Journal</a>
+          <a class="btn btn--primary" href="/contact#book">Check availability</a>
+        </div>
+      </div>
+      <% } else { %>
+      <div class="popular reveal">
+        <h2 class="section__title">Popular searches</h2>
+        <ul class="chips">
+          <% ['rooms and suites','the spa','dining room','wedding venue','the prairie escape','parking','pet friendly','accessibility'].forEach(function (t) { %>
+          <li class="chips__item"><a href="/search?q=<%= encodeURIComponent(t) %>"><%- icon('search', 16) %><span><%= t %></span></a></li>
+          <% }); %>
+        </ul>
+      </div>
+      <% } %>
+    </div>
+  </section>
+
+  <%- include('partials/cta', { cta: { h2: 'Cannot find what you need?', text: 'Call the front desk and ask — reception is staffed 24 hours, and there is always a person who knows the answer.', primary: { label: 'Check availability', path: '/contact#book' } } }) %>
+</main>
+
+<%- include('partials/footer') %>
+<script src="/js/main.js?v=<%= assetVersion %>" defer></script>
+</body>
+</html>

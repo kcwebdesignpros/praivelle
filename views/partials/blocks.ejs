@@ -1,0 +1,605 @@
+<%
+/* --------------------------------------------------------------------------
+   Generic block renderer. Every content file (services, inner pages, blog
+   posts) is an array of these blocks. Add a new type here and every page
+   gains it.
+   -------------------------------------------------------------------------- */
+
+var TONE = {
+  prose: '', cards: 'soft', steps: '', stats: 'navy', timeline: '',
+  split: 'soft', table: '', faq: 'soft', checklist: '', quote: 'cyan',
+  gallery: 'soft', marquee: '', text: '', cta: ''
+};
+
+function esc(v) { return v == null ? '' : String(v); }
+function asList(list) { return Array.isArray(list) ? list : []; }
+function stepDelay(i) { return Math.min(i * 70, 420); }
+
+var SIZES_CARD = '(min-width: 1040px) 31vw, (min-width: 700px) 47vw, 92vw';
+var SIZES_WIDE = '(min-width: 1040px) 46vw, 92vw';
+var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
+%>
+<% blocks.forEach(function (b, bi) {
+  var id = b.id || ('block-' + (bi + 1));
+  var tone = b.tone || TONE[b.type] || '';
+  var sectionCls = 'section' + (tone ? ' section--' + tone : '') + ' section--' + b.type;
+%>
+<% if (b.type === 'prose') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container container--narrow">
+    <div class="prose reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
+      <% if (asList(b.list).length) { %>
+        <% if (b.listTitle) { %><h3 class="prose__list-title"><%= esc(b.listTitle) %></h3><% } %>
+        <ul class="tick-list">
+          <% asList(b.list).forEach(function (li) { %>
+            <% if (typeof li === 'string') { %>
+              <li><%- icon('check-circle', 19) %><span><%= esc(li) %></span></li>
+            <% } else { %>
+              <li><%- icon('check-circle', 19) %><span><strong><%= esc(li.title) %></strong> <%= esc(li.text) %></span></li>
+            <% } %>
+          <% }); %>
+        </ul>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<% } else if (b.type === 'cards') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="cards cards--<%= b.columns || 3 %>">
+      <% asList(b.items).forEach(function (it, i) { %>
+      <li class="card reveal" style="--d:<%= stepDelay(i) %>ms">
+        <span class="card__ico"><%- icon(it.icon || 'check', 26) %></span>
+        <h3 class="card__title"><%= esc(it.title) %></h3>
+        <p class="card__text"><%= esc(it.text) %></p>
+        <% if (it.path) { %>
+        <a class="card__link" href="<%= it.path %>">Learn more <%- icon('arrow-right', 16) %></a>
+        <% } %>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+<% } else if (b.type === 'steps') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ol class="steps">
+      <% asList(b.items).forEach(function (it, i) { %>
+      <li class="step reveal" id="step-<%= i + 1 %>" style="--d:<%= stepDelay(i) %>ms">
+        <span class="step__num" aria-hidden="true"><%= String(i + 1).padStart(2, '0') %></span>
+        <div class="step__body">
+          <h3 class="step__title"><%= esc(it.title) %></h3>
+          <p class="step__text"><%= esc(it.text) %></p>
+        </div>
+      </li>
+      <% }); %>
+    </ol>
+  </div>
+</section>
+
+<% } else if (b.type === 'stats') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <% if (b.h2 || b.intro) { %>
+    <header class="section__head section__head--light reveal">
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <% } %>
+    <ul class="stats">
+      <% asList(b.items).forEach(function (it, i) { %>
+      <li class="stat reveal" style="--d:<%= stepDelay(i) %>ms">
+        <strong class="stat__value"
+                data-count="<%= it.value %>"
+                data-decimals="<%= it.decimals || 0 %>"
+                data-prefix="<%= esc(it.prefix || '') %>"
+                data-suffix="<%= esc(it.suffix || '') %>"><%= esc(it.prefix || '') %><%= fmtNum(it.value, it.decimals || 0) %><%= esc(it.suffix || '') %></strong>
+        <span class="stat__label"><%= esc(it.label) %></span>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+<% } else if (b.type === 'timeline') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ol class="timeline">
+      <% asList(b.items).forEach(function (it, i) { %>
+      <li class="timeline__item reveal" style="--d:<%= stepDelay(i) %>ms">
+        <span class="timeline__year"><%= esc(it.year) %></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title"><%= esc(it.title) %></h3>
+          <p class="timeline__text"><%= esc(it.text) %></p>
+        </div>
+      </li>
+      <% }); %>
+    </ol>
+  </div>
+</section>
+
+<% } else if (b.type === 'split') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <div class="split<%= b.reverse ? ' split--reverse' : '' %>">
+      <div class="split__media reveal">
+        <%- imgTag(b.image, b.imageAlt || '', { sizes: SIZES_WIDE, cls: 'split__img' }) %>
+      </div>
+      <div class="split__content reveal" style="--d:120ms">
+        <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+        <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+        <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
+        <% if (asList(b.list).length) { %>
+        <ul class="tick-list tick-list--tight">
+          <% asList(b.list).forEach(function (li) { %>
+          <li><%- icon('check-circle', 19) %><span><%= esc(typeof li === 'string' ? li : li.text) %></span></li>
+          <% }); %>
+        </ul>
+        <% } %>
+        <% if (b.cta) { %>
+        <a class="btn btn--primary" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% } else if (b.type === 'table') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container container--wide">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <div class="table-wrap reveal">
+      <table class="table">
+        <% if (asList(b.head).length) { %>
+        <thead>
+          <tr><% asList(b.head).forEach(function (h) { %><th scope="col"><%= esc(h) %></th><% }); %></tr>
+        </thead>
+        <% } %>
+        <tbody>
+          <% asList(b.rows).forEach(function (row) { %>
+          <tr>
+            <% row.forEach(function (cell, ci) { %>
+              <% if (ci === 0) { %><th scope="row"><%= esc(cell) %></th>
+              <% } else { %><td data-label="<%= esc(asList(b.head)[ci] || '') %>"><%= esc(cell) %></td><% } %>
+            <% }); %>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <% if (b.note) { %><p class="table__note reveal"><%- icon('activity', 16) %> <span><%= esc(b.note) %></span></p><% } %>
+  </div>
+</section>
+
+<% } else if (b.type === 'checklist') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="checklist checklist--<%= b.columns || 2 %>">
+      <% asList(b.items).forEach(function (it, i) { %>
+      <li class="reveal" style="--d:<%= stepDelay(i) %>ms">
+        <span class="checklist__ico"><%- icon('check', 16) %></span>
+        <span><%= esc(it) %></span>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+<% } else if (b.type === 'faq') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container container--narrow">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <div class="faq reveal">
+      <% asList(b.items).forEach(function (f, i) { %>
+      <details class="faq__item"<%= i === 0 ? ' open' : '' %>>
+        <summary class="faq__q">
+          <span><%= esc(f.q) %></span>
+          <span class="faq__icon" aria-hidden="true"><%- icon('plus', 18) %></span>
+        </summary>
+        <div class="faq__a"><p><%= esc(f.a) %></p></div>
+      </details>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<% } else if (b.type === 'quote') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container container--narrow">
+    <figure class="pullquote reveal">
+      <span class="pullquote__mark" aria-hidden="true"><%- icon('quote', 34) %></span>
+      <blockquote class="pullquote__text"><p><%= esc(b.text) %></p></blockquote>
+      <% if (b.author) { %>
+      <figcaption class="pullquote__by"><strong><%= esc(b.author) %></strong><% if (b.role) { %><span><%= esc(b.role) %></span><% } %></figcaption>
+      <% } %>
+    </figure>
+  </div>
+</section>
+
+<% } else if (b.type === 'gallery') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="gallery">
+      <% asList(b.items).forEach(function (it, i) { %>
+      <li class="gallery__item reveal" style="--d:<%= stepDelay(i) %>ms">
+        <%- imgTag(it.image, it.alt || '', { sizes: SIZES_CARD, cls: 'gallery__img' }) %>
+        <% if (it.caption) { %><span class="gallery__cap"><%= esc(it.caption) %></span><% } %>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+<% } else if (b.type === 'marquee') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <% if (b.h2) { %><h2 class="marquee__heading reveal"><%= esc(b.h2) %></h2><% } %>
+  </div>
+  <div class="marquee reveal" data-marquee>
+    <div class="marquee__track">
+      <% [0, 1].forEach(function (dup) { %>
+      <ul class="marquee__set"<%= dup ? ' aria-hidden="true"' : '' %>>
+        <% asList(b.items).forEach(function (it) { %>
+        <li class="marquee__item"><%- icon('check-circle', 18) %><span><%= esc(it) %></span></li>
+        <% }); %>
+      </ul>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<% } else if (b.type === 'cta') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <div class="inline-cta reveal">
+      <div class="inline-cta__text">
+        <h2><%= esc(b.h2) %></h2>
+        <p><%= esc(b.text) %></p>
+      </div>
+      <div class="inline-cta__actions">
+        <% if (b.primary) { %><a class="btn btn--primary btn--lg" href="<%= b.primary.path %>"><%= esc(b.primary.label) %> <%- icon('arrow-right', 18) %></a><% } %>
+        <% if (b.secondary) { %><a class="btn btn--ghost-light btn--lg" href="<%= b.secondary.path %>"><%= esc(b.secondary.label) %></a><% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% } else if (b.type === 'text') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container container--narrow">
+    <div class="prose prose--center reveal">
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
+    </div>
+  </div>
+</section>
+
+<% } else if (b.type === 'services-grid') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="svc-grid">
+      <% services.forEach(function (s, i) { %>
+      <li class="svc-card reveal" style="--d:<%= stepDelay(i) %>ms">
+        <a class="svc-card__link" href="/services/<%= s.slug %>">
+          <span class="svc-card__media">
+            <%- imgTag(s.image, s.imageAlt || s.name, { sizes: SIZES_CARD, cls: 'svc-card__img' }) %>
+          </span>
+          <span class="svc-card__body">
+            <span class="svc-card__ico"><%- icon(s.icon, 24) %></span>
+            <span class="svc-card__title"><%= s.shortName %></span>
+            <span class="svc-card__text"><%= s.tagline %></span>
+            <span class="svc-card__more">Explore this service <%- icon('arrow-right', 16) %></span>
+          </span>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+    <% if (b.cta) { %>
+    <p class="section__foot reveal"><a class="btn btn--outline" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a></p>
+    <% } %>
+  </div>
+</section>
+
+<% } else if (b.type === 'testimonials') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+  </div>
+  <%
+    var featured = site.testimonialList.filter(function (r) { return r.featured; });
+    var rest = site.testimonialList.filter(function (r) { return !r.featured; });
+    var reviews = featured.concat(rest).slice(0, b.limit || 8);
+  %>
+  <div class="carousel reveal" data-carousel>
+    <div class="carousel__viewport" tabindex="0" aria-label="Guest reviews, scrollable">
+      <ul class="carousel__track">
+        <% reviews.forEach(function (r) { %>
+        <li class="carousel__slide">
+          <figure class="review">
+            <div class="review__stars" aria-label="<%= r.rating %> out of 5 stars">
+              <% for (var s = 0; s < 5; s++) { %><span class="<%= s < r.rating ? 'is-on' : '' %>">★</span><% } %>
+            </div>
+            <blockquote class="review__text"><p><%= r.text %></p></blockquote>
+            <figcaption class="review__by">
+              <span class="review__avatar" aria-hidden="true"><%= r.author.charAt(0) %></span>
+              <span class="review__who">
+                <strong><%= r.author %></strong>
+                <small><%= r.location %> · <%= r.stay %></small>
+              </span>
+              <span class="review__src"><%- icon(r.source === 'Yelp' ? 'yelp' : 'google', 15) %> <%= r.source %></span>
+            </figcaption>
+          </figure>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+    <div class="carousel__bar">
+      <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous reviews"><%- icon('chevron-left', 20) %></button>
+      <div class="carousel__dots" data-carousel-dots aria-hidden="true"></div>
+      <button class="carousel__btn" type="button" data-carousel-next aria-label="Next reviews"><%- icon('chevron-right', 20) %></button>
+    </div>
+  </div>
+  <% if (b.cta) { %>
+  <div class="container"><p class="section__foot reveal"><a class="btn btn--outline" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a></p></div>
+  <% } %>
+</section>
+
+<% } else if (b.type === 'team-preview') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="team-grid team-grid--<%= b.limit || 3 %>">
+      <% site.team.filter(function (t) { return t.image; }).slice(0, b.limit || 3).forEach(function (t, i) { %>
+      <li class="person reveal" style="--d:<%= stepDelay(i) %>ms">
+        <a class="person__link" href="/doctors#<%= t.slug %>">
+          <span class="person__media">
+            <%- imgTag(t.image, t.imageAlt, { sizes: '(min-width:1040px) 31vw, (min-width:700px) 47vw, 92vw', cls: 'person__img' }) %>
+          </span>
+          <span class="person__body">
+            <strong class="person__name"><%= t.name %><% if (t.credentials) { %>, <span><%= t.credentials %></span><% } %></strong>
+            <span class="person__role"><%= t.role %></span>
+            <span class="person__short"><%= t.short %></span>
+          </span>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+    <% if (b.cta) { %>
+    <p class="section__foot reveal"><a class="btn btn--outline" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a></p>
+    <% } %>
+  </div>
+</section>
+
+<% } else if (b.type === 'blog-preview') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="post-grid">
+      <% posts.slice(0, b.limit || 3).forEach(function (p, i) { %>
+      <li class="post-card reveal" style="--d:<%= stepDelay(i) %>ms">
+        <a class="post-card__link" href="/blog/<%= p.slug %>">
+          <span class="post-card__media">
+            <%- imgTag(p.image, p.imageAlt || p.title, { sizes: SIZES_CARD, cls: 'post-card__img' }) %>
+            <span class="post-card__cat"><%= p.category %></span>
+          </span>
+          <span class="post-card__body">
+            <span class="post-card__meta"><time datetime="<%= p.date %>"><%= fmtDate(p.date) %></time> · <%= p.readTime %></span>
+            <span class="post-card__title"><%= p.title %></span>
+            <span class="post-card__excerpt"><%= p.excerpt %></span>
+            <span class="post-card__more">Read article <%- icon('arrow-right', 16) %></span>
+          </span>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+    <% if (b.cta) { %>
+    <p class="section__foot reveal"><a class="btn btn--outline" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a></p>
+    <% } %>
+  </div>
+</section>
+
+<% } else if (b.type === 'amenity-strip') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <% if (b.h2) { %><h2 class="marquee__heading reveal"><%= esc(b.h2) %></h2><% } %>
+  </div>
+  <div class="marquee reveal" data-marquee>
+    <div class="marquee__track">
+      <% [0, 1].forEach(function (dup) { %>
+      <ul class="marquee__set"<%= dup ? ' aria-hidden="true"' : '' %>>
+        <% site.amenities.forEach(function (n) { %>
+        <li class="marquee__item marquee__item--chip"><%- icon('check-circle', 18) %><span><%= n %></span></li>
+        <% }); %>
+      </ul>
+      <% }); %>
+    </div>
+  </div>
+  <% if (b.cta) { %>
+  <div class="container"><p class="section__foot reveal"><a class="btn btn--outline" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a></p></div>
+  <% } %>
+</section>
+
+<% } else if (b.type === 'trust-bar') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <ul class="trust">
+      <% site.trustBadges.forEach(function (t, i) { %>
+      <li class="trust__item reveal" style="--d:<%= stepDelay(i) %>ms">
+        <span class="trust__ico"><%- icon(t.icon, 24) %></span>
+        <span class="trust__body"><strong><%= t.title %></strong><small><%= t.text %></small></span>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+<% } else if (b.type === 'offer') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <div class="offer reveal">
+      <div class="offer__left">
+        <p class="eyebrow eyebrow--light"><%= b.eyebrow || 'Signature package' %></p>
+        <h2 class="offer__title"><%= b.h2 || site.signatureOffer.title %></h2>
+        <p class="offer__price">
+          <strong><%= site.signatureOffer.price %></strong>
+          <s><%= site.signatureOffer.strike %></s>
+          <span><%= site.signatureOffer.unit %></span>
+        </p>
+        <p class="offer__copy"><%= b.intro || '' %></p>
+        <a class="btn btn--primary btn--lg" href="/contact#book"><%- icon('calendar-check', 19) %> Book <%= site.signatureOffer.title %></a>
+      </div>
+      <div class="offer__right">
+        <h3 class="offer__includes">Everything included</h3>
+        <ul class="tick-list tick-list--light">
+          <% site.signatureOffer.includes.forEach(function (i) { %>
+          <li><%- icon('check-circle', 19) %><span><%= i %></span></li>
+          <% }); %>
+        </ul>
+        <p class="offer__fine"><%= site.signatureOffer.fine %></p>
+      </div>
+    </div>
+  </div>
+</section>
+<% } else if (b.type === 'blog-grid') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+
+    <div class="filter reveal" data-filter>
+      <span class="filter__label">Filter by topic</span>
+      <ul class="filter__list">
+        <li><button class="filter__btn is-active" type="button" data-filter-btn="all" aria-pressed="true">All articles</button></li>
+        <% categories.forEach(function (c) { %>
+        <li><button class="filter__btn" type="button" data-filter-btn="<%= c %>" aria-pressed="false"><%= c %></button></li>
+        <% }); %>
+      </ul>
+      <p class="filter__count" data-filter-count aria-live="polite"><%= posts.length %> articles</p>
+    </div>
+
+    <ul class="post-grid post-grid--wide" data-filter-grid>
+      <% posts.forEach(function (p, i) { %>
+      <li class="post-card reveal" style="--d:<%= stepDelay(i) %>ms" data-cat="<%= p.category %>">
+        <a class="post-card__link" href="/blog/<%= p.slug %>">
+          <span class="post-card__media">
+            <%- imgTag(p.image, p.imageAlt || p.title, { sizes: SIZES_CARD, cls: 'post-card__img' }) %>
+            <span class="post-card__cat"><%= p.category %></span>
+          </span>
+          <span class="post-card__body">
+            <span class="post-card__meta"><time datetime="<%= p.date %>"><%= fmtDate(p.date) %></time> · <%= p.readTime %></span>
+            <span class="post-card__title"><%= p.title %></span>
+            <span class="post-card__excerpt"><%= p.excerpt %></span>
+            <span class="post-card__more">Read article <%- icon('arrow-right', 16) %></span>
+          </span>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+
+<% } else if (b.type === 'team-grid') { %>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <div class="team-full">
+      <% site.team.forEach(function (t, i) { %>
+      <article class="member reveal" id="<%= t.slug %>" style="--d:<%= stepDelay(i) %>ms">
+        <div class="member__media">
+          <% if (t.image) { %>
+          <%- imgTag(t.image, t.imageAlt, { sizes: '(min-width:900px) 320px, 60vw', cls: 'member__img' }) %>
+          <% } else { %>
+          <span class="member__initials" aria-hidden="true"><%= t.initials %></span>
+          <% } %>
+        </div>
+        <div class="member__body">
+          <p class="member__eyebrow"><%= t.role %></p>
+          <h3 class="member__name"><%= t.name %><% if (t.credentials) { %>, <%= t.credentials %><% } %></h3>
+          <% asList(t.bio).forEach(function (p) { %><p class="member__bio"><%= p %></p><% }); %>
+          <div class="member__cols">
+            <div>
+              <h4 class="member__sub">Responsibilities</h4>
+              <ul class="tick-list tick-list--tight">
+                <% asList(t.focus).forEach(function (f) { %><li><%- icon('check-circle', 18) %><span><%= f %></span></li><% }); %>
+              </ul>
+            </div>
+            <dl class="member__facts">
+              <div><dt>Education</dt><dd><%= t.education %></dd></div>
+              <div><dt>Experience</dt><dd><%= t.years %> years in hospitality</dd></div>
+              <% if (asList(t.memberships).length) { %>
+              <div><dt>Memberships</dt><dd><%= t.memberships.join(' · ') %></dd></div>
+              <% } %>
+            </dl>
+          </div>
+          <% if (t.funFact) { %><p class="member__fun"><%- icon('sparkles', 16) %> <span><%= t.funFact %></span></p><% } %>
+          <a class="btn btn--outline" href="/contact#book"><%- icon('calendar-check', 18) %> Enquire with <%= t.name.split(' ').slice(-1)[0] %></a>
+        </div>
+      </article>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<% } %>
+<% }); %>

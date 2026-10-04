@@ -1,0 +1,19 @@
+# Normalise line endings so the repo doesn't churn between Windows and Linux/Netlify
+* text=auto eol=lf
+
+# Source
+*.js    text eol=lf
+*.json  text eol=lf
+*.ejs   text eol=lf
+*.css   text eol=lf
+*.md    text eol=lf
+*.toml  text eol=lf
+
+# Binary — never touch
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.ico   binary
+*.woff2 binary
+*.gif   binary

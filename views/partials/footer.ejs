@@ -1,0 +1,128 @@
+<footer class="site-footer" id="siteFooter">
+  <div class="footer__glow" aria-hidden="true"></div>
+
+  <div class="container footer__main">
+    <div class="footer__brand">
+      <a class="footer__logo" href="/" aria-label="<%= site.name %> — home">
+        <img src="<%= site.logoLight %>" width="<%= site.logoWidth %>" height="<%= site.logoHeight %>" alt="<%= site.name %> logo" loading="lazy" decoding="async">
+      </a>
+      <p class="footer__about"><%= site.description %></p>
+
+      <ul class="footer__ratings">
+        <% site.reviewProfiles.forEach(function (r) { %>
+        <li class="footer__rating">
+          <span class="footer__rating-ico"><%- icon(r.icon, 20) %></span>
+          <span>
+            <strong><%= r.rating %> <span class="footer__stars" aria-hidden="true">★★★★★</span></strong>
+            <small><%= r.count.toLocaleString('en-US') %> <%= r.name %> reviews</small>
+          </span>
+        </li>
+        <% }); %>
+      </ul>
+
+      <ul class="footer__socials">
+        <% site.socials.forEach(function (s) { %>
+        <li><a href="<%= s.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= site.name %> on <%= s.name %>"><%- icon(s.icon, 18) %></a></li>
+        <% }); %>
+      </ul>
+    </div>
+
+    <nav class="footer__cols" aria-label="Footer navigation">
+      <div class="footer__col">
+        <h2 class="footer__title">Stay &amp; Services</h2>
+        <ul class="footer__links">
+          <% services.forEach(function (s) { %>
+          <li><a href="/services/<%= s.slug %>"><%= s.shortName %></a></li>
+          <% }); %>
+          <li><a href="/services">Everything we do</a></li>
+        </ul>
+      </div>
+
+      <% site.footerColumns.forEach(function (col) { %>
+      <div class="footer__col">
+        <h2 class="footer__title"><%= col.title %></h2>
+        <ul class="footer__links">
+          <% col.links.forEach(function (l) { %>
+          <li><a href="<%= l.path %>"><%= l.label %></a></li>
+          <% }); %>
+        </ul>
+      </div>
+      <% }); %>
+
+      <div class="footer__col footer__col--contact">
+        <h2 class="footer__title">Find us</h2>
+        <address class="footer__address">
+          <a href="<%= site.mapUrl %>" target="_blank" rel="noopener">
+            <%- icon('map-pin', 16) %>
+            <span><%= site.address.street %><br><%= site.address.city %>, <%= site.address.region %> <%= site.address.postal %></span>
+          </a>
+          <a href="tel:<%= site.phoneHref %>"><%- icon('phone', 16) %><span>Reservations: <%= site.phone %></span></a>
+          <a href="tel:<%= site.conciergePhoneHref %>"><%- icon('bell', 16) %><span>Concierge: <%= site.conciergePhone %></span></a>
+          <a href="mailto:<%= site.email %>"><%- icon('mail', 16) %><span><%= site.email %></span></a>
+        </address>
+
+        <h3 class="footer__subtitle">Hours</h3>
+        <ul class="footer__hours">
+          <% site.hours.forEach(function (h) { %>
+          <li><span><%= h.day %></span><strong><%= h.time %></strong></li>
+          <% }); %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="footer__cta">
+      <div class="footer__cta-text">
+        <h2>Twelve rooms, and one of them is free this weekend</h2>
+        <p>Book direct for the lowest rate we publish, complimentary valet parking, breakfast for two and a front desk that answers at any hour. The Prairie Escape is from $279 a night.</p>
+      </div>
+      <div class="footer__cta-actions">
+        <a class="btn btn--primary btn--lg" href="/contact#book"><%- icon('calendar-check', 19) %> Check availability</a>
+        <a class="btn btn--outline-light btn--lg" href="tel:<%= site.phoneHref %>"><%- icon('phone', 19) %> <%= site.phone %></a>
+      </div>
+    </div>
+
+    <div class="footer__areas">
+      <h3 class="footer__subtitle">Guests travel to us from across the Kansas City metro</h3>
+      <p class="footer__areas-list"><%= site.serviceAreas.join(' · ') %></p>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; <%= year %> <%= site.legalName %>. All rights reserved.
+        <span class="footer__licence"><%= site.licenseLine %></span>
+      </p>
+      <ul class="footer__legal">
+        <% site.legalLinks.forEach(function (l) { %>
+        <li><a href="<%= l.path %>"><%= l.label %></a></li>
+        <% }); %>
+      </ul>
+      <p class="footer__credit">
+        <%= site.credit.prefix %><a href="<%= site.credit.url %>" target="_blank" rel="noopener"><%= site.credit.label %></a>
+      </p>
+    </div>
+
+    <p class="footer__disclaimer">
+      Room rates are quoted in US dollars and exclude the combined Missouri and Jackson County lodging tax.
+      Rates, packages and menus are subject to change and are confirmed in writing at the time of booking.
+      Photographs are of the actual property. Accessibility arrangements should be discussed with the front desk
+      before arrival so we can place you in the right room.
+    </p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top"><%- icon('arrow-up', 20) %></button>
+
+<!-- Mobile-only sticky action bar. Appears once the hero is scrolled past so a
+     phone user is never more than one tap from calling or reserving. -->
+<div class="mobile-bar" id="mobileBar" hidden>
+  <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:<%= site.phoneHref %>">
+    <%- icon('phone', 19) %>
+    <span>Call the desk</span>
+  </a>
+  <a class="mobile-bar__btn mobile-bar__btn--book" href="/contact#book">
+    <%- icon('calendar-check', 19) %>
+    <span>Reserve a room</span>
+  </a>
+</div>

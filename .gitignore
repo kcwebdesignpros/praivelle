@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# build artefacts
+public/img/
+.netlify/
+_screenshots/
+.bundle-sim/
+
+# generated image sources (the committed WebP masters live in /img)
+img/raw/
+
+# logs & env
+*.log
+npm-debug.log*
+.env
+.env.local
+.DS_Store
+Thumbs.db

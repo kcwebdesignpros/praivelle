@@ -1,0 +1,60 @@
+<%
+/* Inner-page hero. Expects `hero` (a page/service/post object) and `crumbs`. */
+var h = hero || {};
+var cr = crumbs || [];
+%>
+<section class="page-hero<%= h.heroImage ? ' page-hero--media' : '' %>">
+  <% if (h.heroImage) { %>
+  <div class="page-hero__media">
+    <%- imgTag(h.heroImage, h.heroImageAlt || '', { sizes: '100vw', cls: 'page-hero__img', eager: true }) %>
+    <span class="page-hero__scrim" aria-hidden="true"></span>
+  </div>
+  <% } %>
+  <div class="container page-hero__inner">
+    <% if (cr.length) { %>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <% cr.forEach(function (c, i) { %>
+        <li>
+          <% if (i < cr.length - 1) { %>
+          <a href="<%= c.path %>"><%= c.name %></a>
+          <% } else { %>
+          <span aria-current="page"><%= c.name %></span>
+          <% } %>
+        </li>
+        <% }); %>
+      </ol>
+    </nav>
+    <% } %>
+
+    <% if (h.eyebrow) { %><p class="eyebrow eyebrow--light"><%= h.eyebrow %></p><% } %>
+    <h1 class="page-hero__title"><%= h.h1 || h.title || h.name %></h1>
+    <% if (h.heroIntro) { %><p class="page-hero__intro"><%= h.heroIntro %></p><% } %>
+
+    <% if (h.priceFrom || h.duration) { %>
+    <ul class="page-hero__meta">
+      <% if (h.priceFrom) { %><li><%- icon('credit-card', 17) %><span><%= h.priceFrom %></span></li><% } %>
+      <% if (h.duration) { %><li><%- icon('timer', 17) %><span><%= h.duration %></span></li><% } %>
+      <% if (h.author) { %><li><%- icon('user', 17) %><span>By <%= h.author %></span></li><% } %>
+      <% if (h.date) { %><li><%- icon('calendar', 17) %><span><time datetime="<%= h.date %>"><%= fmtDate(h.date) %></time></span></li><% } %>
+      <% if (h.readTime) { %><li><%- icon('clock', 17) %><span><%= h.readTime %></span></li><% } %>
+    </ul>
+    <% } %>
+
+    <div class="page-hero__actions">
+      <a class="btn btn--primary btn--lg" href="/contact#book"><%- icon('calendar-check', 19) %> Check availability</a>
+      <a class="btn btn--outline-light btn--lg" href="tel:<%= site.phoneHref %>"><%- icon('phone', 19) %> <%= site.phone %></a>
+    </div>
+
+    <% if (Array.isArray(h.heroStats) && h.heroStats.length) { %>
+    <ul class="page-hero__stats">
+      <% h.heroStats.forEach(function (s, i) { %>
+      <li style="--d:<%= i * 70 %>ms">
+        <strong><%= s.prefix || '' %><%= fmtNum(s.value, s.decimals || 0) %><%= s.suffix || '' %></strong>
+        <span><%= s.label %></span>
+      </li>
+      <% }); %>
+    </ul>
+    <% } %>
+  </div>
+</section>

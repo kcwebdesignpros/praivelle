@@ -1,0 +1,30 @@
+{
+  "name": "praivelle-house",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Praivelle House — independent boutique hotel website (Kansas City area). Node.js + Express + EJS, SEO-optimised, Netlify-ready.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "images": "node scripts/generate-image-variants.js",
+    "fonts": "node scripts/fetch-fonts.js",
+    "check:seo": "node scripts/check-seo.js",
+    "verify:ui": "node scripts/verify-ui.js",
+    "verify:bundle": "esbuild netlify/functions/server.js --bundle --platform=node --target=node20 --format=cjs --outfile=.bundle-sim/server.js && node scripts/verify-netlify-bundle.js",
+    "prepare:netlify": "node scripts/prepare-netlify.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "sharp": "^0.33.4"
+  }
+}

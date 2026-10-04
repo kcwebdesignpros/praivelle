@@ -1,0 +1,19 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main id="main">
+  <%- include('partials/page-hero', { hero: page, crumbs: crumbs }) %>
+
+  <%- include('partials/blocks', { blocks: page.blocks }) %>
+
+  <% if (page.slug === 'contact') { %>
+    <%- include('partials/form-contact') %>
+  <% } %>
+
+  <%- include('partials/cta', { cta: page.cta }) %>
+</main>
+
+<%- include('partials/footer') %>
+<script src="/js/main.js?v=<%= assetVersion %>" defer></script>
+</body>
+</html>

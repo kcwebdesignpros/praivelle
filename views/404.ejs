@@ -1,0 +1,62 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main id="main">
+  <section class="page-hero page-hero--plain">
+    <div class="container page-hero__inner">
+      <p class="eyebrow">Error 404</p>
+      <h1 class="page-hero__title">This page has checked out, but the house is still open</h1>
+      <p class="page-hero__intro">The page you were looking for is not here. It may have been renamed, or the link may have a typo. Here are the places most people are heading.</p>
+      <div class="page-hero__actions">
+        <a class="btn btn--primary btn--lg" href="/"><%- icon('arrow-left', 19) %> Back to the homepage</a>
+        <a class="btn btn--outline-light btn--lg" href="/contact#book"><%- icon('calendar-check', 19) %> Check availability</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="lost-grid">
+        <a class="lost reveal" href="/services">
+          <span class="lost__ico"><%- icon('bed', 26) %></span>
+          <h2>Stay &amp; Services</h2>
+          <p>Rooms and suites, the spa, the dining room, weddings, meetings and the concierge desk.</p>
+        </a>
+        <a class="lost reveal" style="--d:70ms" href="/offers">
+          <span class="lost__ico"><%- icon('gift', 26) %></span>
+          <h2>Offers &amp; packages</h2>
+          <p>The Prairie Escape, wellness weekends, dining journeys and gift vouchers.</p>
+        </a>
+        <a class="lost reveal" style="--d:140ms" href="/team">
+          <span class="lost__ico"><%- icon('users', 26) %></span>
+          <h2>Meet the team</h2>
+          <p>The four people who actually run the house, and how to reach them.</p>
+        </a>
+        <a class="lost reveal" style="--d:210ms" href="/gallery">
+          <span class="lost__ico"><%- icon('image', 26) %></span>
+          <h2>Gallery</h2>
+          <p>Every room, the spa, the dining room, the gardens and the prairie.</p>
+        </a>
+        <a class="lost reveal" style="--d:280ms" href="/faq">
+          <span class="lost__ico"><%- icon('headphones', 26) %></span>
+          <h2>FAQ</h2>
+          <p>Check-in, parking, pets, dining, accessibility and cancellation, in plain English.</p>
+        </a>
+        <a class="lost reveal" style="--d:350ms" href="/contact">
+          <span class="lost__ico"><%- icon('phone', 26) %></span>
+          <h2>Contact</h2>
+          <p>Call, email or send an enquiry and the front desk will come straight back to you.</p>
+        </a>
+      </div>
+
+      <div class="empty empty--tight reveal">
+        <p>Still stuck? Call <a href="tel:<%= site.phoneHref %>"><%= site.phone %></a> and we will point you in the right direction.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<script src="/js/main.js?v=<%= assetVersion %>" defer></script>
+</body>
+</html>

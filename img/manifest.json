@@ -1,0 +1,211 @@
+{
+  "hero.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      480,
+      760,
+      1100,
+      1400
+    ],
+    "bytes": 313422
+  },
+  "about-lobby.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 296424
+  },
+  "cta-band.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      560,
+      900,
+      1200,
+      1400
+    ],
+    "bytes": 187374
+  },
+  "split-cellar.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 212962
+  },
+  "svc-rooms-suites.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 231582
+  },
+  "svc-spa-wellness.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 141454
+  },
+  "svc-dining.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 201012
+  },
+  "svc-weddings-events.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 315832
+  },
+  "svc-meetings-corporate.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 183132
+  },
+  "svc-experiences-concierge.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 192548
+  },
+  "gallery-pool.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 262716
+  },
+  "gallery-bar.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 209594
+  },
+  "gallery-terrace.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 346110
+  },
+  "gallery-bath.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 203072
+  },
+  "gallery-library.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 279734
+  },
+  "team-genevieve-marchand.webp": {
+    "natural": 1024,
+    "height": 1024,
+    "variants": [
+      240,
+      360,
+      480,
+      720
+    ],
+    "bytes": 43902
+  },
+  "team-julien-baptiste.webp": {
+    "natural": 1024,
+    "height": 1024,
+    "variants": [
+      240,
+      360,
+      480,
+      720
+    ],
+    "bytes": 79986
+  },
+  "team-amara-osei.webp": {
+    "natural": 1024,
+    "height": 1024,
+    "variants": [
+      240,
+      360,
+      480,
+      720
+    ],
+    "bytes": 65128
+  },
+  "team-clara-whitfield.webp": {
+    "natural": 1024,
+    "height": 1024,
+    "variants": [
+      240,
+      360,
+      480,
+      720
+    ],
+    "bytes": 56162
+  }
+}

@@ -1,0 +1,162 @@
+<% var nav = site.nav; %>
+<div class="topbar" id="topbar">
+  <div class="topbar__inner container">
+    <ul class="topbar__list">
+      <li class="topbar__hide-md">
+        <a href="<%= site.mapUrl %>" target="_blank" rel="noopener">
+          <%- icon('map-pin', 15, 'topbar__ico') %>
+          <span><%= site.address.street %>, <%= site.address.city %>, <%= site.address.region %> <%= site.address.postal %></span>
+        </a>
+      </li>
+      <li class="topbar__hide-sm">
+        <a href="mailto:<%= site.email %>">
+          <%- icon('mail', 15, 'topbar__ico') %>
+          <span><%= site.email %></span>
+        </a>
+      </li>
+      <li class="topbar__hide-lg">
+        <span>
+          <%- icon('clock', 15, 'topbar__ico') %>
+          <span><%= site.hoursSummary %></span>
+        </span>
+      </li>
+    </ul>
+    <ul class="topbar__list topbar__list--right">
+      <li>
+        <a class="topbar__emergency" href="tel:<%= site.conciergePhoneHref %>">
+          <%- icon('bell', 15, 'topbar__ico') %>
+          <span>Concierge, 24 hours: <%= site.conciergePhone %></span>
+        </a>
+      </li>
+      <li class="topbar__hide-sm">
+        <ul class="topbar__socials">
+          <% site.socials.forEach(function (s) { %>
+          <li><a href="<%= s.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= site.name %> on <%= s.name %>"><%- icon(s.icon, 15) %></a></li>
+          <% }); %>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"><span></span></div>
+  <div class="header__inner container">
+    <a class="brand" href="/" aria-label="<%= site.name %> — home">
+      <img class="brand__logo" src="<%= site.logo %>" width="<%= site.logoWidth %>" height="<%= site.logoHeight %>" alt="<%= site.name %> logo" fetchpriority="high" decoding="async">
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary navigation">
+      <div class="nav__head">
+        <img class="nav__logo" src="<%= site.logo %>" width="<%= site.logoWidth %>" height="<%= site.logoHeight %>" alt="<%= site.name %>" decoding="async">
+        <button class="nav__close" type="button" data-nav-close aria-label="Close menu"><%- icon('close', 22) %></button>
+      </div>
+
+      <div class="nav__body">
+        <ul class="nav__list">
+          <% nav.forEach(function (item) { %>
+            <% if (item.children && item.children.length) { %>
+              <li class="nav__item nav__item--has-menu">
+                <div class="nav__row">
+                  <a class="nav__link<%= isActive(item.path) ? ' is-active' : '' %>" href="<%= item.path %>" aria-haspopup="true"><%= item.label %></a>
+                  <button class="nav__sub-toggle" type="button" aria-expanded="false" aria-controls="menu-<%= item.label.toLowerCase().replace(/[^a-z]+/g,'-') %>" aria-label="Toggle <%= item.label %> submenu">
+                    <%- icon('chevron-down', 16) %>
+                  </button>
+                </div>
+                <div class="dropdown" id="menu-<%= item.label.toLowerCase().replace(/[^a-z]+/g,'-') %>">
+                  <div class="dropdown__inner">
+                    <p class="dropdown__label"><%= item.label %></p>
+                    <ul class="dropdown__list">
+                      <% item.children.forEach(function (child) { %>
+                      <li>
+                        <a class="dropdown__link" href="<%= child.path %>">
+                          <span class="dropdown__ico"><%- icon(child.icon || 'arrow-right', 18) %></span>
+                          <span class="dropdown__text">
+                            <strong><%= child.label %></strong>
+                            <small><%= child.desc %></small>
+                          </span>
+                        </a>
+                      </li>
+                      <% }); %>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            <% } else if (item.mega === 'services') { %>
+              <li class="nav__item nav__item--has-menu nav__item--mega">
+                <div class="nav__row">
+                  <a class="nav__link<%= isActive('/services') ? ' is-active' : '' %>" href="/services" aria-haspopup="true"><%= item.label %></a>
+                  <button class="nav__sub-toggle" type="button" aria-expanded="false" aria-controls="menu-services" aria-label="Toggle services submenu">
+                    <%- icon('chevron-down', 16) %>
+                  </button>
+                </div>
+                <div class="dropdown dropdown--mega" id="menu-services">
+                  <div class="dropdown__inner">
+                    <p class="dropdown__label">Rooms, spa, dining &amp; events</p>
+                    <ul class="dropdown__list dropdown__list--mega">
+                      <% services.forEach(function (s) { %>
+                      <li>
+                        <a class="dropdown__link" href="/services/<%= s.slug %>">
+                          <span class="dropdown__ico"><%- icon(s.icon, 18) %></span>
+                          <span class="dropdown__text">
+                            <strong><%= s.shortName %></strong>
+                            <small><%= s.tagline %></small>
+                          </span>
+                        </a>
+                      </li>
+                      <% }); %>
+                    </ul>
+                    <a class="dropdown__all" href="/services">
+                      View everything we do
+                      <%- icon('arrow-right', 16) %>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            <% } else { %>
+              <li class="nav__item">
+                <a class="nav__link<%= isActive(item.path) ? ' is-active' : '' %>" href="<%= item.path %>"><%= item.label %></a>
+              </li>
+            <% } %>
+          <% }); %>
+        </ul>
+
+        <div class="nav__info">
+          <p class="nav__label">Visit the house</p>
+          <ul class="nav__info-list">
+            <li><span class="nav__info-ico"><%- icon('map-pin', 16) %></span><a href="<%= site.mapUrl %>" target="_blank" rel="noopener"><%= site.address.street %><br><%= site.address.city %>, <%= site.address.region %> <%= site.address.postal %></a></li>
+            <li><span class="nav__info-ico"><%- icon('phone', 16) %></span><a href="tel:<%= site.phoneHref %>">Reservations: <%= site.phone %></a></li>
+            <li><span class="nav__info-ico"><%- icon('bell', 16) %></span><a href="tel:<%= site.conciergePhoneHref %>">Concierge: <%= site.conciergePhone %></a></li>
+            <li><span class="nav__info-ico"><%- icon('mail', 16) %></span><a href="mailto:<%= site.email %>"><%= site.email %></a></li>
+            <li><span class="nav__info-ico"><%- icon('clock', 16) %></span><span><%= site.hoursSummary %></span></li>
+          </ul>
+          <ul class="nav__socials">
+            <% site.socials.forEach(function (s) { %>
+            <li><a href="<%= s.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= site.name %> on <%= s.name %>"><%- icon(s.icon, 18) %></a></li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav__actions">
+        <a class="btn btn--primary btn--block" href="/contact#book"><%- icon('calendar-check', 18) %> Reserve a room</a>
+        <a class="btn btn--ghost btn--block" href="tel:<%= site.phoneHref %>"><%- icon('phone', 18) %> <%= site.phone %></a>
+      </div>
+    </nav>
+
+    <div class="header__actions">
+      <a class="header__phone" href="tel:<%= site.phoneHref %>">
+        <span class="header__phone-ico"><%- icon('phone', 18) %></span>
+        <span class="header__phone-text">
+          <small>Reservations</small>
+          <strong><%= site.phone %></strong>
+        </span>
+      </a>
+      <a class="btn btn--primary header__cta" href="/contact#book"><%- icon('calendar-check', 18) %> Reserve a room</a>
+      <button class="burger" id="navToggle" type="button" aria-controls="primaryNav" aria-expanded="false" aria-label="Open menu">
+        <span class="burger__box"><span class="burger__bar"></span><span class="burger__bar"></span><span class="burger__bar"></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay" data-nav-close hidden></div>

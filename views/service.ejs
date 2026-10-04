@@ -1,0 +1,67 @@
+<%
+  var hero = Object.assign({}, service, {
+    heroImage: service.image,
+    heroImageAlt: service.imageAlt,
+    h1: service.name,
+    heroIntro: service.heroIntro
+  });
+  var related = services.filter(function (s) { return (service.related || []).indexOf(s.slug) !== -1; });
+  var toc = service.blocks.filter(function (b) { return b.h2 && b.id; });
+%>
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main id="main">
+  <%- include('partials/page-hero', { hero: hero, crumbs: crumbs }) %>
+
+  <% if (service.highlights && service.highlights.length) { %>
+  <section class="section section--tight">
+    <div class="container">
+      <ul class="chips reveal">
+        <% service.highlights.forEach(function (h) { %>
+        <li class="chips__item"><%- icon('check-circle', 17) %><span><%= h %></span></li>
+        <% }); %>
+      </ul>
+    </div>
+  </section>
+  <% } %>
+
+  <%- include('partials/blocks', { blocks: service.blocks }) %>
+
+  <% if (related.length) { %>
+  <section class="section section--soft">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 class="section__title">Related services at Praivelle House</h2>
+        <p class="section__intro">Most stays combine two or three of these. We will sequence them so nothing is booked before you have decided it is what you want.</p>
+      </header>
+      <ul class="svc-grid svc-grid--<%= related.length %>">
+        <% related.forEach(function (s, i) { %>
+        <li class="svc-card reveal" style="--d:<%= i * 70 %>ms">
+          <a class="svc-card__link" href="/services/<%= s.slug %>">
+            <span class="svc-card__media">
+              <%- imgTag(s.image, s.imageAlt || s.name, { sizes: '(min-width:1040px) 31vw, (min-width:700px) 47vw, 92vw', cls: 'svc-card__img' }) %>
+            </span>
+            <span class="svc-card__body">
+              <span class="svc-card__ico"><%- icon(s.icon, 24) %></span>
+              <span class="svc-card__title"><%= s.shortName %></span>
+              <span class="svc-card__text"><%= s.tagline %></span>
+              <span class="svc-card__more">Explore this service <%- icon('arrow-right', 16) %></span>
+            </span>
+          </a>
+        </li>
+        <% }); %>
+      </ul>
+      <p class="section__foot reveal"><a class="btn btn--outline" href="/services">Everything we do <%- icon('arrow-right', 17) %></a></p>
+    </div>
+  </section>
+  <% } %>
+
+  <%- include('partials/cta', { cta: service.cta }) %>
+</main>
+
+<%- include('partials/footer') %>
+<script src="/js/main.js?v=<%= assetVersion %>" defer></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<%
+  /* ---------------------------------------------------------------- locals */
+  var _title       = typeof title !== 'undefined' && title ? title : site.name;
+  var _desc        = typeof description !== 'undefined' && description ? description : site.description;
+  var _canonical   = typeof canonical !== 'undefined' && canonical ? canonical : site.url + currentPath;
+  var _keywords    = typeof keywords !== 'undefined' ? keywords : '';
+  var _robots      = typeof robots !== 'undefined' && robots ? robots
+                     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  var _ogType      = typeof ogType !== 'undefined' && ogType ? ogType : 'website';
+  var _ogImage     = typeof ogImage !== 'undefined' && ogImage ? ogImage : site.url + site.ogImage;
+  var _schemas     = typeof schema !== 'undefined' && schema ? schema.filter(Boolean) : [];
+  var _preload     = typeof preloadImage !== 'undefined' ? preloadImage : null;
+  var _preloadSet  = typeof preloadSrcset !== 'undefined' ? preloadSrcset : null;
+  var _preloadSize = typeof preloadSizes !== 'undefined' ? preloadSizes : null;
+%><!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title><%= _title %></title>
+<meta name="description" content="<%= _desc %>">
+<% if (_keywords) { %><meta name="keywords" content="<%= _keywords %>"><% } %>
+<link rel="canonical" href="<%= _canonical %>">
+<meta name="robots" content="<%= _robots %>">
+<meta name="author" content="<%= site.name %>">
+<meta name="theme-color" content="#0B1F3A">
+<meta name="format-detection" content="telephone=no">
+<meta name="geo.region" content="US-MO">
+<meta name="geo.placename" content="Kansas City, Missouri">
+<meta name="geo.position" content="<%= site.geo.lat %>;<%= site.geo.lng %>">
+<meta name="ICBM" content="<%= site.geo.lat %>, <%= site.geo.lng %>">
+
+<!-- Open Graph -->
+<meta property="og:type" content="<%= _ogType %>">
+<meta property="og:site_name" content="<%= site.name %>">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="<%= _title %>">
+<meta property="og:description" content="<%= _desc %>">
+<meta property="og:url" content="<%= _canonical %>">
+<meta property="og:image" content="<%= _ogImage %>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<%= site.name %> — <%= site.tagline %>">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= _title %>">
+<meta name="twitter:description" content="<%= _desc %>">
+<meta name="twitter:image" content="<%= _ogImage %>">
+
+<!-- Icons -->
+<link rel="icon" href="/img/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="<%= site.name %>">
+
+<!-- Self-hosted fonts: no third-party requests -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/plus-jakarta-sans-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-600.woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/style.css?v=<%= assetVersion %>">
+
+<% if (_preload) { %>
+<link rel="preload" as="image" href="<%= _preload %>"<% if (_preloadSet) { %> imagesrcset="<%= _preloadSet %>"<% } %><% if (_preloadSize) { %> imagesizes="<%= _preloadSize %>"<% } %> fetchpriority="high">
+<% } %>
+
+<!-- Gate scroll-reveal hidden state behind html.js so content is always visible without JS -->
+<script nonce="<%= nonce %>">document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+
+<% _schemas.forEach(function (s) { %>
+<script type="application/ld+json" nonce="<%= nonce %>"><%- JSON.stringify(s).replace(/<\//g, '<\\/') %></script>
+<% }); %>
+</head>
+<body class="<%= typeof bodyClass !== 'undefined' && bodyClass ? bodyClass : '' %>" data-page="<%= currentPath %>">
+<a class="skip-link" href="#main">Skip to main content</a>
