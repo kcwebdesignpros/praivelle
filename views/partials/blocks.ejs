@@ -19,6 +19,26 @@ function eyebrow(text, light, ico) {
     '<span class="eyebrow__ico">' + icon(ico || 'sparkles', 15) + '</span>' + esc(text) + '</p>';
 }
 function asList(list) { return Array.isArray(list) ? list : []; }
+
+/* How many items each block type renders. The data files keep everything;
+   these caps keep a page scannable. Override per block with b.limit. */
+var CAP = {
+  prose: 2,
+  split: 2,
+  cards: 6,
+  steps: 5,
+  stats: 4,
+  timeline: 6,
+  table: 8,
+  checklist: 8,
+  faq: 6,
+  gallery: 12
+};
+
+function cap(list, max) {
+  var arr = Array.isArray(list) ? list : [];
+  return max && arr.length > max ? arr.slice(0, max) : arr;
+}
 function stepDelay(i) { return Math.min(i * 70, 420); }
 
 var SIZES_CARD = '(min-width: 1040px) 31vw, (min-width: 700px) 47vw, 92vw';
@@ -36,11 +56,11 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
     <div class="prose reveal">
       <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
-      <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
+      <% cap(b.body, b.limit || CAP.prose).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
       <% if (asList(b.list).length) { %>
         <% if (b.listTitle) { %><h3 class="prose__list-title"><%= esc(b.listTitle) %></h3><% } %>
         <ul class="tick-list">
-          <% asList(b.list).forEach(function (li) { %>
+          <% cap(b.list, 6).forEach(function (li) { %>
             <% if (typeof li === 'string') { %>
               <li><%- icon('check-circle', 19) %><span><%= esc(li) %></span></li>
             <% } else { %>
@@ -62,7 +82,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
     <ul class="cards cards--<%= b.columns || 3 %>">
-      <% asList(b.items).forEach(function (it, i) { %>
+      <% cap(b.items, b.limit || CAP.cards).forEach(function (it, i) { %>
       <li class="card reveal" style="--d:<%= stepDelay(i) %>ms">
         <span class="card__ico"><%- icon(it.icon || 'check', 26) %></span>
         <h3 class="card__title"><%= esc(it.title) %></h3>
@@ -85,7 +105,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
     <ol class="steps">
-      <% asList(b.items).forEach(function (it, i) { %>
+      <% cap(b.items, b.limit || CAP.steps).forEach(function (it, i) { %>
       <li class="step reveal" id="step-<%= i + 1 %>" style="--d:<%= stepDelay(i) %>ms">
         <span class="step__num" aria-hidden="true"><%= String(i + 1).padStart(2, '0') %></span>
         <div class="step__body">
@@ -131,7 +151,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
     <ol class="timeline">
-      <% asList(b.items).forEach(function (it, i) { %>
+      <% cap(b.items, b.limit || CAP.timeline).forEach(function (it, i) { %>
       <li class="timeline__item reveal" style="--d:<%= stepDelay(i) %>ms">
         <span class="timeline__year"><%= esc(it.year) %></span>
         <div class="timeline__body">
@@ -154,10 +174,10 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <div class="split__content reveal" style="--d:120ms">
         <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
         <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
-        <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
+        <% cap(b.body, b.limit || CAP.split).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
         <% if (asList(b.list).length) { %>
         <ul class="tick-list tick-list--tight">
-          <% asList(b.list).forEach(function (li) { %>
+          <% cap(b.list, 5).forEach(function (li) { %>
           <li><%- icon('check-circle', 19) %><span><%= esc(typeof li === 'string' ? li : li.text) %></span></li>
           <% }); %>
         </ul>
@@ -186,7 +206,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
         </thead>
         <% } %>
         <tbody>
-          <% asList(b.rows).forEach(function (row) { %>
+          <% cap(b.rows, b.limit || CAP.table).forEach(function (row) { %>
           <tr>
             <% row.forEach(function (cell, ci) { %>
               <% if (ci === 0) { %><th scope="row"><%= esc(cell) %></th>
@@ -210,7 +230,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
     <ul class="checklist checklist--<%= b.columns || 2 %>">
-      <% asList(b.items).forEach(function (it, i) { %>
+      <% cap(b.items, b.limit || CAP.checklist).forEach(function (it, i) { %>
       <li class="reveal" style="--d:<%= stepDelay(i) %>ms">
         <span class="checklist__ico"><%- icon('check', 16) %></span>
         <span><%= esc(it) %></span>
@@ -229,7 +249,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
     <div class="faq reveal">
-      <% asList(b.items).forEach(function (f, i) { %>
+      <% cap(b.items, b.limit || CAP.faq).forEach(function (f, i) { %>
       <details class="faq__item"<%= i === 0 ? ' open' : '' %>>
         <summary class="faq__q">
           <span><%= esc(f.q) %></span>
@@ -313,7 +333,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
   <div class="container container--narrow">
     <div class="prose prose--center reveal">
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
-      <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
+      <% cap(b.body, 3).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
     </div>
   </div>
 </section>
@@ -624,7 +644,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
         <div class="member__body">
           <p class="member__eyebrow"><%= t.role %></p>
           <h3 class="member__name"><%= t.name %><% if (t.credentials) { %>, <%= t.credentials %><% } %></h3>
-          <% asList(t.bio).forEach(function (p) { %><p class="member__bio"><%= p %></p><% }); %>
+          <% cap(t.bio, 2).forEach(function (p) { %><p class="member__bio"><%= p %></p><% }); %>
           <div class="member__cols">
             <div>
               <h4 class="member__sub">Responsibilities</h4>

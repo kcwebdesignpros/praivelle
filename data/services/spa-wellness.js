@@ -42,12 +42,12 @@ module.exports = {
       eyebrow: 'The Spa',
       h2: 'A spa with four rooms and no reason to rush',
       body: [
-        'The Spa sits in the west wing, where the old milking parlour used to be. We kept the vaulted ceiling and the original limestone wall, added four treatment rooms, and let the rest stay quiet. There is no piped music in the corridors, no scent diffuser fighting the candles, and no one trying to sell you a cream on the way out.',
-        'The heart of the menu is the Prairie Reset, ninety minutes that begin with a foot soak in warm water and end with your shoulders finally dropping. Therapists use slow, deep pressure rather than a fixed routine, and they will ask before they begin what has been hurting and how much pressure you actually want. Most people fall asleep. That is rather the point.',
-        'Around the treatment rooms are the rooms you do not pay extra for: a cedar sauna, a eucalyptus steam room, a heated indoor pool under a skylight, and a fitness studio with free weights, two cardio machines and a mat area. Guests use them from morning to night as part of their stay, and day visitors can add a spa pass for $45.',
-        'Couples are looked after in a double suite with side-by-side tables, a private steam shower and a small lounge where you can stay as long as you like afterward. We also offer a mother-and-daughter treatment, a bridal party menu, and a men-only hour on Thursday evenings when the sauna runs a little hotter than usual.',
-        'Pre-natal massage is offered after the first trimester with a therapist trained in side-lying technique. Sports and deep-tissue work is available for runners on the prairie trail and cyclists logging miles through the Flint Hills. If you have a shoulder that clicks or a knee that complains, say so at booking and we will match you with the right therapist.',
-        'Products come from a small producer in Lawrence, Kansas that makes everything in batches of a few hundred jars. The list is deliberately short: a cleansing balm, a hydrating serum, a body oil and a clay mask. Nothing is tested on animals, everything is refillable, and you can buy a jar at the desk if you want to take the calm home.'
+        'The Spa sits in the west wing, where the old milking parlour used to be. We kept the vaulted ceiling and the original limestone wall, added four treatment rooms, and let the rest stay quiet.',
+        'The heart of the menu is the Prairie Reset, ninety minutes that begin with a foot soak in warm water and end with your shoulders finally dropping.',
+        'Around the treatment rooms are the rooms you do not pay extra for: a cedar sauna, a eucalyptus steam room, a heated indoor pool under a skylight, and a fitness studio with free weights, two cardio machines and a mat area.',
+        'Couples are looked after in a double suite with side-by-side tables, a private steam shower and a small lounge where you can stay as long as you like afterward.',
+        'Pre-natal massage is offered after the first trimester with a therapist trained in side-lying technique. Sports and deep-tissue work is available for runners on the prairie trail and cyclists logging miles through the Flint Hills.',
+        'Products come from a small producer in Lawrence, Kansas that makes everything in batches of a few hundred jars. The list is deliberately short: a cleansing balm, a hydrating serum, a body oil and a clay mask.'
       ]
     },
     {
@@ -62,7 +62,7 @@ module.exports = {
         {
           icon: 'hand-heart',
           title: 'Massage',
-          text: 'Swedish, deep tissue or a blend of both, at the pressure you ask for rather than the pressure on the card. Fifty or eighty minutes.'
+          text: 'Swedish, deep tissue or a blend of both, at the pressure you ask for rather than the pressure on the card.'
         },
         {
           icon: 'droplet',
@@ -114,7 +114,7 @@ module.exports = {
       image: '/img/svc-spa-wellness.webp',
       imageAlt: 'A therapist preparing warm oil in the candlelit Prairie Reset treatment room',
       body: [
-        'The Prairie Reset is the treatment we would book if we were staying here. It begins with a foot soak in warm water and Epsom salt while the therapist asks two questions: where does it hurt, and how much pressure do you want. Then you lie down and, for the next hour and a quarter, you do nothing at all.',
+        'The Prairie Reset is the treatment we would book if we were staying here. It begins with a foot soak in warm water and Epsom salt while the therapist asks two questions: where does it hurt, and how much pressure do you want.',
         'The massage moves from shoulders to feet with slow, deep strokes, working the places that hold a desk job and a long drive. It finishes with warm oil through the scalp and a few minutes of quiet, because rushing the last five minutes ruins the first eighty-five.',
         'It costs $185 for ninety minutes, and it is the one appointment worth booking before you arrive, particularly on a Friday or Saturday. Couples can take it side by side in the double suite for $350.'
       ],
@@ -230,10 +230,10 @@ module.exports = {
       eyebrow: 'Beyond the treatment table',
       h2: 'The pool, the sauna and the rest of the day',
       body: [
-        'The heated indoor pool sits under a long skylight, so you can swim in daylight even in January. It is kept at 84 degrees, long enough for laps and warm enough to stand in, with a shallow step entry and a lift chair for guests who need one. Towels, robes and water are set out poolside, and the loungers face the windows rather than a wall.',
-        'The cedar sauna runs at 185 degrees and the eucalyptus steam room at 110, and both are open from nine in the morning until eight at night. We keep the ritual simple: shower, sit, cool off, repeat. A cold plunge and a quiet room with iced towels are a few steps away, and on Thursday evenings the sauna runs hotter for the men-only hour.',
-        'The fitness studio is small and genuinely usable: a full rack of free weights, two cardio machines, kettlebells, mats, and a screen for guided sessions if you want them. It stays open around the clock for hotel guests, and the concierge can arrange a personal trainer, a yoga session on the terrace, or a guided run along the prairie trail with a member of staff who knows the route.',
-        'Guests staying with us use the pool, sauna, steam room and studio at no charge for the whole of their stay. Day visitors can add a spa pass for $45, which includes everything except a treatment, and treatments can be booked on the same day if a slot is free. Between the two, most people find the afternoon disappears pleasantly.'
+        'The heated indoor pool sits under a long skylight, so you can swim in daylight even in January. It is kept at 84 degrees, long enough for laps and warm enough to stand in, with a shallow step entry and a lift chair for guests who need one.',
+        'The cedar sauna runs at 185 degrees and the eucalyptus steam room at 110, and both are open from nine in the morning until eight at night. We keep the ritual simple: shower, sit, cool off, repeat.',
+        'The fitness studio is small and genuinely usable: a full rack of free weights, two cardio machines, kettlebells, mats, and a screen for guided sessions if you want them.',
+        'Guests staying with us use the pool, sauna, steam room and studio at no charge for the whole of their stay.'
       ]
     },
     {

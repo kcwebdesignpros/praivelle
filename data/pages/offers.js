@@ -35,10 +35,10 @@ module.exports = {
       eyebrow: 'How our offers work',
       h2: 'Packages That Are Actually Good Value',
       body: [
-        'A hotel package is usually a room with a small discount attached to something you were going to buy anyway, wrapped in a name that sounds better than it is. We have tried to do the opposite. Every offer on this page bundles things that genuinely go together, priced so that the bundle costs meaningfully less than buying the parts separately, and written down in plain English so you can see exactly what you are getting.',
-        'The flagship is The Prairie Escape, which is the package we would book ourselves if we were coming for a night. A Garden King room, breakfast for two, a fifty-minute treatment each at The Spa, a bottle of sparkling wine on arrival and a late 2:00 PM check-out. It is $279 a night against a regular rate of $389, and it is available Sunday to Thursday. If you only read one line of this page, read that one.',
-        'The other packages exist because guests kept asking for them. People wanted a version built around the spa, so we made the Wellness Weekend. They wanted the full dining experience with a room attached, so we made the Dining Journey. They wanted something to give as a present, so we made the vouchers. And they wanted to spend Christmas somewhere that felt like a house rather than a hotel lobby, so we made the festive package, which is now one of the busiest things we do.',
-        'One thing that is true across all of them: the price you see is the price you pay, plus tax. There is no resort fee, no service charge and no mandatory gratuity added at checkout. We think that is the least a hotel can do, and it is surprising how rarely it happens.'
+        'A hotel package is usually a room with a small discount attached to something you were going to buy anyway, wrapped in a name that sounds better than it is. We have tried to do the opposite.',
+        'The flagship is The Prairie Escape, which is the package we would book ourselves if we were coming for a night. A Garden King room, breakfast for two, a fifty-minute treatment each at The Spa, a bottle of sparkling wine on arrival and a late 2:00 PM check-out.',
+        'The other packages exist because guests kept asking for them. People wanted a version built around the spa, so we made the Wellness Weekend. They wanted the full dining experience with a room attached, so we made the Dining Journey.',
+        'One thing that is true across all of them: the price you see is the price you pay, plus tax. There is no resort fee, no service charge and no mandatory gratuity added at checkout.'
       ]
     },
     {
@@ -59,17 +59,17 @@ module.exports = {
         {
           icon: 'calendar-check',
           title: 'The Midweek Rate',
-          text: 'Sunday to Thursday, any room, from $249 a night, breakfast for two included and a late check-out where the house allows. The quietest nights we have, and the best value.'
+          text: 'Sunday to Thursday, any room, from $249 a night, breakfast for two included and a late check-out where the house allows.'
         },
         {
           icon: 'spa',
           title: 'The Wellness Weekend',
-          text: 'Two nights, daily breakfast, three treatments, a wellness lunch and full use of the pool, sauna and steam room. From $689 for two, Friday to Sunday.'
+          text: 'Two nights, daily breakfast, three treatments, a wellness lunch and full use of the pool, sauna and steam room.'
         },
         {
           icon: 'utensils',
           title: 'The Dining Journey',
-          text: 'A suite, a five-course tasting menu for two at the hearth, a cellar bar flight of three wines and breakfast the next morning. From $549 for two.'
+          text: 'A suite, a five-course tasting menu for two at the hearth, a cellar bar flight of three wines and breakfast the next morning.'
         },
         {
           icon: 'heart',
@@ -79,12 +79,12 @@ module.exports = {
         {
           icon: 'sunrise',
           title: 'Prairie Christmas & New Year',
-          text: 'Two nights over the holidays, a festive dinner, a mulled wine reception by the fire and, for New Year, a black-tie dinner and midnight toast. From $1,180 for two.'
+          text: 'Two nights over the holidays, a festive dinner, a mulled wine reception by the fire and, for New Year, a black-tie dinner and midnight toast.'
         },
         {
           icon: 'gift',
           title: 'Gift Vouchers',
-          text: 'Any amount from $100, redeemable against rooms, dining, spa and experiences. Delivered by email the same day or posted on heavy card if you prefer.'
+          text: 'Any amount from $100, redeemable against rooms, dining, spa and experiences.'
         }
       ]
     },
@@ -143,9 +143,9 @@ module.exports = {
       image: '/img/svc-rooms-suites.webp',
       imageAlt: 'A Garden King suite at Praivelle House with views over the prairie',
       body: [
-        'Book with us directly and you will not find the same room cheaper anywhere else. That is the whole of our best-rate guarantee, and we keep it simple on purpose. If you find a lower publicly available rate for the same room, on the same dates, with the same inclusions, within twenty-four hours of booking direct, we will match it and take a further ten per cent off. No forms, no phone calls to a third party, no arguments about which rate counts.',
-        'The reason we can promise this is that we do not pay commission to online travel agencies, so there is no middleman taking fifteen per cent out of your room rate. Booking direct means the money you spend stays in the house, which pays for the things you actually notice — more people on the floor, better food, and a kitchen that is not cutting corners. It is also why the front desk can be flexible about late check-out and upgrades in a way a booking site never can.',
-        'Booking direct has other, quieter advantages. We see your whole reservation in one place, so if you call to move a dinner reservation or add a treatment, we already know who you are. If something goes wrong on the way here — a delayed flight, a closed road — you can reach a person who can actually help rather than a call centre. And when you return, we remember you, because you booked with us and not with a stranger.',
+        'Book with us directly and you will not find the same room cheaper anywhere else. That is the whole of our best-rate guarantee, and we keep it simple on purpose.',
+        'The reason we can promise this is that we do not pay commission to online travel agencies, so there is no middleman taking fifteen per cent out of your room rate.',
+        'Booking direct has other, quieter advantages. We see your whole reservation in one place, so if you call to move a dinner reservation or add a treatment, we already know who you are.',
         'If you have found a rate elsewhere and want us to match it, call (816) 555-0147 or email reservations@praivellehouse.com with the details. We will look at it honestly and tell you straight away whether it qualifies. We would rather have the conversation than lose you to a website.'
       ],
       list: [
@@ -163,10 +163,10 @@ module.exports = {
       h2: 'Terms, Without the Small Print',
       body: [
         'Most hotel terms are written to protect the hotel and confuse the guest. We have tried to write ours the other way round. Here is everything that matters, in language you can read once and understand.',
-        'Rates are quoted per night, for two people, and exclude state and local tax, which is added at checkout. Packages with a minimum stay are noted on the offer itself; most are one or two nights. Availability is limited, particularly in October and December, so the earlier you book the more likely you are to get the room you want.',
-        'You can cancel or move most bookings free of charge up to seventy-two hours before arrival. Inside seventy-two hours, the first night is charged, which is what it costs us to hold a room we could have sold. If you booked a package that includes a treatment, and you cancel the treatment within twenty-four hours, the treatment is charged, because the therapist has set aside that hour for you.',
-        'Children are welcome in all packages, and we do not charge for children under twelve sharing a room with two adults. Dogs are welcome in the garden-level rooms for a one-off fee of $50, and we will have a bed and bowls in the room before you arrive if you tell us the size. The spa is for guests aged sixteen and over, except for designated family hours.',
-        'Gift vouchers are valid for two years from the date of purchase, are redeemable against any part of the house, and can be transferred to anyone you like. They are not redeemable for cash, but they never expire in the way that quietly loses you the value — we will always honour a voucher, even a little late, if you talk to us. And if a package sells out on your dates, tell us what you wanted from it and we will build the same thing by hand.'
+        'Rates are quoted per night, for two people, and exclude state and local tax, which is added at checkout. Packages with a minimum stay are noted on the offer itself; most are one or two nights.',
+        'You can cancel or move most bookings free of charge up to seventy-two hours before arrival. Inside seventy-two hours, the first night is charged, which is what it costs us to hold a room we could have sold.',
+        'Children are welcome in all packages, and we do not charge for children under twelve sharing a room with two adults.',
+        'Gift vouchers are valid for two years from the date of purchase, are redeemable against any part of the house, and can be transferred to anyone you like.'
       ]
     },
     {
@@ -178,7 +178,7 @@ module.exports = {
       items: [
         {
           q: 'What exactly is included in The Prairie Escape?',
-          a: 'A night in a Garden King room, breakfast for two in The Dining Room, a fifty-minute treatment each at The Spa, a bottle of sparkling wine on arrival and a 2:00 PM late check-out. It is $279 a night against a regular rate of $389, and it runs Sunday to Thursday.'
+          a: 'A night in a Garden King room, breakfast for two in The Dining Room, a fifty-minute treatment each at The Spa, a bottle of sparkling wine on arrival and a 2:00 PM late check-out.'
         },
         {
           q: 'Can I use an offer on a Friday or Saturday?',

@@ -2,33 +2,21 @@
 <div class="topbar" id="topbar">
   <div class="topbar__inner container">
     <ul class="topbar__list">
+      <li>
+        <a href="tel:<%= site.phoneHref %>">
+          <%- icon('phone', 15, 'topbar__ico') %>
+          <span><%= site.phone %></span>
+        </a>
+      </li>
       <li class="topbar__hide-md">
         <a href="<%= site.mapUrl %>" target="_blank" rel="noopener">
           <%- icon('map-pin', 15, 'topbar__ico') %>
-          <span><%= site.address.street %>, <%= site.address.city %>, <%= site.address.region %> <%= site.address.postal %></span>
+          <span><%= site.address.street %>, <%= site.address.city %>, <%= site.address.region %></span>
         </a>
-      </li>
-      <li class="topbar__hide-sm">
-        <a href="mailto:<%= site.email %>">
-          <%- icon('mail', 15, 'topbar__ico') %>
-          <span><%= site.email %></span>
-        </a>
-      </li>
-      <li class="topbar__hide-lg">
-        <span>
-          <%- icon('clock', 15, 'topbar__ico') %>
-          <span><%= site.hoursSummary %></span>
-        </span>
       </li>
     </ul>
     <ul class="topbar__list topbar__list--right">
       <li>
-        <a class="topbar__emergency" href="tel:<%= site.conciergePhoneHref %>">
-          <%- icon('bell', 15, 'topbar__ico') %>
-          <span>Concierge, 24 hours: <%= site.conciergePhone %></span>
-        </a>
-      </li>
-      <li class="topbar__hide-sm">
         <ul class="topbar__socials">
           <% site.socials.forEach(function (s) { %>
           <li><a href="<%= s.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= site.name %> on <%= s.name %>"><%- icon(s.icon, 15) %></a></li>

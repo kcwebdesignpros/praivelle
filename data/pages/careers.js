@@ -34,10 +34,10 @@ module.exports = {
       eyebrow: 'The job, honestly',
       h2: 'What It Is Like to Work Here',
       body: [
-        'Praivelle House is twelve suites, a spa, a wood-fired dining room and a cellar bar on twelve acres of prairie, and it takes more than fifty people to run it properly. That number matters, because it means you will know everyone you work with by name, and they will know you. There is no corporate script here and no regional manager who visits twice a year. Geneviève and Michael still own the house, still eat in the dining room, and still notice when a room has been turned well and when it has not.',
-        'The work is hospitality, so some of it is hard. Weekends are our busiest nights. A wedding can run until midnight and a suite can need turning at seven the next morning. We will never pretend otherwise. What we do promise is that the hard shifts are shared fairly, that the rota is published far enough ahead that you can build a life around it, and that when you have done something well, someone will tell you so.',
-        'People stay here a long time. Our executive chef has been with the house since 2011, our spa director since 2014, and more than half of our supervisors were promoted from inside the building. We are not a stepping stone that churns through staff every season. We are the kind of place where a commis chef becomes a chef de partie, and a chef de partie becomes a sous chef, without ever having to leave the prairie.',
-        'If you are the sort of person who wants to be told exactly what to do and then left alone, this will not suit you. We hire people who notice things, who will walk a guest to the door rather than point at it, and who take a quiet pride in getting the small things right. That is the whole culture, and everything else follows from it.'
+        'Praivelle House is twelve suites, a spa, a wood-fired dining room and a cellar bar on twelve acres of prairie, and it takes more than fifty people to run it properly.',
+        'The work is hospitality, so some of it is hard. Weekends are our busiest nights. A wedding can run until midnight and a suite can need turning at seven the next morning. We will never pretend otherwise.',
+        'People stay here a long time. Our executive chef has been with the house since 2011, our spa director since 2014, and more than half of our supervisors were promoted from inside the building. We are not a stepping stone that churns through staff every season.',
+        'If you are the sort of person who wants to be told exactly what to do and then left alone, this will not suit you.'
       ]
     },
     {
@@ -48,10 +48,10 @@ module.exports = {
       image: '/img/about-lobby.webp',
       imageAlt: 'A team member arranging fresh flowers on the front desk at Praivelle House',
       body: [
-        'Skills can be taught. We have taught people to pour wine properly, to fold a sheet to hotel standard, and to read a table well enough to know when to approach and when to wait. What we cannot teach is warmth, and warmth is the one thing every hire here has to bring with them.',
-        'So the interview is less about your CV than you might expect. We will ask what you did when a guest was unhappy, how you handle a colleague who is having a bad day, and what you notice first when you walk into a room. We are listening for curiosity and honesty, not for a rehearsed answer about your passion for hospitality.',
-        'Experience helps, and for the kitchen and the spa it is essential. But for front of house, housekeeping and events we will happily train the right person from scratch. Several of our best housekeepers had never worked in a hotel before they came here. What they had was an eye for detail and the temperament to keep caring about it on the four hundredth room of the year.',
-        'We also hire slowly. A vacancy stays open until we find the right person rather than the first available one, because a poor hire costs the whole team far more than an empty rota line. If you apply and do not hear back quickly, it is rarely about you. It usually means we are still deciding.'
+        'Skills can be taught. We have taught people to pour wine properly, to fold a sheet to hotel standard, and to read a table well enough to know when to approach and when to wait.',
+        'So the interview is less about your CV than you might expect. We will ask what you did when a guest was unhappy, how you handle a colleague who is having a bad day, and what you notice first when you walk into a room.',
+        'Experience helps, and for the kitchen and the spa it is essential. But for front of house, housekeeping and events we will happily train the right person from scratch. Several of our best housekeepers had never worked in a hotel before they came here.',
+        'We also hire slowly. A vacancy stays open until we find the right person rather than the first available one, because a poor hire costs the whole team far more than an empty rota line.'
       ],
       list: [
         'Warmth and curiosity matter more than a perfect CV',
@@ -72,37 +72,37 @@ module.exports = {
         {
           icon: 'bell',
           title: 'Front of House',
-          text: 'Reception, arrivals, departures and everything in between. You are the first and last person a guest meets, so you set the tone for the whole stay. Full training given; a second language is a bonus but never a requirement.'
+          text: 'Reception, arrivals, departures and everything in between.'
         },
         {
           icon: 'bed',
           title: 'Housekeeping',
-          text: 'Twelve suites, the spa, the dining room and the public rooms, kept to a standard guests feel without being told. This is detail work and it matters more than any other job in the house. Full training given, with a clear route to supervisor.'
+          text: 'Twelve suites, the spa, the dining room and the public rooms, kept to a standard guests feel without being told.'
         },
         {
           icon: 'spa',
           title: 'Spa Therapist',
-          text: 'Massage, facials and body treatments in a five-room spa. You will need a recognised qualification and a current licence to practise in Missouri. We fund at least two advanced courses a year and give you the time to take them.'
+          text: 'Massage, facials and body treatments in a five-room spa. You will need a recognised qualification and a current licence to practise in Missouri.'
         },
         {
           icon: 'chef-hat',
           title: 'Commis Chef',
-          text: 'The first rung of our kitchen brigade. You will learn every station, work the wood-fired hearth and prep for a dining room that serves from morning until late. No experience needed if your knife skills and your attitude are right.'
+          text: 'The first rung of our kitchen brigade.'
         },
         {
           icon: 'utensils',
           title: 'Chef de Partie',
-          text: 'Own a section of the line. We are looking for someone with two or more years in a professional kitchen who can run a station cleanly on a busy Saturday and help bring on the commis beside them.'
+          text: 'Own a section of the line.'
         },
         {
           icon: 'calendar-check',
           title: 'Events Coordinator',
-          text: 'Weddings, board meetings and private dinners, from first enquiry to final invoice. You will work with Clara Whitfield and the kitchen to make sure every detail a couple has imagined actually happens on the day.'
+          text: 'Weddings, board meetings and private dinners, from first enquiry to final invoice.'
         },
         {
           icon: 'building',
           title: 'Maintenance',
-          text: 'A 1940s farmhouse needs a patient pair of hands. Plumbing, heating, small electrical work, the pool plant and the prairie fences. If you like old buildings and fixing things properly rather than quickly, you will enjoy this one.'
+          text: 'A 1940s farmhouse needs a patient pair of hands. Plumbing, heating, small electrical work, the pool plant and the prairie fences.'
         }
       ]
     },
@@ -137,11 +137,11 @@ module.exports = {
       eyebrow: 'The practical part',
       h2: 'Pay, Tips and the Rota',
       body: [
-        'We pay above the Kansas City hospitality average for every role, and we publish the range in the job advert rather than asking you to guess. Pay is reviewed every year in January, and no one has to negotiate alone in a back office to get a fair rise. If the cost of living moves, we move with it.',
-        'Tips and the service charge are shared transparently. Every dollar of service charge goes to the team, split by a published formula that weighs hours worked and the role you worked, and a monthly statement shows exactly how it was divided. There is no house deduction and no manager discretion, which means there is nothing to argue about at the end of a busy month.',
-        'The rota is the thing people ask about most, so here it is plainly. We publish four weeks at a time, at least a fortnight before the period begins. Shift patterns are set by department and we do our best to keep them regular, because a predictable life is worth more than a surprise day off. If you need a specific day for a school run or a class, tell us at interview and we will build it into the pattern.',
-        'Overtime is paid at time and a half, and we do not run on the assumption that everyone will quietly work an extra hour for free. If a wedding runs late, you are paid for it. If you are asked to cover a shift at short notice, there is a cover premium. We would rather pay properly than rely on goodwill, because goodwill runs out and a fair wage does not.',
-        'Everyone gets two consecutive days off each week wherever the department allows, and we protect them. The one exception is our peak weeks in May and October, when we ask for a little flexibility and give it back in lieu time within the month. Nobody here works a seventh day in a row without being asked first and paid for it.'
+        'We pay above the Kansas City hospitality average for every role, and we publish the range in the job advert rather than asking you to guess.',
+        'Tips and the service charge are shared transparently. Every dollar of service charge goes to the team, split by a published formula that weighs hours worked and the role you worked, and a monthly statement shows exactly how it was divided.',
+        'The rota is the thing people ask about most, so here it is plainly. We publish four weeks at a time, at least a fortnight before the period begins.',
+        'Overtime is paid at time and a half, and we do not run on the assumption that everyone will quietly work an extra hour for free. If a wedding runs late, you are paid for it.',
+        'Everyone gets two consecutive days off each week wherever the department allows, and we protect them. The one exception is our peak weeks in May and October, when we ask for a little flexibility and give it back in lieu time within the month.'
       ]
     },
     {
@@ -154,7 +154,7 @@ module.exports = {
       items: [
         {
           title: 'Send us your details',
-          text: 'Apply through the form on our contact page or email the house directly. A CV is welcome, but a short paragraph about why this place appeals to you tells us more. There is no online test and no portal to fight with.'
+          text: 'Apply through the form on our contact page or email the house directly. A CV is welcome, but a short paragraph about why this place appeals to you tells us more.'
         },
         {
           title: 'A short call',
@@ -166,11 +166,11 @@ module.exports = {
         },
         {
           title: 'A paid working trial',
-          text: 'For most roles we offer a paid trial shift, so you can see the job as it really is and we can see you in it. No one works for free, and no one is asked to trial without being told the rate first.'
+          text: 'For most roles we offer a paid trial shift, so you can see the job as it really is and we can see you in it.'
         },
         {
           title: 'An offer and a start date',
-          text: 'If it is right, we make a written offer with the full package spelled out, then agree a start date that works around your notice. We stay in touch between the offer and day one so you arrive knowing what to expect.'
+          text: 'If it is right, we make a written offer with the full package spelled out, then agree a start date that works around your notice.'
         }
       ]
     },
@@ -181,9 +181,9 @@ module.exports = {
       h2: 'Training, Apprenticeships and Where This Leads',
       body: [
         'Every new team member gets a structured first ninety days: a full induction, a buddy on their shifts, and a set of standards written down so nothing depends on guesswork. Nobody is dropped onto a busy Saturday and left to work it out alone.',
-        'Beyond that, the house pays for training that makes you better at your craft. Our kitchen runs an apprenticeship with a local college that takes a commis chef to a recognised qualification while they work. The spa funds advanced therapy courses every year. Front-of-house staff can train toward a hospitality management certificate, and we cover the exam fees.',
-        'We also teach the things that are specific to this house. Our wine programme is run with the Wine & Spirit Education Trust, and any team member can sit a Level 1 or Level 2 course on us. Housekeeping has its own standards manual that we wrote ourselves, and we train to it deliberately rather than hoping it rubs off.',
-        'The point of all of it is that you should be able to build a career here rather than a season. More than half our supervisors and department heads started in an entry-level role at this address. The path is real, it is written down, and we will tell you honestly what it would take to reach the next step.'
+        'Beyond that, the house pays for training that makes you better at your craft. Our kitchen runs an apprenticeship with a local college that takes a commis chef to a recognised qualification while they work. The spa funds advanced therapy courses every year.',
+        'We also teach the things that are specific to this house. Our wine programme is run with the Wine & Spirit Education Trust, and any team member can sit a Level 1 or Level 2 course on us.',
+        'The point of all of it is that you should be able to build a career here rather than a season. More than half our supervisors and department heads started in an entry-level role at this address.'
       ]
     },
     {
@@ -193,8 +193,8 @@ module.exports = {
       h2: 'What We Ask, and What We Do Not',
       body: [
         'We will not ask you to perform a personality for us or pretend that hospitality is your life’s calling. We ask three kinds of question: what you have done, how you treat people, and what you notice. The rest we can work out together.',
-        'Expect a question about a time a guest or a customer was unhappy and what you actually did about it. Expect one about a colleague who was struggling and how you helped. Expect one about the last thing you noticed that someone else had missed. There are no trick questions and no single answer we are fishing for, only an honest one.',
-        'We will also tell you the parts of the job that are not glamorous, because we would rather you decide now than discover it in your second week. Weekends, early turns, late functions and the odd difficult guest are all part of it. If that is fine with you, the rest tends to be a pleasure.',
+        'Expect a question about a time a guest or a customer was unhappy and what you actually did about it. Expect one about a colleague who was struggling and how you helped. Expect one about the last thing you noticed that someone else had missed.',
+        'We will also tell you the parts of the job that are not glamorous, because we would rather you decide now than discover it in your second week. Weekends, early turns, late functions and the odd difficult guest are all part of it.',
         'You will meet at least two people, one of whom would work alongside you every day. If you have questions about pay, rota, uniform, meals or anything else, ask them at the interview. We would much rather answer them early than have them become a reason to leave.'
       ]
     },
@@ -214,15 +214,15 @@ module.exports = {
       items: [
         {
           q: 'Where is Praivelle House, and how would I get there?',
-          a: 'We are at 1200 Prairie Ridge Road, Kansas City, MO 64112, about ten minutes from the Country Club Plaza and twenty-four minutes from Kansas City International. Staff parking is free, and we run a shared taxi account for anyone finishing after the last bus.'
+          a: 'We are at 1200 Prairie Ridge Road, Kansas City, MO 64112, about ten minutes from the Country Club Plaza and twenty-four minutes from Kansas City International.'
         },
         {
           q: 'Do I need hotel experience to apply?',
-          a: 'For front of house, housekeeping and events, no. We train from scratch and several of our best people had never worked in a hotel before. For the spa and for senior kitchen roles you will need a relevant qualification and, in the spa, a current Missouri licence.'
+          a: 'For front of house, housekeeping and events, no. We train from scratch and several of our best people had never worked in a hotel before.'
         },
         {
           q: 'What are the hours and the rota like?',
-          a: 'Reception is staffed twenty-four hours, the dining room runs from seven in the morning until ten at night, the spa from nine until eight, and the cellar bar from four until midnight. We publish the rota four weeks ahead and protect two consecutive days off wherever the department allows.'
+          a: 'Reception is staffed twenty-four hours, the dining room runs from seven in the morning until ten at night, the spa from nine until eight, and the cellar bar from four until midnight.'
         },
         {
           q: 'How much does it pay, and are tips shared?',
@@ -254,15 +254,15 @@ module.exports = {
   faqs: [
     {
       q: 'Where is Praivelle House, and how would I get there?',
-      a: 'We are at 1200 Prairie Ridge Road, Kansas City, MO 64112, about ten minutes from the Country Club Plaza and twenty-four minutes from Kansas City International. Staff parking is free, and we run a shared taxi account for anyone finishing after the last bus.'
+      a: 'We are at 1200 Prairie Ridge Road, Kansas City, MO 64112, about ten minutes from the Country Club Plaza and twenty-four minutes from Kansas City International.'
     },
     {
       q: 'Do I need hotel experience to apply?',
-      a: 'For front of house, housekeeping and events, no. We train from scratch and several of our best people had never worked in a hotel before. For the spa and for senior kitchen roles you will need a relevant qualification and, in the spa, a current Missouri licence.'
+      a: 'For front of house, housekeeping and events, no. We train from scratch and several of our best people had never worked in a hotel before.'
     },
     {
       q: 'What are the hours and the rota like?',
-      a: 'Reception is staffed twenty-four hours, the dining room runs from seven in the morning until ten at night, the spa from nine until eight, and the cellar bar from four until midnight. We publish the rota four weeks ahead and protect two consecutive days off wherever the department allows.'
+      a: 'Reception is staffed twenty-four hours, the dining room runs from seven in the morning until ten at night, the spa from nine until eight, and the cellar bar from four until midnight.'
     },
     {
       q: 'How much does it pay, and are tips shared?',

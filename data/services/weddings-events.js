@@ -42,12 +42,12 @@ module.exports = {
       eyebrow: 'The property',
       h2: 'Twelve acres, and the light you actually get',
       body: [
-        'Most couples choose a venue from photographs. We would rather you stood on the south lawn at the exact hour your ceremony will begin and watched the light cross the bluestem. That is why Clara Whitfield, our Director of Weddings & Events, walks every couple across the property twice — once before lunch and once in the late afternoon — so you can feel how the same field changes between four and seven. The house sits on twelve acres of restored prairie south of the Country Club Plaza, built around a 1940s farmhouse, with three mature oaks, a walled terrace and a tree line that has not moved in eighty years. The farmhouse itself still has the original oak floors, a wraparound porch and a front door repainted four times, most recently in a soft green that photographs beautifully at golden hour.',
-        'You have four places to gather, and each one asks for a different kind of day. The Orchard holds up to two hundred and forty on the south lawn, ceremony at one end and dinner at the other, with the oaks doing most of the decorating. The Ballroom seats a hundred and sixty at round tables beneath the original timber ceiling, which is the right room for a winter wedding or a long dinner. The Library takes eighteen around one table, and the Hearth Room forty beside the fire. Most couples use two of them: a ceremony outdoors, dinner inside, then back out to the terrace for the last hour. The terrace sits between the two, so a couple can move from vows to drinks to dinner without anyone getting into a car or losing the view.',
-        'Dinner is cooked by Julien Baptiste, our Executive Chef, over the same live-oak hearth that runs The Dining Room. He sources almost everything within ninety miles — heritage pork from a farm forty minutes north, heirloom tomatoes from a grower in Lawrence, greens cut on the morning of the wedding — and he will sit down with you to build a menu rather than hand you a list. Couples usually choose a three- or four-course seated dinner, or a long-table feast of whole roasted fish, charred vegetables and bread baked that afternoon. Dietary requirements are handled as proper dishes, not afterthoughts. He will also tell you, kindly, which of your ideas will not work in August, which is worth more than a menu that promises everything.',
-        'Our packages are built to remove the small anxieties. The Essential covers the ceremony site, the reception space, tables, chairs, linens, glassware, service staff, a bar package and a menu tasting for four. The Signature adds florals through our grower, a string trio for the ceremony, a two-night suite for the couple and a welcome dinner for the wedding party on the Friday. The Prairie Collection is the full weekend: exclusive use of the house, all twelve suites for two nights, a rehearsal dinner, the wedding itself and a farewell brunch. Prices start at $8,500 and rise with the guest count and the season. Everything is itemised before you sign, so the number on the proposal is the number on the final invoice, less anything you choose to remove.',
-        'Missouri weather is not sentimental, so we plan for it twice. Every outdoor ceremony is booked with a matching indoor room held on standby, and Clara keeps a laminated rain plan that has been executed eleven times since 2016. If the forecast turns, we move the ceremony into the Ballroom or the Hearth Room, the florist re-dresses the space, and the bar moves to the covered terrace. You will be told by noon on the day and you will not be asked to make the call. In eighteen years we have never cancelled a wedding, and we have never moved one without a plan the couple had already approved. The standby room is not a lesser space; it is the room we would have chosen for the ceremony if the forecast had been kind.',
-        'The house holds twelve suites, and wedding parties usually take the whole property for the weekend. The couple gets the Prairie Suite, the party fills the rest, and everyone eats breakfast together the morning after. Guests who stay elsewhere are ten minutes from the Plaza and twenty-four from Kansas City International. Clara and her team of four run the timeline in fifteen-minute blocks and share it with every vendor a month out. They will meet your photographer, brief your band and hold your rings. On the day itself you should be doing one thing only, and it is not logistics. On the morning of the wedding, breakfast is brought to the couple’s suite and the party gathers downstairs at their own pace.'
+        'Most couples choose a venue from photographs. We would rather you stood on the south lawn at the exact hour your ceremony will begin and watched the light cross the bluestem.',
+        'You have four places to gather, and each one asks for a different kind of day. The Orchard holds up to two hundred and forty on the south lawn, ceremony at one end and dinner at the other, with the oaks doing most of the decorating.',
+        'Dinner is cooked by Julien Baptiste, our Executive Chef, over the same live-oak hearth that runs The Dining Room.',
+        'Our packages are built to remove the small anxieties. The Essential covers the ceremony site, the reception space, tables, chairs, linens, glassware, service staff, a bar package and a menu tasting for four.',
+        'Missouri weather is not sentimental, so we plan for it twice. Every outdoor ceremony is booked with a matching indoor room held on standby, and Clara keeps a laminated rain plan that has been executed eleven times since 2016.',
+        'The house holds twelve suites, and wedding parties usually take the whole property for the weekend. The couple gets the Prairie Suite, the party fills the rest, and everyone eats breakfast together the morning after.'
       ]
     },
     {
@@ -62,22 +62,22 @@ module.exports = {
         {
           icon: 'rings',
           title: 'Ceremonies',
-          text: 'An outdoor ceremony under the oaks, a candlelit exchange in the Ballroom, or a quiet elopement for two in the orchard. We hold an indoor room for every outdoor booking.'
+          text: 'An outdoor ceremony under the oaks, a candlelit exchange in the Ballroom, or a quiet elopement for two in the orchard.'
         },
         {
           icon: 'glass',
           title: 'Receptions',
-          text: 'Round tables for a seated dinner or long tables for a feast. Capacity runs from twelve to two hundred and forty across the lawn, the Ballroom and the terrace.'
+          text: 'Round tables for a seated dinner or long tables for a feast.'
         },
         {
           icon: 'cake',
           title: 'Rehearsal dinners',
-          text: 'The night before, in the Hearth Room or the Cellar Bar. Smaller, louder and less formal than the wedding itself, with a short menu and one long table.'
+          text: 'The night before, in the Hearth Room or the Cellar Bar.'
         },
         {
           icon: 'flower',
           title: 'Design and florals',
-          text: 'We work with a grower in Lawrence who cuts for the season, not the catalogue. Peonies in June, dahlias in September, dried grasses through the winter.'
+          text: 'We work with a grower in Lawrence who cuts for the season, not the catalogue.'
         },
         {
           icon: 'utensils',
@@ -87,7 +87,7 @@ module.exports = {
         {
           icon: 'bed',
           title: 'Accommodation for the party',
-          text: 'Twelve suites, yours for the weekend. The couple takes the Prairie Suite and the wedding party fills the rest, with breakfast included for everyone staying.'
+          text: 'Twelve suites, yours for the weekend.'
         },
         {
           icon: 'calendar-check',
@@ -97,7 +97,7 @@ module.exports = {
         {
           icon: 'users',
           title: 'Vendor curation',
-          text: 'We keep a short list of photographers, bands and officiants we have worked with for years. Bring your own if you prefer, and we will brief them properly.'
+          text: 'We keep a short list of photographers, bands and officiants we have worked with for years.'
         },
         {
           icon: 'car',
@@ -114,8 +114,8 @@ module.exports = {
       image: '/img/gallery-terrace.webp',
       imageAlt: 'The walled terrace at Praivelle House dressed with string lights for an evening reception',
       body: [
-        'The Orchard is the south lawn, and it is where most couples say their vows. Ceremony at the western end facing the sunset, dinner beneath a clear-span tent or open to the sky, dancing on a floor laid over the grass. It seats two hundred and forty and stands three hundred and twenty, and it is yours from the morning.',
-        'The walled terrace is the quieter room outdoors, with its own fireplace, the string lights and a view back to the house. It is where guests drift after dinner, where the last drinks are poured, and where a wedding of thirty can feel as though the whole property belongs to them.'
+        'The Orchard is the south lawn, and it is where most couples say their vows. Ceremony at the western end facing the sunset, dinner beneath a clear-span tent or open to the sky, dancing on a floor laid over the grass.',
+        'The walled terrace is the quieter room outdoors, with its own fireplace, the string lights and a view back to the house.'
       ],
       list: [
         'Ceremony and reception in one place',
@@ -227,7 +227,7 @@ module.exports = {
         },
         {
           q: 'Can we bring our own caterer or alcohol?',
-          a: 'Catering is handled in-house by Executive Chef Julien Baptiste, and we hold the liquor licence, so alcohol is served by our bar team. You are welcome to bring your own wine for a corkage fee, and we will decant and serve it properly.'
+          a: 'Catering is handled in-house by Executive Chef Julien Baptiste, and we hold the liquor licence, so alcohol is served by our bar team.'
         },
         {
           q: 'Do you have accommodation for the wedding party?',
@@ -266,7 +266,7 @@ module.exports = {
     },
     {
       q: 'Can we bring our own caterer or alcohol?',
-      a: 'Catering is handled in-house by Executive Chef Julien Baptiste, and we hold the liquor licence, so alcohol is served by our bar team. You are welcome to bring your own wine for a corkage fee, and we will decant and serve it properly.'
+      a: 'Catering is handled in-house by Executive Chef Julien Baptiste, and we hold the liquor licence, so alcohol is served by our bar team.'
     },
     {
       q: 'Do you have accommodation for the wedding party?',

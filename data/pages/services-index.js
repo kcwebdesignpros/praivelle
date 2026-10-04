@@ -35,11 +35,11 @@ module.exports = {
       eyebrow: 'Start here',
       h2: 'Six Things, One House, and Why That Matters',
       body: [
-        'Most hotels are one thing. A city hotel is a bed and a lobby. A resort is a pool and a buffet. A restaurant with rooms is a restaurant with rooms. We are, deliberately, several things at once — twelve suites, a private spa, a wood-fired dining room, a cellar bar, a wedding lawn and a small meeting space — and we run all of them to the same standard, with the same people, on the same twelve acres of prairie.',
-        'That is unusual, and it is the whole point. It means you can arrive on a Friday, have a treatment on Saturday morning, eat dinner at the hearth on Saturday night, and hold a board meeting in the library on Monday without ever leaving the property or meeting a different team. It means a wedding here can use the orchard for the ceremony, the lawn for the reception and the dining room for the morning-after brunch, all of it run by Clara and her team. It means the person who takes your dinner order probably also knows which room you are in and what time your treatment is.',
-        'We think of the six services as one experience with six doors, and guests move between them freely. A room rate includes breakfast. A spa booking includes pool and sauna access for the day. A dinner reservation can be paired with a cellar bar flight. An event booking can draw on the whole house. You do not have to pick a lane, and you certainly do not have to book through three different departments to have a good weekend.',
-        'There is a practical reason for the arrangement as well. A house that runs six things can afford to do each of them properly, because the kitchen feeds the events, the events fill the rooms, and the rooms bring people to the spa. A single-purpose restaurant on this site would have to chase covers every night of the week. A single-purpose hotel would sit half empty on quiet Tuesdays. Doing several things well, in one place, with one team, is what lets us stay small and still offer the range of a much larger property.',
-        'This page is the map. Below, you will find each of the six services in turn, a plain comparison of what each one costs and who it suits, a list of what every stay includes regardless of which door you came through, and answers to the questions guests ask before they book. If you would rather just talk to a person, the front desk is staffed twenty-four hours and the number is (816) 555-0147.'
+        'Most hotels are one thing. A city hotel is a bed and a lobby. A resort is a pool and a buffet. A restaurant with rooms is a restaurant with rooms.',
+        'That is unusual, and it is the whole point.',
+        'We think of the six services as one experience with six doors, and guests move between them freely. A room rate includes breakfast. A spa booking includes pool and sauna access for the day. A dinner reservation can be paired with a cellar bar flight.',
+        'There is a practical reason for the arrangement as well. A house that runs six things can afford to do each of them properly, because the kitchen feeds the events, the events fill the rooms, and the rooms bring people to the spa.',
+        'This page is the map.'
       ]
     },
     {
@@ -72,17 +72,17 @@ module.exports = {
         {
           icon: 'key',
           title: 'One team, start to finish',
-          text: 'The people who check you in are the people who know your dinner reservation, your spa time and your late check-out. Nothing is handed between departments or lost in a system.'
+          text: 'The people who check you in are the people who know your dinner reservation, your spa time and your late check-out.'
         },
         {
           icon: 'wallet',
           title: 'One bill, no surprises',
-          text: 'Rooms, dining, spa and experiences all post to a single folio. No resort fee, no service charge and no separate booking systems to reconcile when you get home.'
+          text: 'Rooms, dining, spa and experiences all post to a single folio.'
         },
         {
           icon: 'leaf',
           title: 'One property, walkable',
-          text: 'Everything is a two-minute walk across a garden. You can go from treatment room to dining room to your suite without ever getting in a car or crossing a road.'
+          text: 'Everything is a two-minute walk across a garden.'
         }
       ]
     },
@@ -94,10 +94,10 @@ module.exports = {
       image: '/img/svc-spa-wellness.webp',
       imageAlt: 'A treatment room at The Spa at Praivelle House',
       body: [
-        'The reason we run six services under one roof is that a good stay is not a checklist of purchases. It is a sequence, and the sequence matters. You arrive, you settle, you eat, you sleep, you do something restorative, you eat again. Each part should make the next part easier, not harder, and that only works if the parts are run by people who talk to each other.',
-        'So when you book a spa treatment, the therapist knows whether you arrived late the night before and whether you have a long drive ahead, because the front desk told them. When you book the tasting menu, the kitchen knows you have an early treatment the next morning and will pace the evening accordingly if you ask. When you book a meeting room, the kitchen knows how many of you there are and what time you break, and the coffee arrives warm rather than on a schedule.',
-        'None of this is clever technology. It is a small team in a small house, paying attention, with a shared system and a shared set of standards. It is the sort of thing that is easy to promise and hard to do at scale, which is precisely why we stayed at twelve rooms and did not become fifty.',
-        'If you are planning something that spans more than one service — a wedding weekend, a company retreat, a milestone birthday — tell us once and we will coordinate all of it. One point of contact, one plan, one bill. Clara handles events, Amara handles wellness, Julien handles anything that involves eating or drinking, and the front desk holds the whole thing together.'
+        'The reason we run six services under one roof is that a good stay is not a checklist of purchases. It is a sequence, and the sequence matters. You arrive, you settle, you eat, you sleep, you do something restorative, you eat again.',
+        'So when you book a spa treatment, the therapist knows whether you arrived late the night before and whether you have a long drive ahead, because the front desk told them.',
+        'None of this is clever technology. It is a small team in a small house, paying attention, with a shared system and a shared set of standards.',
+        'If you are planning something that spans more than one service \u2014 a wedding weekend, a company retreat, a milestone birthday \u2014 tell us once and we will coordinate all of it. One point of contact, one plan, one bill.'
       ],
       list: [
         'One point of contact for a stay that spans several services',
@@ -116,7 +116,7 @@ module.exports = {
       items: [
         {
           title: 'Choose what you want the stay to be',
-          text: 'A quiet night, a spa weekend, a dinner you have been looking forward to, or a full event. You do not need to have it worked out. Tell us the shape of the trip and we will suggest the rest.'
+          text: 'A quiet night, a spa weekend, a dinner you have been looking forward to, or a full event. You do not need to have it worked out.'
         },
         {
           title: 'Call, email or book online',

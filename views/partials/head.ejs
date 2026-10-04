@@ -12,6 +12,10 @@
   var _preload     = typeof preloadImage !== 'undefined' ? preloadImage : null;
   var _preloadSet  = typeof preloadSrcset !== 'undefined' ? preloadSrcset : null;
   var _preloadSize = typeof preloadSizes !== 'undefined' ? preloadSizes : null;
+  /* X / Twitter attribution, derived from the socials list so there is one
+     place to change it. */
+  var _tw = (site.socials || []).filter(function (s) { return /twitter|x\.com/i.test(s.url); })[0];
+  var _twHandle = _tw ? '@' + (_tw.url.split('/').filter(Boolean).pop() || '') : null;
 %><!DOCTYPE html>
 <html lang="en-US" class="no-js">
 <head>
@@ -23,7 +27,7 @@
 <link rel="canonical" href="<%= _canonical %>">
 <meta name="robots" content="<%= _robots %>">
 <meta name="author" content="<%= site.name %>">
-<meta name="theme-color" content="#0B1F3A">
+<meta name="theme-color" content="#2E3C85">
 <meta name="format-detection" content="telephone=no">
 <meta name="geo.region" content="US-MO">
 <meta name="geo.placename" content="Kansas City, Missouri">
@@ -47,6 +51,10 @@
 <meta name="twitter:title" content="<%= _title %>">
 <meta name="twitter:description" content="<%= _desc %>">
 <meta name="twitter:image" content="<%= _ogImage %>">
+<meta name="twitter:image:alt" content="<%= _title %>">
+<% if (_twHandle && _twHandle.length > 1) { %><meta name="twitter:site" content="<%= _twHandle %>">
+<meta name="twitter:creator" content="<%= _twHandle %>">
+<% } %>
 
 <!-- Icons -->
 <link rel="icon" href="/img/favicon.ico" sizes="32x32">

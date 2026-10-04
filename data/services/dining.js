@@ -42,12 +42,12 @@ module.exports = {
       eyebrow: 'The Dining Room',
       h2: 'A threshing barn, a live fire and a short shopping list',
       body: [
-        'The Dining Room is the oldest part of the house, a former threshing barn with a limestone wall at one end and a wood-fired hearth at the other. The fire is lit at seven each morning and burns until the last table leaves. Almost everything you eat is cooked over it, beside it or finished in the embers.',
-        'Executive Chef Julien Baptiste arrived in 2011 from a bistro in Lyon and never left. His rule is simple: if he cannot find it within ninety miles, it needs a very good reason to be on the plate. The pork comes from a farm in Lawson, the vegetables from a market garden outside Lawrence, the flour from a mill in McPherson, and the cheese from a creamery in Weston.',
-        'The menu changes four times a year, with the seasons rather than the calendar. Spring is asparagus and morels from the Missouri woods; summer is tomatoes still warm from the field; autumn is squash, game and the last of the orchard apples; winter is braises, root vegetables and the fire doing most of the work. Between the four main menus, a short list of dishes comes and goes every week depending on what the growers bring.',
-        'Dinner runs from 5:00 to 10:00 PM and most people take two to three hours over it, which is exactly how it is meant to be eaten. There is a three-course prix fixe at $68 and a seven-course tasting at $135, plus a kitchen counter for four where you watch the fire and the plating up close. Wines can be matched by the glass to either menu.',
-        'Mornings belong to guests. Breakfast is served from 7:00 AM, included in every rate, and moves from a full cooked plate early in the week to a lighter table of yogurt, fruit and house granola as the weekend arrives. Afternoon tea runs from 2:00 to 4:30 PM, open to anyone, with scones from the morning bake and a pot of tea blended in Kansas City.',
-        'Below the dining room is the Cellar Bar, open from 4:00 PM to midnight, with low stone arches, a fireplace in winter and a library of four hundred wines. The list leans French and Missouri, with a dozen by the glass and a handful kept back for guests who ask. Cocktails are built on the same fire and garden: smoked old fashioneds, prairie bitters, and a non-alcoholic list that gets as much attention as the rest.'
+        'The Dining Room is the oldest part of the house, a former threshing barn with a limestone wall at one end and a wood-fired hearth at the other. The fire is lit at seven each morning and burns until the last table leaves.',
+        'Executive Chef Julien Baptiste arrived in 2011 from a bistro in Lyon and never left. His rule is simple: if he cannot find it within ninety miles, it needs a very good reason to be on the plate.',
+        'The menu changes four times a year, with the seasons rather than the calendar.',
+        'Dinner runs from 5:00 to 10:00 PM and most people take two to three hours over it, which is exactly how it is meant to be eaten.',
+        'Mornings belong to guests. Breakfast is served from 7:00 AM, included in every rate, and moves from a full cooked plate early in the week to a lighter table of yogurt, fruit and house granola as the weekend arrives.',
+        'Below the dining room is the Cellar Bar, open from 4:00 PM to midnight, with low stone arches, a fireplace in winter and a library of four hundred wines.'
       ]
     },
     {
@@ -114,7 +114,7 @@ module.exports = {
       image: '/img/svc-dining.webp',
       imageAlt: 'Whole fish grilling over oak embers in the wood-fired hearth at The Dining Room',
       body: [
-        'When we restored the barn, we could have put in a modern range and been done with it. Instead we rebuilt the original hearth and hung a grill over it, because a wood fire does something no gas burner can: it seasons as it cooks, and it makes everyone slow down, cooks and guests alike.',
+        'When we restored the barn, we could have put in a modern range and been done with it.',
         'Whole fish are grilled over oak embers. Vegetables are buried in the coals and dug out blackened and sweet. The pork from Lawson is smoked over applewood for fourteen hours, then finished over the fire, and the crackling is the thing regulars order before they even sit down.',
         'You can watch all of it from the kitchen counter, four seats at the pass where the chefs talk you through each course and hand things across before they reach the dining room. It books out first, and it is worth the planning.'
       ],
@@ -228,10 +228,10 @@ module.exports = {
       eyebrow: 'Private dining and the cellar',
       h2: 'A room of your own, and four hundred bottles below',
       body: [
-        'The Orchard Room is a private dining room off the main floor, with a long oak table that seats twenty-four and glass doors onto the garden. It can be set for a birthday, a board dinner, a rehearsal supper or a tasting, and up to forty guests fit standing for a reception. Menus are written for the occasion rather than chosen from the main list, and the chef will meet you beforehand to plan the courses.',
-        'The Cellar Bar holds the wine library, four hundred labels deep, stored in the stone arches that once held the farm cider. The list leans French and Missouri, because those are the two places our chef trusts most, with a dozen poured by the glass and a short reserve list kept back for guests who ask. The bar team will open anything on the list by the bottle, and they will tell you honestly when the cheaper bottle is the better one.',
-        'Cocktails are built on the same fire and the same garden. The old fashioned is smoked over oak chips, the prairie bitters are made in-house from local herbs, and the non-alcoholic list gets equal care, from smoked shrubs to a house kombucha brewed a few miles away. In winter the fireplace runs all evening, and in summer the doors open onto the terrace.',
-        'Private events can extend into the Cellar Bar after dinner, and the kitchen will keep serving until midnight for a booked party. For anything from a table of ten to a full buy-out of the dining room, call events on (816) 555-0149 and we will build the evening around what you actually want, rather than a package we happen to sell.'
+        'The Orchard Room is a private dining room off the main floor, with a long oak table that seats twenty-four and glass doors onto the garden.',
+        'The Cellar Bar holds the wine library, four hundred labels deep, stored in the stone arches that once held the farm cider.',
+        'Cocktails are built on the same fire and the same garden. The old fashioned is smoked over oak chips, the prairie bitters are made in-house from local herbs, and the non-alcoholic list gets equal care, from smoked shrubs to a house kombucha brewed a few miles away.',
+        'Private events can extend into the Cellar Bar after dinner, and the kitchen will keep serving until midnight for a booked party.'
       ]
     },
     {

@@ -42,12 +42,12 @@ module.exports = {
       eyebrow: 'Why meet here',
       h2: 'A room that stops the day feeling like a Tuesday',
       body: [
-        'Off-site meetings work when the room does some of the work for you. The Library at Praivelle House is a panelled room with one long oak table, eighteen chairs and a door that closes properly. There is no lobby noise, no booking system and no colleague dropping by to ask a question. You drive ten minutes from the Plaza or twenty-four from the airport, park under the oaks, and by nine in the morning the only thing in the room is the work. For eighteen years we have hosted boards, partners, leadership teams and founders who wanted exactly that. Our own team meets at the same table every Monday, so we know which chairs squeak, which socket the projector needs and how the room behaves in a rainstorm.',
-        'You have two principal meeting rooms and two larger spaces for bigger groups. The Library is our boardroom: eighteen around the table, a wall screen, a glass wall onto the garden and a private door to the terrace for breaks. The Hearth Room takes twenty-four boardroom-style or forty theatre-style, with the fireplace at one end and windows on three sides. For larger gatherings, the Ballroom seats a hundred and sixty theatre-style and the south lawn holds up to two hundred and forty under a tent. The Cellar Bar, below the dining room, is the room for a working dinner that turns into a longer conversation. Between them, the two small rooms and the two large ones cover almost any shape of gathering, from a six-person interview panel to a company-wide town hall.',
-        'Every meeting room is fitted with a 4K screen, an HDMI and USB-C connection at the table, a wireless presentation puck and a ceiling microphone for hybrid calls. The house runs on fibre with a dedicated meeting VLAN, so a video call does not compete with a guest streaming a film upstairs. If your own IT team needs to test the room in advance, they can. We also hold a small inventory of laptops, clickers, flip charts and a portable speaker, and we will test your platform the evening before so the first five minutes of your meeting are not spent on audio. The rooms are sound-treated, so a confidential conversation stays confidential, and the lighting is dimmable from a control beside the door.',
-        'Our day delegate rate starts at $89 per person and covers the room from eight in the morning until six, unlimited tea, coffee and water, a mid-morning break with pastries from our kitchen, a working lunch and the AV above. Half-day rates are available for morning or afternoon sessions. Residential packages add a suite, dinner in The Dining Room and breakfast, and start at $329 per person. Because the house has only twelve suites, a residential retreat of up to twenty-four people can take the whole property, which is often the point: no other guests, no shared lobby, and the run of the dining room and the spa. We bill per person, not per item, so a delegate who drinks six coffees costs the same as one who drinks none, and your finance team gets one line rather than forty.',
-        'Board retreats usually take the Library for the working day and the Hearth Room for dinner, with a facilitator we can recommend if you do not have one. Executive offsites tend to want something the office cannot give: a walk on the prairie trail between sessions, a sommelier-led tasting in the Cellar Bar, a cooking session at the hearth. Team away-days use the lawn and the terrace for a longer, looser programme. Client entertaining is a category of its own — a private table in The Dining Room, a chef menu, and a room where a deal can be discussed without a neighbouring table listening. We also host the parts of a corporate calendar that are not meetings at all: an interview day, a product launch, a retirement dinner or an awards evening for ninety.',
-        'A dedicated event manager is assigned to your booking from the first enquiry to the final invoice, and you will have their mobile number, not a switchboard. The same person runs the room on the day, briefs the kitchen and the AV technician, and handles the small changes that always come up. Clara Whitfield and her team of four run meetings and weddings alike, and they are used to working to a corporate timetable: an invoice that matches the quote, a run sheet that matches the agenda, and a room that is ready before your first delegate arrives. If something is not right, you tell one person and it is fixed before the next session, not logged and lost.'
+        'Off-site meetings work when the room does some of the work for you. The Library at Praivelle House is a panelled room with one long oak table, eighteen chairs and a door that closes properly.',
+        'You have two principal meeting rooms and two larger spaces for bigger groups. The Library is our boardroom: eighteen around the table, a wall screen, a glass wall onto the garden and a private door to the terrace for breaks.',
+        'Every meeting room is fitted with a 4K screen, an HDMI and USB-C connection at the table, a wireless presentation puck and a ceiling microphone for hybrid calls.',
+        'Our day delegate rate starts at $89 per person and covers the room from eight in the morning until six, unlimited tea, coffee and water, a mid-morning break with pastries from our kitchen, a working lunch and the AV above.',
+        'Board retreats usually take the Library for the working day and the Hearth Room for dinner, with a facilitator we can recommend if you do not have one.',
+        'A dedicated event manager is assigned to your booking from the first enquiry to the final invoice, and you will have their mobile number, not a switchboard.'
       ]
     },
     {
@@ -67,12 +67,12 @@ module.exports = {
         {
           icon: 'clipboard-check',
           title: 'Board retreats',
-          text: 'A working day in the Library, dinner in the Hearth Room and a facilitator if you need one. Most boards stay two nights and take the whole house.'
+          text: 'A working day in the Library, dinner in the Hearth Room and a facilitator if you need one.'
         },
         {
           icon: 'briefcase',
           title: 'Executive offsites',
-          text: 'Strategy days that use the prairie trail, the hearth and the Cellar Bar. The room is quiet, the schedule is yours and nobody walks past the window.'
+          text: 'Strategy days that use the prairie trail, the hearth and the Cellar Bar.'
         },
         {
           icon: 'users',
@@ -97,7 +97,7 @@ module.exports = {
         {
           icon: 'bed',
           title: 'Residential retreats',
-          text: 'From $329 per person, with a suite, dinner and breakfast. Up to twenty-four people can take all twelve suites and the run of the house.'
+          text: 'From $329 per person, with a suite, dinner and breakfast.'
         },
         {
           icon: 'car',
@@ -115,7 +115,7 @@ module.exports = {
       imageAlt: 'The Library boardroom at Praivelle House with bookshelves and a long oak meeting table',
       body: [
         'The Library was the farmhouse study before it was a meeting room, and it still feels like one: dark panelling, a single long table, shelves that hold real books and a window that looks onto the garden rather than a car park.',
-        'It seats eighteen comfortably, which is the number at which a board can still have one conversation. There is a screen that disappears when you do not need it, a glass wall you can frost for privacy, and a door to the terrace for a break that is thirty seconds away rather than a lift ride. There is also a screen that folds away, so the room reads as a study rather than a conference suite when you are not using it.'
+        'It seats eighteen comfortably, which is the number at which a board can still have one conversation.'
       ],
       list: [
         'Eighteen around a single table',

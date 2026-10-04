@@ -31,10 +31,10 @@ module.exports = {
       eyebrow: 'From the person who sets the chairs',
       h2: 'The packing list nobody sends you',
       body: [
-        'I have run weddings at Praivelle House since the first one, a small ceremony under the three oak trees in 2009, and I can tell you what people actually need on the day because I spend the whole of it watching them reach for things. The invitations do not tell you about the wind. The website does not mention that the walk from the orchard to the ballroom is longer than it looks in the photographs. So consider this the honest list.',
-        'A prairie wedding is not a beach wedding and not a garden wedding. It is its own thing, and the thing it mostly is, is a wedding with weather. We are on twelve acres outside Kansas City, the south lawn opens onto the restored grass, and the breeze that comes across it has been travelling for a while before it reaches your table. Plan for that and you will be comfortable all day. Ignore it and you will spend the ceremony holding your hair down with one hand.',
-        'This is written for guests, though the wedding party should read it twice. I have kept the advice specific, because generic advice about outdoor weddings is the reason people still show up in stilettos in July. If you are the couple, skip to the checklist and send it to your people, or let us print it on the back of the programme. We have done that before and the guests thanked us for it.',
-        'One promise before we start. Nothing here is designed to make you buy anything. Most of it is about what to leave at home, which is the half of packing that people neglect. The best-dressed guest at any of our weddings is usually the one carrying the smallest bag.'
+        'I have run weddings at Praivelle House since the first one, a small ceremony under the three oak trees in 2009, and I can tell you what people actually need on the day because I spend the whole of it watching them reach for things.',
+        'A prairie wedding is not a beach wedding and not a garden wedding. It is its own thing, and the thing it mostly is, is a wedding with weather.',
+        'This is written for guests, though the wedding party should read it twice. I have kept the advice specific, because generic advice about outdoor weddings is the reason people still show up in stilettos in July.',
+        'One promise before we start. Nothing here is designed to make you buy anything. Most of it is about what to leave at home, which is the half of packing that people neglect.'
       ]
     },
     {
@@ -48,22 +48,22 @@ module.exports = {
         {
           icon: 'waves',
           title: 'The wind on the south lawn',
-          text: 'It is real and it is constant. Anything loose, light or unbasted will move. Bring a wrap you can pin, and skip the wide-brim hat for the ceremony.'
+          text: 'It is real and it is constant. Anything loose, light or unbasted will move.'
         },
         {
           icon: 'sunrise',
           title: 'Heels, or the honest truth',
-          text: 'The lawn is grass, the path is crushed stone and the terrace is old flagstone. A block heel works. A thin stiletto does not, and the ground will win.'
+          text: 'The lawn is grass, the path is crushed stone and the terrace is old flagstone. A block heel works.'
         },
         {
           icon: 'moon',
           title: 'Layers for a Missouri evening',
-          text: 'It can be eighty at five and fifty-five by ten. The temperature drops fast once the sun is behind the ridge, and the dancing happens after that.'
+          text: 'It can be eighty at five and fifty-five by ten.'
         },
         {
           icon: 'droplet',
           title: 'The humidity',
-          text: 'Missouri air in summer is wet air. Natural fibres breathe, heavy synthetics do not, and a spare shirt in the car has rescued more than one guest.'
+          text: 'Missouri air in summer is wet air.'
         }
       ]
     },
@@ -73,10 +73,10 @@ module.exports = {
       eyebrow: 'First, the wind',
       h2: 'The south lawn has its own weather',
       body: [
-        'Let me be specific about the wind, because people hear the word and picture a pleasant breeze. On the south lawn it is more than that. It comes off twelve acres of open prairie, it picks up speed as it crosses the ridge, and it arrives at the ceremony with opinions. On a normal Saturday it will lift a tablecloth corner, ruffle every programme and make a loose scarf into a nuisance within ten minutes.',
-        'What this means in practice is simple. Anything you want to stay where you put it needs to be weighted or fastened. A silk scarf will not stay on your shoulders through a forty-minute ceremony; a wrap with a pin will. A wide-brimmed hat is a lovely idea for the photographs and a liability in the aisle, which is why our flat shoes basket also contains two hat pins and a roll of double-sided tape, both of which get used.',
-        'The wind also does something kind, which is worth saying. It keeps the ceremony from being hot, it moves the grass in a way that photographs beautifully, and it carries the smell of the wood-fired kitchen across the lawn in the hour before dinner. Every couple who has married here has mentioned the sound of it in the trees afterwards. You just have to dress as though it exists.',
-        'For the wedding party, a note on hair. Updos survive the lawn better than loose styles, and a little product goes further than a lot. If you are having your hair done on site, tell your stylist the ceremony is outdoors and the walk between the orchard and the terrace is unsheltered. They will adjust, and you will not spend the vows tucking hair behind your ear.'
+        'Let me be specific about the wind, because people hear the word and picture a pleasant breeze. On the south lawn it is more than that.',
+        'What this means in practice is simple. Anything you want to stay where you put it needs to be weighted or fastened. A silk scarf will not stay on your shoulders through a forty-minute ceremony; a wrap with a pin will.',
+        'The wind also does something kind, which is worth saying. It keeps the ceremony from being hot, it moves the grass in a way that photographs beautifully, and it carries the smell of the wood-fired kitchen across the lawn in the hour before dinner.',
+        'For the wedding party, a note on hair. Updos survive the lawn better than loose styles, and a little product goes further than a lot.'
       ]
     },
     {
@@ -85,10 +85,10 @@ module.exports = {
       eyebrow: 'Shoes',
       h2: 'Heels, block heels and the walk from the orchard',
       body: [
-        'The most common regret I hear is about shoes, and it is almost always the same sentence: I wish I had brought flats. The reason is the ground. A prairie wedding moves you across four different surfaces in one evening. You arrive on a crushed-stone path, you cross a mown lawn for the ceremony, you walk the orchard path to the ballroom, and you finish on old flagstone around the terrace and the bar.',
-        'On grass and gravel, a block heel or a wedge is stable and a thin stiletto is not. On flagstone, a stiletto can catch in the gaps between the stones, which is how we came to keep a first-aid kit with more blister plasters than bandages. None of this means you cannot wear the shoes you love. It means the shoes you love should have a base wide enough to stand on, or you should bring a second pair for the parts of the evening that involve walking.',
-        'This is why we keep the flat shoes basket. It sits by the door of the ballroom, it is stocked with simple flats in a range of sizes, and it is not a joke or a gimmick. Guests use it every single weekend, usually around the second dance, and they always look relieved. You are welcome to bring your own, of course, and many people do. A pair of ballet flats or clean white trainers in a tote bag is the single most useful thing you can carry.',
-        'For the couple, one last word. If your ceremony is on the lawn and your photographs are in the orchard, bring a spare pair and swap. Nobody has ever looked at a wedding album and wished the bride had suffered more. The walk from the orchard to the ballroom is about four minutes at a stroll and longer in heels, and it is one of the loveliest parts of the property, so you may as well enjoy it.'
+        'The most common regret I hear is about shoes, and it is almost always the same sentence: I wish I had brought flats. The reason is the ground. A prairie wedding moves you across four different surfaces in one evening.',
+        'On grass and gravel, a block heel or a wedge is stable and a thin stiletto is not. On flagstone, a stiletto can catch in the gaps between the stones, which is how we came to keep a first-aid kit with more blister plasters than bandages.',
+        'This is why we keep the flat shoes basket. It sits by the door of the ballroom, it is stocked with simple flats in a range of sizes, and it is not a joke or a gimmick.',
+        'For the couple, one last word. If your ceremony is on the lawn and your photographs are in the orchard, bring a spare pair and swap. Nobody has ever looked at a wedding album and wished the bride had suffered more.'
       ]
     },
     {
@@ -97,10 +97,10 @@ module.exports = {
       eyebrow: 'The air',
       h2: 'Layers for the evening, sense for the humidity',
       body: [
-        'Missouri weather does two things that catch out-of-town guests every time. The first is the drop after sunset. A July afternoon on the lawn can sit at eighty-five, and by ten o’clock, with the ridge between you and the last of the light, it can be in the fifties. The dancing happens in that window. This is why we tell people to bring a layer even in midsummer, and why the couple usually ends up in a jacket or a cardigan in the late photographs.',
-        'The second is the humidity. Kansas City in summer is a wet heat, and it does not dry off when the sun goes down. Natural fibres — linen, cotton, light wool — breathe and forgive you. Heavy synthetic fabrics trap the moisture and show every crease by the time dinner is served. If you have a choice between two outfits, take the one that moves air. A linen shirt that wrinkles a little is a better evening than a polyester one that stays crisp and cooks you.',
-        'There is a practical side to this that guests rarely think about. Bring a spare shirt or blouse if you are travelling any distance, especially if you are dancing. We keep a steamer in the bridal suite and the grooms’ room and you are welcome to borrow it, but a change of top in the car has saved more evenings than any steamer. It is a small thing to pack and a large thing to have.',
-        'For the wedding party, a note about getting ready. The house is air-conditioned and cool, but the walk to the ceremony is not. Give yourself fifteen minutes between finishing your photographs indoors and stepping onto the lawn, and drink water in that window. We have never had a fainting at a wedding here, and I would like to keep it that way.'
+        'Missouri weather does two things that catch out-of-town guests every time. The first is the drop after sunset.',
+        'The second is the humidity. Kansas City in summer is a wet heat, and it does not dry off when the sun goes down. Natural fibres \u2014 linen, cotton, light wool \u2014 breathe and forgive you.',
+        'There is a practical side to this that guests rarely think about. Bring a spare shirt or blouse if you are travelling any distance, especially if you are dancing.',
+        'For the wedding party, a note about getting ready. The house is air-conditioned and cool, but the walk to the ceremony is not. Give yourself fifteen minutes between finishing your photographs indoors and stepping onto the lawn, and drink water in that window.'
       ]
     },
     {
@@ -136,32 +136,32 @@ module.exports = {
         {
           icon: 'alert-triangle',
           title: 'The stiletto heels',
-          text: 'They will sink into the lawn and catch on the flagstone. If you love them for the photographs, bring them and change, but do not wear them across the grass.'
+          text: 'They will sink into the lawn and catch on the flagstone.'
         },
         {
           icon: 'image',
           title: 'The wide-brim hat',
-          text: 'Lovely in theory, airborne in practice. If you want one for the pictures, hold it for the pictures and let it go for the rest of the day.'
+          text: 'Lovely in theory, airborne in practice.'
         },
         {
           icon: 'refresh',
           title: 'The enormous handbag',
-          text: 'You will be standing, walking and holding a drink. A small bag or a clutch you can tuck under an arm beats a tote you have to set down all evening.'
+          text: 'You will be standing, walking and holding a drink.'
         },
         {
           icon: 'zap',
           title: 'The heavy perfume',
-          text: 'On a warm evening in a crowd, less is more. A light scent carries; a strong one fills a whole table and reaches the ceremony.'
+          text: 'On a warm evening in a crowd, less is more.'
         },
         {
           icon: 'lock',
           title: 'The valuables you cannot carry',
-          text: 'Leave the heirloom jewellery and the spare cash in the room safe. We have security on site, but the simplest security is not bringing it.'
+          text: 'Leave the heirloom jewellery and the spare cash in the room safe.'
         },
         {
           icon: 'clock',
           title: 'The tight schedule',
-          text: 'Prairie weddings run on light and weather, not the clock. Leave the rigid plan at home and let the evening take the shape it wants.'
+          text: 'Prairie weddings run on light and weather, not the clock.'
         }
       ]
     },
@@ -171,10 +171,10 @@ module.exports = {
       eyebrow: 'The three things',
       h2: 'What guests always forget',
       body: [
-        'After years of this, I can predict with some confidence the three things guests forget, and it is never the thing they worried about. Nobody forgets their outfit. Almost everybody forgets a layer for the evening, and by nine o’clock they are borrowing a blanket from the basket we keep on the terrace. The drop after sunset is the single most underestimated part of a prairie wedding.',
-        'The second thing is a spare pair of shoes. Guests arrive in the shoes they intend to wear all night and discover, somewhere between the ceremony and the first dance, that the ground had other ideas. The flat shoes basket covers the emergency, but it is always nicer to have your own. A pair of folding flats takes up almost no room and has never once gone unused.',
-        'The third is water, and I do not mean a bottle in the car. A wedding is a long day, often in the sun, often with a drink in hand and not enough of anything else. Guests forget that the ceremony, the cocktail hour and dinner together run four or five hours before the dancing even starts. Drink water in the gaps. Our bartenders will happily give you a glass of it, and the coffee at the end of the night is there for a reason.',
-        'There is a fourth thing, if I am allowed it: a plan for getting home. We are out on Prairie Ridge Road, and while ride share reaches us, it is thinner after midnight than it is in the city. Book your ride early, agree on a driver, or ask us to arrange a car. The concierge line, (816) 555-0148, is answered during every event, and we would rather you called than drove tired.'
+        'After years of this, I can predict with some confidence the three things guests forget, and it is never the thing they worried about. Nobody forgets their outfit.',
+        'The second thing is a spare pair of shoes. Guests arrive in the shoes they intend to wear all night and discover, somewhere between the ceremony and the first dance, that the ground had other ideas.',
+        'The third is water, and I do not mean a bottle in the car. A wedding is a long day, often in the sun, often with a drink in hand and not enough of anything else.',
+        'There is a fourth thing, if I am allowed it: a plan for getting home. We are out on Prairie Ridge Road, and while ride share reaches us, it is thinner after midnight than it is in the city.'
       ]
     },
     {
@@ -212,7 +212,7 @@ module.exports = {
         },
         {
           q: 'What shoes should I actually wear?',
-          a: 'A block heel, a wedge or a smart flat. The ground is grass, crushed stone and old flagstone, and a thin stiletto will struggle on all three. If you love a stiletto for the photographs, bring it and change into something stable for the rest of the day.'
+          a: 'A block heel, a wedge or a smart flat. The ground is grass, crushed stone and old flagstone, and a thin stiletto will struggle on all three.'
         },
         {
           q: 'How cold does it get in the evening?',
@@ -243,7 +243,7 @@ module.exports = {
     },
     {
       q: 'What shoes should I actually wear?',
-      a: 'A block heel, a wedge or a smart flat. The ground is grass, crushed stone and old flagstone, and a thin stiletto will struggle on all three. If you love a stiletto for the photographs, bring it and change into something stable for the rest of the day.'
+      a: 'A block heel, a wedge or a smart flat. The ground is grass, crushed stone and old flagstone, and a thin stiletto will struggle on all three.'
     },
     {
       q: 'How cold does it get in the evening?',

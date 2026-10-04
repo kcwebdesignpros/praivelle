@@ -42,10 +42,10 @@ module.exports = {
       eyebrow: 'How we hire',
       h2: 'Temperament First, Skill Second',
       body: [
-        'Every hire at Praivelle House starts the same way. Before anyone talks about a résumé, we ask a simple question: tell us about a time you looked after someone. It does not have to be a guest and it does not have to be a hotel. It can be a sick parent, a difficult customer, a younger sibling, a stranger at a bus stop. What we are listening for is not the story itself but the way it is told — whether the person leans in, whether they remember small details, whether they were paying attention to the human in front of them or only to the task.',
-        'You can teach almost anyone to work a front desk, mix a drink or make a bed to a standard. What you cannot teach, or at least what we have never learned how to teach, is the instinct to notice. The instinct to see that a guest has come down for breakfast looking grey and to bring them tea without being asked. The instinct to remember that a couple mentioned a dog back home. That instinct is what we hire, and everything else we can build around it.',
-        'It is a slower way to staff a hotel, and it costs us. A chain can fill a vacancy in a fortnight with a person who has done the exact role in three other properties. We will sometimes run a department one person short for a season rather than hire someone who is technically qualified and temperamentally wrong, because one wrong hire at a twelve-suite house is visible to every guest within a week. The house is too small to hide a mismatch.',
-        'The first two weeks of any job here are spent shadowing, not working a station. A new member of the front desk follows an experienced one through arrivals, departures, complaints and quiet afternoons before they ever check anyone in alone. A new cook in the kitchen spends their first month learning the hearth under Julien personally, and it is months before they are trusted to work the fire by themselves. We would rather be slow and keep the culture than fast and lose it.'
+        'Every hire at Praivelle House starts the same way. Before anyone talks about a r\u00e9sum\u00e9, we ask a simple question: tell us about a time you looked after someone. It does not have to be a guest and it does not have to be a hotel.',
+        'You can teach almost anyone to work a front desk, mix a drink or make a bed to a standard. What you cannot teach, or at least what we have never learned how to teach, is the instinct to notice.',
+        'It is a slower way to staff a hotel, and it costs us. A chain can fill a vacancy in a fortnight with a person who has done the exact role in three other properties.',
+        'The first two weeks of any job here are spent shadowing, not working a station. A new member of the front desk follows an experienced one through arrivals, departures, complaints and quiet afternoons before they ever check anyone in alone.'
       ]
     },
     {
@@ -56,10 +56,10 @@ module.exports = {
       image: '/img/gallery-library.webp',
       imageAlt: 'Staff and guests in the library at Praivelle House',
       body: [
-        'There is a particular kind of person who thrives in a twelve-suite house and a particular kind who does not. The one who thrives is someone who likes knowing what is going on across the whole building. On any given evening the person on the front desk might help carry a tray, the sommelier might walk a wedding guest to their room, and the general manager might be the one who finds the lost earring. Nobody here has the luxury of saying that is not my department, and after a while nobody wants it.',
-        'That has an upside and a cost. The upside is that the work is varied and the days go quickly and you learn the whole of a hotel rather than one slice of it. People who have worked here have gone on to run their own places, and we are glad about that. The cost is that a small team cannot absorb a bad day quietly. If someone is having a hard week, it shows, so we try to run the place in a way that means people are not having hard weeks very often.',
-        'We pay above the local hospitality average, we post the rota a month in advance, and we do not schedule anyone for a clopen — a close followed by an open — ever. We close the whole dining room for two days in January and again in July so that the kitchen and the front of house get a genuine break at the same time. Staff eat the same food that goes out to guests, at a table, sitting down, not standing in a corridor. These are small things and they are the difference between a team that stays and a team that churns.',
-        'More than half the people here have been here five years or longer. Two started as summer staff and now run departments. When we say the house has a family feeling, we do not mean it is loose or unprofessional. We mean that people look out for each other, and that shows up in the way they look out for you.'
+        'There is a particular kind of person who thrives in a twelve-suite house and a particular kind who does not. The one who thrives is someone who likes knowing what is going on across the whole building.',
+        'That has an upside and a cost. The upside is that the work is varied and the days go quickly and you learn the whole of a hotel rather than one slice of it.',
+        'We pay above the local hospitality average, we post the rota a month in advance, and we do not schedule anyone for a clopen \u2014 a close followed by an open \u2014 ever.',
+        'More than half the people here have been here five years or longer. Two started as summer staff and now run departments. When we say the house has a family feeling, we do not mean it is loose or unprofessional.'
       ],
       list: [
         'Above-average pay for Kansas City hospitality roles',
@@ -87,10 +87,10 @@ module.exports = {
       eyebrow: 'A day in the house',
       h2: 'What the Team Actually Does All Day',
       body: [
-        'A house like this runs on a rhythm that most guests never see. It starts at half past five, when the overnight porter finishes the last of the night shift and the first baker comes in to start the bread. By six the kitchen is warm and the lobby has been walked and the flowers have been checked. By half past six Geneviève is in with a coffee, reading the arrivals list and the maintenance list, and the day has quietly begun.',
-        'Breakfast service runs from seven. Housekeeping starts stripping rooms at nine and works against a board that tells them who is arriving, who is staying and who has asked for a late check-out. The front desk handles the steady trickle of departures until eleven, then turns to the arrivals, the requests and the small crises that fill any hotel afternoon — a lost charger, a dinner reservation that needs moving, a guest who wants to know whether the trail out back is muddy.',
-        'By four the cellar bar is opening and the kitchen is lighting the hearth. The evening is the busiest and the best part of the day. Sommelier pours, the dining room fills, the spa runs its last treatments until eight, and the bar stays open until midnight. Through all of it the front desk is staffed and awake, because a hotel that is only awake when it is convenient is not really a hotel.',
-        'Overnight, the house is looked after by a small night team who check the boilers, walk the grounds, restock the bar and set up breakfast. Guests who cannot sleep often find themselves talking to the night porter, who has heard every story worth hearing and tells none of them. It is the least visible shift and, in its way, the one that holds the whole thing together.'
+        'A house like this runs on a rhythm that most guests never see. It starts at half past five, when the overnight porter finishes the last of the night shift and the first baker comes in to start the bread.',
+        'Breakfast service runs from seven. Housekeeping starts stripping rooms at nine and works against a board that tells them who is arriving, who is staying and who has asked for a late check-out.',
+        'By four the cellar bar is opening and the kitchen is lighting the hearth. The evening is the busiest and the best part of the day. Sommelier pours, the dining room fills, the spa runs its last treatments until eight, and the bar stays open until midnight.',
+        'Overnight, the house is looked after by a small night team who check the boilers, walk the grounds, restock the bar and set up breakfast.'
       ]
     },
     {
@@ -102,7 +102,7 @@ module.exports = {
       items: [
         {
           q: 'Will I actually meet the people described on this page?',
-          a: 'Usually, yes. Geneviève is in the lobby most mornings, Julien runs the pass most nights, Amara takes two clients a day and Clara is on site for every event she books. It is a twelve-suite house, so the people who run it are in it.'
+          a: 'Usually, yes. Genevi\u00e8ve is in the lobby most mornings, Julien runs the pass most nights, Amara takes two clients a day and Clara is on site for every event she books.'
         },
         {
           q: 'How big is the team?',
@@ -114,7 +114,7 @@ module.exports = {
         },
         {
           q: 'Are you hiring, and how do I apply?',
-          a: 'We post openings on our careers page and keep a standing list of good people for when roles come up. Send a short note and a résumé to stay@praivellehouse.com, and tell us about a time you looked after someone. That last part matters more than the format.'
+          a: 'We post openings on our careers page and keep a standing list of good people for when roles come up. Send a short note and a r\u00e9sum\u00e9 to stay@praivellehouse. com, and tell us about a time you looked after someone.'
         },
         {
           q: 'Do you offer training and progression?',

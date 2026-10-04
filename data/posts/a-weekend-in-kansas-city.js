@@ -31,11 +31,11 @@ module.exports = {
       eyebrow: 'Before you arrive',
       h2: 'A weekend planned by people who live here',
       body: [
-        'Guests ask us the same thing almost every Friday: what would you actually do with two days in Kansas City if you were not working. So we wrote it down. This is the version we hand to friends, not the version that fits a brochure. It assumes you have a car, or are willing to use one, though the streetcar covers a good stretch of the middle of it.',
-        'A word on the map before we start. Praivelle House sits on twelve acres of restored prairie about ten minutes from the Country Club Plaza and twenty-four minutes from Kansas City International, so you are close enough to the city to treat it casually and far enough out that the evenings are genuinely quiet. We usually suggest guests drive in for the day and come back to the house for dinner, rather than move hotels halfway through a trip.',
-        'Kansas City is not a city you can see in a weekend, and anyone who tells you otherwise has not spent a Sunday afternoon at the Nelson. What you can do in forty-eight hours is understand why people here are so calm about it. The art is free. The barbecue is a religion with two denominations. The fountains are everywhere and nobody makes a fuss about them, which is exactly the point.',
-        'One practical note before the itinerary. First Fridays only happen on the first Friday of the month, when the Crossroads galleries open their doors after dark and the streets fill with food trucks and students. If your weekend lands on one, build the whole evening around it. If it does not, the Crossroads is still worth a Saturday for the coffee, the murals and the small studios that keep daytime hours.',
-        'We have written this as a Friday-to-Sunday shape, but the order matters more than the days. The museums close in the late afternoon, the barbecue sells out of burnt ends when it sells out, and the prairie is at its best in the first hour of light. Move the pieces around the weather, not the clock.'
+        'Guests ask us the same thing almost every Friday: what would you actually do with two days in Kansas City if you were not working. So we wrote it down. This is the version we hand to friends, not the version that fits a brochure.',
+        'A word on the map before we start.',
+        'Kansas City is not a city you can see in a weekend, and anyone who tells you otherwise has not spent a Sunday afternoon at the Nelson. What you can do in forty-eight hours is understand why people here are so calm about it. The art is free.',
+        'One practical note before the itinerary. First Fridays only happen on the first Friday of the month, when the Crossroads galleries open their doors after dark and the streets fill with food trucks and students. If your weekend lands on one, build the whole evening around it.',
+        'We have written this as a Friday-to-Sunday shape, but the order matters more than the days. The museums close in the late afternoon, the barbecue sells out of burnt ends when it sells out, and the prairie is at its best in the first hour of light.'
       ]
     },
     {
@@ -44,11 +44,11 @@ module.exports = {
       eyebrow: 'Friday',
       h2: 'Arrive, drop your bags, and start at the Plaza',
       body: [
-        'If you land at MCI in the afternoon, you are at the house in well under half an hour. Leave the bags, take a short walk down to the trailhead on the west edge of the property, and then drive the ten minutes to the Country Club Plaza for the evening. This is the gentlest possible introduction to the city, and it keeps the first night low-effort after a travel day.',
-        'The Plaza was laid out in the 1920s by J.C. Nichols and modelled on Seville, which is why it looks like a Spanish city dropped into the middle of Missouri. It is a shopping district, yes, but it is also a pleasant place to walk at dusk, when the towers are lit and the fountains are running. The bronze horse fountain at 47th and Main is the one everyone photographs, and it earns the attention.',
-        'Eat an early, unpretentious dinner somewhere on or near the Plaza, then save the serious eating for Saturday. The restaurants around 47th Street lean comfortable rather than fashionable, which we consider a virtue. Order something simple, walk a block or two afterwards, and do not let anyone talk you into a late night before the best day of the trip.',
-        'Back at the house, the Cellar Bar is open until midnight, which means the last drink of the evening does not require a car. A glass of something red downstairs, in the old stone cellar under the dining room, is a good way to close a travel day and a good way to meet whichever other guests have had the same idea.',
-        'If you would rather not drive at all on the first night, tell the concierge when you book and we will arrange a car and driver. It is not expensive for a short run to the Plaza, and it means the evening can run as long as it wants to.'
+        'If you land at MCI in the afternoon, you are at the house in well under half an hour.',
+        'The Plaza was laid out in the 1920s by J. C. Nichols and modelled on Seville, which is why it looks like a Spanish city dropped into the middle of Missouri.',
+        'Eat an early, unpretentious dinner somewhere on or near the Plaza, then save the serious eating for Saturday. The restaurants around 47th Street lean comfortable rather than fashionable, which we consider a virtue.',
+        'Back at the house, the Cellar Bar is open until midnight, which means the last drink of the evening does not require a car.',
+        'If you would rather not drive at all on the first night, tell the concierge when you book and we will arrange a car and driver.'
       ]
     },
     {
@@ -81,27 +81,27 @@ module.exports = {
       items: [
         {
           title: 'Start at the Nelson-Atkins when the doors open',
-          text: 'The museum opens at ten on Saturdays and admission is free. Go straight to the Bloch Building for the contemporary work, then loop back through the European galleries. The shuttlecocks on the south lawn are the photograph everyone takes; the Chinese temple room is the one people remember for years afterwards.'
+          text: 'The museum opens at ten on Saturdays and admission is free. Go straight to the Bloch Building for the contemporary work, then loop back through the European galleries.'
         },
         {
           title: 'Cross town to the River Market for lunch',
-          text: 'The City Market has been running since 1857 and the Saturday farmers market is the biggest in the region. Buy something from a stall and eat it outside, then walk down to the Town of Kansas bridge for the view over the Missouri River and the old industrial flats below.'
+          text: 'The City Market has been running since 1857 and the Saturday farmers market is the biggest in the region.'
         },
         {
           title: 'Take the streetcar south',
-          text: 'The KC Streetcar is free and runs the length of Main Street. Ride it from the River Market down to Union Station, which puts you within an easy walk of the WWI Museum, Crown Center and the shops at Union Station itself.'
+          text: 'The KC Streetcar is free and runs the length of Main Street.'
         },
         {
           title: 'Climb the Liberty Memorial',
-          text: 'The National WWI Museum and Memorial sits under the tower on Pershing Road. The museum is underground, the poppy field is glass, and the view from the top of the tower is the best in the city. Take the elevator if the stairs look long, because they are.'
+          text: 'The National WWI Museum and Memorial sits under the tower on Pershing Road. The museum is underground, the poppy field is glass, and the view from the top of the tower is the best in the city.'
         },
         {
           title: 'End the afternoon in the Crossroads',
-          text: 'Walk or drive the ten minutes to the Crossroads Arts District. The galleries along 18th and Baltimore open late on First Fridays, and on any other Saturday the coffee roasters, the murals and the small design shops are reason enough to wander for an hour.'
+          text: 'Walk or drive the ten minutes to the Crossroads Arts District.'
         },
         {
           title: 'Finish at the Kauffman Center',
-          text: 'The Kauffman Center for the Performing Arts, designed by Moshe Safdie, sits on a bluff above downtown. Check the calendar for the symphony, the ballet or a touring show. If nothing is on, the lobby alone is worth the detour, and the Cellar Bar at the house is open until midnight when you get back.'
+          text: 'The Kauffman Center for the Performing Arts, designed by Moshe Safdie, sits on a bluff above downtown. Check the calendar for the symphony, the ballet or a touring show.'
         }
       ]
     },
@@ -111,11 +111,11 @@ module.exports = {
       eyebrow: 'The argument',
       h2: 'Arthur Bryant’s or Joe’s Kansas City',
       body: [
-        'You will be asked to pick a side, and we will not pretend the question has a clean answer. Arthur Bryant’s, on Brooklyn Avenue since 1930, is the older institution, the one with the sawdust on the floor, the sauce that comes in a squeeze bottle and the burnt ends that made the place famous far outside Missouri. It is a pilgrimage. Go at an off hour, order the burnt ends, and understand that the service is fast and the decor is not the point.',
-        'Joe’s Kansas City, which most of us still call Oklahoma Joe’s, started in a gas station at 47th and Mission in the Rosedale neighbourhood and has the line to prove it. The Z-Man — brisket, smoked provolone and a couple of onion rings on a bun — is the sandwich people drive across the state for. The original location, still attached to the gas pumps, remains the one to visit even if you have to wait.',
-        'Our honest advice: if it is your first visit and you only have one barbecue meal, go to Joe’s. If you have been before, or you want the older story and a paper plate, go to Bryant’s. If you have two meals, which you should, do both and settle the argument yourself. Gates Bar-B-Q and LC’s, over on the east side, are the answers locals give when they want to send you somewhere you have not already heard of.',
-        'One thing both famous places share: go early or go late. The lunch rush on a Saturday is not the moment to test your patience, and burnt ends in particular have a way of running out by mid-afternoon. If you are chasing a specific cut, call ahead or arrive when the doors open.',
-        'A small confession. The best barbecue we have eaten in the city was not at any of these, but at a church fundraiser in the parking lot of a hardware store on Prospect Avenue on a Saturday in June. That is not a recommendation you can act on, but it is the truth, and it tells you something about how seriously people here take the whole business.'
+        'You will be asked to pick a side, and we will not pretend the question has a clean answer.',
+        'Joe\u2019s Kansas City, which most of us still call Oklahoma Joe\u2019s, started in a gas station at 47th and Mission in the Rosedale neighbourhood and has the line to prove it.',
+        'Our honest advice: if it is your first visit and you only have one barbecue meal, go to Joe\u2019s. If you have been before, or you want the older story and a paper plate, go to Bryant\u2019s.',
+        'One thing both famous places share: go early or go late. The lunch rush on a Saturday is not the moment to test your patience, and burnt ends in particular have a way of running out by mid-afternoon.',
+        'A small confession. The best barbecue we have eaten in the city was not at any of these, but at a church fundraiser in the parking lot of a hardware store on Prospect Avenue on a Saturday in June.'
       ]
     },
     {
@@ -129,22 +129,22 @@ module.exports = {
         {
           icon: 'image',
           title: 'The Kemper Museum of Contemporary Art',
-          text: 'A few blocks from the Nelson, free, and small enough to see properly in an hour. The collection leans modern and the building has a calm that suits a slow start to the day.'
+          text: 'A few blocks from the Nelson, free, and small enough to see properly in an hour.'
         },
         {
           icon: 'wine',
           title: 'The Cellar Bar at the house',
-          text: 'Our own cellar opens at four and runs to midnight. It is where guests end up talking to strangers, which is either the best or the worst part of the trip depending on the evening.'
+          text: 'Our own cellar opens at four and runs to midnight.'
         },
         {
           icon: 'users',
           title: 'The Negro Leagues Baseball Museum',
-          text: 'At 18th and Vine, sharing a building with the American Jazz Museum. It tells the story of Black baseball with a dignity that stays with you. Give it two unhurried hours.'
+          text: 'At 18th and Vine, sharing a building with the American Jazz Museum.'
         },
         {
           icon: 'flower',
           title: 'The Overland Park Arboretum',
-          text: 'Twenty-five minutes south, and a good counterweight to the city. Native plantings, a sculpture garden and a long path that clears your head after a day of driving.'
+          text: 'Twenty-five minutes south, and a good counterweight to the city.'
         },
         {
           icon: 'clock',
@@ -154,7 +154,7 @@ module.exports = {
         {
           icon: 'map-pin',
           title: 'The west trailhead',
-          text: 'The prairie path on the edge of our own property. Best at sunrise, when the grasses hold the dew and the city has not yet woken up on the other side of the ridge.'
+          text: 'The prairie path on the edge of our own property.'
         }
       ]
     },
@@ -164,11 +164,11 @@ module.exports = {
       eyebrow: 'Sunday',
       h2: 'Sunday morning, then the prairie',
       body: [
-        'Sunday should be slower. The Negro Leagues Baseball Museum opens at ten, and it is the single best two hours you can spend in Kansas City if you care about history. The American Jazz Museum shares the building, and the Blue Room next door has live music some evenings. The 18th and Vine district is the heart of the city’s jazz story, and it repays arriving with a little context rather than treating it as a checklist stop.',
-        'From there, drive back out to the house. The prairie trailhead on the west side of the property is open to guests, and a twenty-minute walk through the restored grasses is the right way to end a weekend of driving and eating. In late summer the big bluestem stands taller than a person, and by October the whole field has turned the colour of wheat. It is the same landscape the first farmers here would have recognised, which is a strange thing to feel ten minutes from a shopping district.',
-        'If your flight is not until the afternoon, take lunch on the terrace and let the morning run long. We can hold your bags and call you a car whenever you are ready. Twenty-four minutes to MCI is a promise we have kept for years, even on a Sunday, even in the rain, and it is the kind of small certainty that makes the end of a trip easier than it has any right to be.',
-        'A last thought. The reason we send guests into the city rather than keeping them on the property is that Kansas City rewards curiosity and does not punish you for a wrong turn. The fountains are not signposted. The best barbecue is not the closest. The galleries open when they feel like it. That is the whole charm of the place, and forty-eight hours is enough to feel it, even if it is not nearly enough to finish it.',
-        'Come back in another season and it will be a different city. In April the redbuds take over the boulevards. In July the heat is honest and the evenings are long. In October the prairie turns and the whole drive out from the Plaza smells of cut grass. We will keep the itinerary here for you.'
+        'Sunday should be slower. The Negro Leagues Baseball Museum opens at ten, and it is the single best two hours you can spend in Kansas City if you care about history.',
+        'From there, drive back out to the house. The prairie trailhead on the west side of the property is open to guests, and a twenty-minute walk through the restored grasses is the right way to end a weekend of driving and eating.',
+        'If your flight is not until the afternoon, take lunch on the terrace and let the morning run long. We can hold your bags and call you a car whenever you are ready.',
+        'A last thought. The reason we send guests into the city rather than keeping them on the property is that Kansas City rewards curiosity and does not punish you for a wrong turn. The fountains are not signposted. The best barbecue is not the closest.',
+        'Come back in another season and it will be a different city. In April the redbuds take over the boulevards. In July the heat is honest and the evenings are long. In October the prairie turns and the whole drive out from the Plaza smells of cut grass.'
       ]
     },
     {

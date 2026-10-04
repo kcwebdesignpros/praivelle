@@ -1,0 +1,60 @@
+<%
+  /* Contextual internal links.
+     Search engines use these to understand which pages belong together, and
+     they give a reader an obvious next step instead of a dead end. The map is
+     explicit so the links stay genuinely relevant rather than rotating. */
+  var RELATED = {
+    '/about': ['/team', '/gallery', '/reviews', '/blog/why-we-kept-the-farmhouse'],
+    '/team': ['/about', '/careers', '/reviews', '/contact'],
+    '/services': ['/services/rooms-suites', '/services/spa-wellness', '/services/dining', '/offers'],
+    '/offers': ['/services/rooms-suites', '/services/spa-wellness', '/services/dining', '/contact'],
+    '/gallery': ['/services/rooms-suites', '/services/spa-wellness', '/about', '/reviews'],
+    '/reviews': ['/gallery', '/services/rooms-suites', '/about', '/contact'],
+    '/blog': ['/about', '/services/dining', '/services/experiences-concierge', '/contact'],
+    '/faq': ['/contact', '/offers', '/services/rooms-suites', '/accessibility'],
+    '/contact': ['/services/rooms-suites', '/offers', '/faq', '/accessibility'],
+    '/careers': ['/team', '/about', '/contact', '/faq'],
+    '/privacy-policy': ['/contact', '/terms', '/faq', '/accessibility'],
+    '/terms': ['/privacy-policy', '/contact', '/faq', '/accessibility'],
+    '/accessibility': ['/contact', '/services/rooms-suites', '/faq', '/terms']
+  };
+
+  var byPath = {};
+  services.forEach(function (s) {
+    byPath['/services/' + s.slug] = { name: s.shortName, icon: s.icon, kind: 'Service' };
+  });
+  (pages.pages || []).forEach(function (p) {
+    byPath[p.path] = { name: p.name, icon: 'file-text', kind: 'Page' };
+  });
+  posts.forEach(function (p) {
+    byPath['/blog/' + p.slug] = { name: p.title, icon: 'book-open', kind: 'Journal' };
+  });
+
+  var links = (RELATED[currentPath] || [])
+    .map(function (p) { return byPath[p] ? Object.assign({ path: p }, byPath[p]) : null; })
+    .filter(Boolean);
+%>
+<% if (links.length) { %>
+<section class="section section--tight">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__ico"><%- icon('compass', 15) %></span>Keep reading</p>
+      <h2 class="section__title">Where to go next</h2>
+    </header>
+    <ul class="related-grid">
+      <% links.forEach(function (l, i) { %>
+      <li class="related-card reveal" style="--d:<%= i * 70 %>ms">
+        <a class="related-card__link" href="<%= l.path %>">
+          <span class="related-card__ico"><%- icon(l.icon, 22) %></span>
+          <span class="related-card__body">
+            <span class="related-card__kind"><%= l.kind %></span>
+            <span class="related-card__name"><%= l.name %></span>
+          </span>
+          <span class="related-card__arrow" aria-hidden="true"><%- icon('arrow-right', 18) %></span>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
+<% } %>

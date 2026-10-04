@@ -52,12 +52,12 @@ module.exports = {
       eyebrow: 'The house',
       h2: 'Twelve rooms built around a farmhouse, not carved out of one',
       body: [
-        'The original 1940s farmhouse had five rooms and a summer kitchen. When Geneviève and Michael Marchand bought the land in 2008, they kept the shell and rebuilt around it, adding two wings that follow the ridge rather than fighting it. The result is a house of twelve rooms where the smallest is a generous 340 square feet and the largest, The Loft, runs to 980.',
-        'Because we are twelve rooms and not a hundred and twelve, the front desk knows your name before you reach it. There is no queue at check-in, no convoy of luggage carts in the lobby, and no room that was chosen for you by an algorithm. You pick the room you want, and it stays yours for the length of your stay.',
-        'Every room faces either the courtyard garden or the prairie beyond it. The Garden rooms open onto the terrace, where breakfast is served under the pergola from May to October. The upper rooms have dormer windows and window seats deep enough to fall asleep in. None of them look onto a parking lot, because there is not one to look at.',
-        'Beds are made with 400-thread-count cotton, changed daily, over mattresses built by hand in Council Grove, Kansas, by a family workshop that has been doing it since 1948. Pillows come in three weights and you can swap them without asking. If you sleep hot, ask for the linen duvet; if you sleep cold, we will add a wool blanket from a mill in Nebraska.',
-        'We do not do turndown theatre. What we do is leave the room the way you like it: a carafe of water, the lamps you left on, the curtains set how you set them. Housekeeping works to a two-hour window around your plans, and if you would rather not be disturbed at all, a card on the door keeps the day yours.',
-        'Rates start at $279 for a Garden King and rise with space and view. Every rate includes breakfast for two, valet parking, fibre Wi-Fi and access to the spa, pool and fitness studio. There are no resort fees, no parking charge, and no surprise line for the coffee already sitting in your room.'
+        'The original 1940s farmhouse had five rooms and a summer kitchen. When Genevi\u00e8ve and Michael Marchand bought the land in 2008, they kept the shell and rebuilt around it, adding two wings that follow the ridge rather than fighting it.',
+        'Because we are twelve rooms and not a hundred and twelve, the front desk knows your name before you reach it. There is no queue at check-in, no convoy of luggage carts in the lobby, and no room that was chosen for you by an algorithm.',
+        'Every room faces either the courtyard garden or the prairie beyond it. The Garden rooms open onto the terrace, where breakfast is served under the pergola from May to October. The upper rooms have dormer windows and window seats deep enough to fall asleep in.',
+        'Beds are made with 400-thread-count cotton, changed daily, over mattresses built by hand in Council Grove, Kansas, by a family workshop that has been doing it since 1948. Pillows come in three weights and you can swap them without asking.',
+        'We do not do turndown theatre. What we do is leave the room the way you like it: a carafe of water, the lamps you left on, the curtains set how you set them.',
+        'Rates start at $279 for a Garden King and rise with space and view. Every rate includes breakfast for two, valet parking, fibre Wi-Fi and access to the spa, pool and fitness studio.'
       ]
     },
     {
@@ -72,7 +72,7 @@ module.exports = {
         {
           icon: 'bed',
           title: 'The Garden King',
-          text: 'Our entry room at 340 square feet, with a king bed and French doors onto the courtyard. Ground floor, and one of two rooms that are fully step-free.'
+          text: 'Our entry room at 340 square feet, with a king bed and French doors onto the courtyard.'
         },
         {
           icon: 'bed',
@@ -112,7 +112,7 @@ module.exports = {
         {
           icon: 'accessibility',
           title: 'Accessible rooms',
-          text: 'Two ground-floor rooms with step-free entry, roll-in showers, grab rails, lowered pegs and a visual alarm. Book by phone and we will talk it through.'
+          text: 'Two ground-floor rooms with step-free entry, roll-in showers, grab rails, lowered pegs and a visual alarm.'
         }
       ]
     },
@@ -124,7 +124,7 @@ module.exports = {
       image: '/img/gallery-bath.webp',
       imageAlt: 'A deep soaking tub and stone vanity in a Praivelle House suite bathroom',
       body: [
-        'Ask guests what they remember about a hotel and almost none of them describe the lobby. They describe the bed. So the money went there: mattresses built by hand in Council Grove, box springs tuned to each frame, and a pillow menu in three weights so you can find yours without a phone call.',
+        'Ask guests what they remember about a hotel and almost none of them describe the lobby. They describe the bed.',
         'The bathrooms got the same attention. The Garden rooms have walk-in showers with a bench; the suites add deep tubs and, in the Spa Suite, a Japanese soaking tub deep enough to stand in. Water is filtered, held at 120 degrees and tested every morning.',
         'Robes are waffle cotton from a mill in Portugal, slippers are yours to keep, and the bath products are made in small batches in Lawrence, Kansas — a short list of four, refilled in glass rather than thrown away in plastic.'
       ],
@@ -239,10 +239,10 @@ module.exports = {
       eyebrow: 'Accessibility, pets and the small print',
       h2: 'The details that decide whether a stay actually works',
       body: [
-        'Two of our ground-floor rooms are fully accessible, with step-free entry from the courtyard, roll-in showers with a fold-down bench, grab rails beside every fixture, lowered pegs and light switches, and a visual alarm for guests who are deaf or hard of hearing. The spa, the pool and the dining room are all reachable without a step, and the lift serves every floor. Tell us what you need and we will confirm it in writing before you book, rather than hoping for the best on arrival.',
-        'Dogs are genuinely welcome here, not merely tolerated. Two dogs of up to fifty pounds each can stay in our pet-friendly rooms for $40 a night, and we provide bowls, a washable bed and a map of the prairie trail that starts at the back gate. Dogs are allowed in the courtyard and on the terrace, though not in the dining room or the spa, and the front desk will gladly arrange a walker if you are out for the day.',
-        'In-room dining runs around the clock from the full kitchen, not a reduced night menu. At two in the morning you can order the same pork from Lawson that was on the dinner menu, or a bowl of soup and a pot of tea. Trays are set with linen and proper glassware, and the coffee arrives in a press rather than a pod.',
-        'The small print is short. Rates exclude the Missouri lodging tax. A single night holds a reservation and the balance is settled at check-out. Cots and rollaway beds are free for children under twelve, and they fit in every room except the Garden Twin. If a flight is delayed or a meeting runs long, call the desk; we would rather move your arrival than charge you for a night you did not sleep.'
+        'Two of our ground-floor rooms are fully accessible, with step-free entry from the courtyard, roll-in showers with a fold-down bench, grab rails beside every fixture, lowered pegs and light switches, and a visual alarm for guests who are deaf or hard of hearing.',
+        'Dogs are genuinely welcome here, not merely tolerated. Two dogs of up to fifty pounds each can stay in our pet-friendly rooms for $40 a night, and we provide bowls, a washable bed and a map of the prairie trail that starts at the back gate.',
+        'In-room dining runs around the clock from the full kitchen, not a reduced night menu. At two in the morning you can order the same pork from Lawson that was on the dinner menu, or a bowl of soup and a pot of tea.',
+        'The small print is short. Rates exclude the Missouri lodging tax. A single night holds a reservation and the balance is settled at check-out. Cots and rollaway beds are free for children under twelve, and they fit in every room except the Garden Twin.'
       ]
     },
     {

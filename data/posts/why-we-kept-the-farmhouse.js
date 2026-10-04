@@ -31,10 +31,10 @@ module.exports = {
       eyebrow: 'Behind the house',
       h2: 'The building we nearly knocked down',
       body: [
-        'The farmhouse was built in 1948 by a family named Halsey, who kept cattle on the land and grew a kitchen garden where our spa now stands. By the time we found it in 2008 it had been empty for four years, the roof had failed in two places, and the county had it listed as a tear-down. We bought it at auction for less than the value of the acreage, and for about six months we fully intended to demolish it and start again.',
-        'I want to be honest about how close we came. Michael and I had a set of drawings from a Kansas City architect for a new building, low and modern and built into the slope, with twenty-four rooms and a proper commercial kitchen. It would have been straightforward. It would have been faster, and cheaper, and simpler to run. We had the demolition quote in a folder, and we were a week away from using it when the roof finally came down in a spring storm and changed the whole calculation.',
-        'What changed was the floors. When the ceiling in the front room collapsed, it revealed the original 1940s oak boards underneath, wide planks, hand-finished, laid over sleepers the way they used to do it. They were dusty and dark and completely sound. Michael knelt down and ran a hand along them and said the thing that decided everything: you cannot buy wood like this anymore. We cancelled the demolition the following Monday.',
-        'This is the story of what we kept, what we found, what the old building forced us to do, and why all of it made the hotel better than the new building would have been. It is also, I should say, a story we tell slightly differently every year as we learn more about the place. The house has a way of correcting you.'
+        'The farmhouse was built in 1948 by a family named Halsey, who kept cattle on the land and grew a kitchen garden where our spa now stands.',
+        'I want to be honest about how close we came. Michael and I had a set of drawings from a Kansas City architect for a new building, low and modern and built into the slope, with twenty-four rooms and a proper commercial kitchen. It would have been straightforward.',
+        'What changed was the floors. When the ceiling in the front room collapsed, it revealed the original 1940s oak boards underneath, wide planks, hand-finished, laid over sleepers the way they used to do it. They were dusty and dark and completely sound.',
+        'This is the story of what we kept, what we found, what the old building forced us to do, and why all of it made the hotel better than the new building would have been.'
       ]
     },
     {
@@ -92,10 +92,10 @@ module.exports = {
       eyebrow: 'In the walls',
       h2: 'The things the Halseys left behind',
       body: [
-        'You learn a lot about a family when you take their house apart. In the walls we found a 1948 copy of the Kansas City Star folded around a pipe, a child’s blue glass marble wedged under a sill, a ration book with two stamps left in it, and a pencil drawing on a scrap of feed sack that we eventually worked out was a map of the original orchard, with the trees numbered. We framed the drawing and hung it in the library, where it still is.',
-        'There was a shoebox behind the chimney breast in the front room containing eleven letters, all from a man named Walter Halsey to a woman named Ruth, posted from a naval base in California between 1943 and 1945. They are careful and shy and full of the weather. We do not know how the story ended, and we have never tried to find out, because it felt like reading over a shoulder. The letters are in the house safe, and any guest who asks can read them, which several have.',
-        'The discoveries changed how we thought about the restoration. Once you know a family lived here and left things in the walls, you stop thinking of the building as a structure and start thinking of it as somebody’s home that you are borrowing. That is the feeling we have tried to keep in the hotel ever since. It is why we never replaced the uneven floorboards in the hall, why we kept the small hand-painted numbers on the bedroom doors, and why the guest rooms are named after the trees in the old orchard rather than given numbers.',
-        'We also learned to be careful. There is a cupboard in the east wing, behind the panelling, that we have never opened because the frame is fragile and we are not sure what is behind it. It has been on the list for a decade. Every few years someone suggests we take a look and every few years we decide the mystery is worth more than the answer.'
+        'You learn a lot about a family when you take their house apart.',
+        'There was a shoebox behind the chimney breast in the front room containing eleven letters, all from a man named Walter Halsey to a woman named Ruth, posted from a naval base in California between 1943 and 1945. They are careful and shy and full of the weather.',
+        'The discoveries changed how we thought about the restoration. Once you know a family lived here and left things in the walls, you stop thinking of the building as a structure and start thinking of it as somebody\u2019s home that you are borrowing.',
+        'We also learned to be careful. There is a cupboard in the east wing, behind the panelling, that we have never opened because the frame is fragile and we are not sure what is behind it. It has been on the list for a decade.'
       ]
     },
     {
@@ -106,8 +106,8 @@ module.exports = {
       image: '/img/gallery-terrace.webp',
       imageAlt: 'The three oak trees on the south lawn at Praivelle House',
       body: [
-        'The three oak trees on the south lawn are older than the house by at least a century. When we were still planning the new building, the architect’s scheme would have taken the easternmost one down to make room for the parking court. That single tree is the reason we started rethinking the whole plan.',
-        'We moved the parking. We moved the terrace. We moved the path guests take from the orchard to the ballroom, so that it curves around all three trees rather than between them. It costs us a little convenience every day and it gives every wedding we host its photographs. When a couple marries under those oaks, they are standing in the shade of trees that were here before the house and will be here after it.'
+        'The three oak trees on the south lawn are older than the house by at least a century. When we were still planning the new building, the architect\u2019s scheme would have taken the easternmost one down to make room for the parking court.',
+        'We moved the parking. We moved the terrace. We moved the path guests take from the orchard to the ballroom, so that it curves around all three trees rather than between them.'
       ],
       list: [
         'The easternmost oak predates the house by roughly a century',
@@ -122,10 +122,10 @@ module.exports = {
       eyebrow: 'The limits',
       h2: 'What the old building would not let us do',
       body: [
-        'Keeping the farmhouse meant accepting a set of constraints that a new building would never have imposed. The rooms are not uniform, because the original house was not. Some are long and narrow, some have a chimney breast cutting into the corner, and two of them share a wall that is eighteen inches thick and completely immovable. We could not give every guest the same experience, and so we stopped trying to.',
-        'The ceilings are low in the oldest part and high in the addition, which means the acoustics change as you walk from the lobby into the dining room. The plumbing had to be rerouted around a foundation we could not touch. The kitchen is smaller than a hotel kitchen should be, and every chef we have had, including Julien, has complained about it and then produced food that a bigger kitchen would not have improved.',
-        'Here is the part that surprised us. Every one of those constraints made the hotel better. Because the rooms are different, guests choose one rather than accepting one, and they come back to the same room the way you return to a favourite chair. Because the kitchen is small, the menu is short and changes with the fire. Because the walls are thick, the house is quiet in a way that a modern building rarely manages. A new hotel would have given us twenty-four identical rooms and nothing to say about any of them.',
-        'The other thing the old building taught us was patience. You cannot rush a farmhouse. You can only work with what is there, in the order it allows. We spent a decade restoring a house that a wrecking ball would have cleared in an afternoon, and every year of it taught us something about the place that we now pass on to guests. The uneven floorboards in the hall are not a flaw we failed to fix. They are the reason the hall sounds like a house and not a corridor.'
+        'Keeping the farmhouse meant accepting a set of constraints that a new building would never have imposed. The rooms are not uniform, because the original house was not.',
+        'The ceilings are low in the oldest part and high in the addition, which means the acoustics change as you walk from the lobby into the dining room. The plumbing had to be rerouted around a foundation we could not touch.',
+        'Here is the part that surprised us. Every one of those constraints made the hotel better. Because the rooms are different, guests choose one rather than accepting one, and they come back to the same room the way you return to a favourite chair.',
+        'The other thing the old building taught us was patience. You cannot rush a farmhouse. You can only work with what is there, in the order it allows.'
       ]
     },
     {
@@ -137,9 +137,9 @@ module.exports = {
       image: '/img/hero.webp',
       imageAlt: 'Restored native prairie grasses on the twelve acres at Praivelle House',
       body: [
-        'The twelve acres around the house were, when we bought them, mown pasture and a little scrub. We kept mowing for the first ten years because it was tidy, and tidiness is a hard habit to break. Then a conservation biologist we had out to look at the oaks told us, almost in passing, that we were sitting on some of the best prairie soil in the county and mowing it into nothing.',
-        'So we stopped. We seeded eleven acres with a mix from a remnant prairie in the Flint Hills, big bluestem and little bluestem, Indian grass, switchgrass, and a long list of forbs with names I had to learn. The first year it looked like a neglected field. The second year it looked worse. The third year the grasses came up above the fence line and the bobolinks arrived, and we understood what we had been mowing.',
-        'Now the prairie is the reason many guests choose us over a hotel downtown. We cut a trail to the ridge and opened the west trailhead, and a twenty-minute walk through it at sunrise is the thing guests mention most often when they write to us afterwards. The city is ten minutes away, and it may as well be a hundred.'
+        'The twelve acres around the house were, when we bought them, mown pasture and a little scrub. We kept mowing for the first ten years because it was tidy, and tidiness is a hard habit to break.',
+        'So we stopped. We seeded eleven acres with a mix from a remnant prairie in the Flint Hills, big bluestem and little bluestem, Indian grass, switchgrass, and a long list of forbs with names I had to learn. The first year it looked like a neglected field.',
+        'Now the prairie is the reason many guests choose us over a hotel downtown. We cut a trail to the ridge and opened the west trailhead, and a twenty-minute walk through it at sunrise is the thing guests mention most often when they write to us afterwards.'
       ],
       list: [
         'Eleven of the twelve acres are now native prairie',
@@ -167,10 +167,10 @@ module.exports = {
       eyebrow: 'The point of it',
       h2: 'Why we did not build the hotel we planned',
       body: [
-        'People ask, sometimes, whether we regret not building new. The honest answer is that we regret the money, occasionally, and nothing else. The new building would have been easier to run, easier to clean, easier to insure, and I think about it every time the heating in the east wing misbehaves. But it would not have been this, and this is the thing we set out to make without knowing it.',
-        'A hotel is a strange kind of building. It is a business and a home and a public place all at once, and most of them solve the problem by being as neutral as possible, so that no guest feels out of place. The farmhouse forced us to do the opposite. It made us specific. It made us uneven and particular and occasionally inconvenient, and in return it gave guests a reason to remember which room they stayed in and which tree they were married under.',
-        'The tagline we settled on, a prairie house reimagined, is not a slogan we invented for a brochure. It is a description of what happened here between 2008 and now. We reimagined a house rather than replacing it, and the house reimagined us in return. Michael and I arrived with drawings for a building and left with a home that happens to take guests, which is a different and much better thing.',
-        'If you come and stay, you will sleep under the original oak boards we found when the ceiling fell in, in a room named after a tree that is no longer there, four feet from a wall that a family called the Halseys built in 1948 and left their letters inside. We did not plan any of that. We just refused to knock it down, and everything good about this place followed from that one decision.'
+        'People ask, sometimes, whether we regret not building new. The honest answer is that we regret the money, occasionally, and nothing else.',
+        'A hotel is a strange kind of building. It is a business and a home and a public place all at once, and most of them solve the problem by being as neutral as possible, so that no guest feels out of place.',
+        'The tagline we settled on, a prairie house reimagined, is not a slogan we invented for a brochure. It is a description of what happened here between 2008 and now. We reimagined a house rather than replacing it, and the house reimagined us in return.',
+        'If you come and stay, you will sleep under the original oak boards we found when the ceiling fell in, in a room named after a tree that is no longer there, four feet from a wall that a family called the Halseys built in 1948 and left their letters inside.'
       ]
     },
     {
@@ -211,11 +211,11 @@ module.exports = {
         },
         {
           q: 'Are the rooms all the same?',
-          a: 'No, and that is deliberate. The original house was not uniform, so the rooms are not either. Some are long, some have a chimney breast in the corner and two share an eighteen-inch wall. Guests tend to pick a favourite and ask for it again.'
+          a: 'No, and that is deliberate. The original house was not uniform, so the rooms are not either. Some are long, some have a chimney breast in the corner and two share an eighteen-inch wall.'
         },
         {
           q: 'What did you find during the restoration?',
-          a: 'A 1948 newspaper folded around a pipe, a child’s marble, a ration book with two stamps left, a pencil map of the old orchard and eleven wartime letters. The map is on the library wall and the letters are in the house safe for guests who ask.'
+          a: 'A 1948 newspaper folded around a pipe, a child\u2019s marble, a ration book with two stamps left, a pencil map of the old orchard and eleven wartime letters.'
         },
         {
           q: 'Can guests walk on the prairie?',
@@ -223,7 +223,7 @@ module.exports = {
         },
         {
           q: 'Why did you not just build a new hotel?',
-          a: 'We nearly did. We had drawings for a modern building with twenty-four rooms and a demolition quote in hand. The original oak floors, revealed when the roof failed, changed our minds, and the constraints of the old house turned out to make the hotel better rather than worse.'
+          a: 'We nearly did. We had drawings for a modern building with twenty-four rooms and a demolition quote in hand.'
         }
       ]
     },
@@ -242,11 +242,11 @@ module.exports = {
     },
     {
       q: 'Are the rooms all the same?',
-      a: 'No, and that is deliberate. The original house was not uniform, so the rooms are not either. Some are long, some have a chimney breast in the corner and two share an eighteen-inch wall. Guests tend to pick a favourite and ask for it again.'
+      a: 'No, and that is deliberate. The original house was not uniform, so the rooms are not either. Some are long, some have a chimney breast in the corner and two share an eighteen-inch wall.'
     },
     {
       q: 'What did you find during the restoration?',
-      a: 'A 1948 newspaper folded around a pipe, a child’s marble, a ration book with two stamps left, a pencil map of the old orchard and eleven wartime letters. The map is on the library wall and the letters are in the house safe for guests who ask.'
+      a: 'A 1948 newspaper folded around a pipe, a child\u2019s marble, a ration book with two stamps left, a pencil map of the old orchard and eleven wartime letters.'
     },
     {
       q: 'Can guests walk on the prairie?',
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       q: 'Why did you not just build a new hotel?',
-      a: 'We nearly did. We had drawings for a modern building with twenty-four rooms and a demolition quote in hand. The original oak floors, revealed when the roof failed, changed our minds, and the constraints of the old house turned out to make the hotel better rather than worse.'
+      a: 'We nearly did. We had drawings for a modern building with twenty-four rooms and a demolition quote in hand.'
     }
   ],
   cta: {

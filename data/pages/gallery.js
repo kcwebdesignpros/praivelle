@@ -120,11 +120,11 @@ module.exports = {
       eyebrow: 'About the photographs',
       h2: 'How These Pictures Were Made',
       body: [
-        'We waited a long time to photograph the house properly. For years the only pictures of Praivelle were ones guests took on their phones and sent to us, which were often better than anything a professional would have produced, because they were taken in the middle of a real stay rather than a staged one. When we finally hired a photographer, in September 2026, we asked her to work the same way: to move in, eat dinner, sleep a night, and only then pick up the camera.',
-        'So every image on this page was taken over three ordinary days by someone who had already spent the night here. There was no stylist, no borrowed furniture, no lighting rig and no props brought in from a warehouse. The books in the library are the books we actually keep. The glasses on the bar are the glasses we actually use. The bed in the Garden King is made the way housekeeping makes it, with the same linen you will sleep in, folded by the same hands.',
-        'That decision costs us something. A styled photograph flatters a room in ways the room itself cannot always match, and it is easier to sell a hotel with a picture of an imagined stay than a real one. We would rather you arrive to find the room a little better than the photograph than a little worse. Several guests have told us, almost apologetically, that the house looks better in person. We take that as the whole point.',
-        'The light did most of the work, as it usually does here. The house faces south across twelve acres of open ground, so there is nothing between the windows and the horizon, and the rooms fill with a soft, even light from mid-morning until late afternoon. The photographer shot almost entirely between first light and eleven, and again in the last hour before dusk, because that is when the oak floors and the old brick look the way they look for most of a day. The pool shot at the top of this page was taken at half past seven in the evening, with the underwater lights just coming on and nobody in the water.',
-        'We have deliberately kept the set small. There are fifty or sixty good photographs of this house, and you will see perhaps fifteen of them here. The rest sit in a folder because they repeat themselves, or because they make a room look grander than it is, or because they show a version of the house that only exists on a perfect day. What is left is honest. If you want to see a specific room before you book, tell the front desk which one and we will send you the photographs we have, including the ones that show the awkward corner.'
+        'We waited a long time to photograph the house properly.',
+        'So every image on this page was taken over three ordinary days by someone who had already spent the night here. There was no stylist, no borrowed furniture, no lighting rig and no props brought in from a warehouse.',
+        'That decision costs us something. A styled photograph flatters a room in ways the room itself cannot always match, and it is easier to sell a hotel with a picture of an imagined stay than a real one.',
+        'The light did most of the work, as it usually does here. The house faces south across twelve acres of open ground, so there is nothing between the windows and the horizon, and the rooms fill with a soft, even light from mid-morning until late afternoon.',
+        'We have deliberately kept the set small. There are fifty or sixty good photographs of this house, and you will see perhaps fifteen of them here.'
       ]
     },
     {
@@ -135,10 +135,10 @@ module.exports = {
       image: '/img/svc-rooms-suites.webp',
       imageAlt: 'A Garden King suite at Praivelle House with a deep bed and windows onto the prairie',
       body: [
-        'A photograph can show you a bed and a window. It cannot show you that the mattress is a hand-made pocket-spring that guests ask about so often we keep the maker on file, or that the pillows come in three firmnesses and housekeeping will swap them without a word if you call down. It cannot show you the weight of the blackout curtains, which are heavy enough to hold back a July sunrise and quiet enough to slide without a sound.',
-        'The Garden King is the room most guests book first and the one they ask for by name when they return. It is not our largest suite, and it is not the most dramatic. It is the room where the proportions are most obviously the work of the original 1940s builder rather than our architect, with a ceiling a touch lower than the rest of the house and a window that runs almost to the floor. You wake up looking at the orchard. In October, when the apples are still on the trees, that is a better reason to get out of bed than most alarm clocks.',
-        'Everything in the room is there because someone would miss it if it were gone. The desk faces the window rather than the wall, because we noticed guests kept turning the chair around. There are two reading lights, not one, and they are warm rather than white, so you can read without waking the person beside you. The kettle and the coffee are on a tray by the door, with real milk in the little fridge, because the first thing most people want in the morning is a cup of coffee and the second is to be left alone to drink it.',
-        'The rooms differ more than the photographs let on. No two of the twelve are the same size, and each one catches the light differently depending on which side of the house it sits on. The six rooms facing south are brighter and warmer; the six facing the courtyard are quieter and darker in the morning, which some guests specifically request. When you book, we will tell you which is which and match you to the one that suits how you actually sleep.'
+        'A photograph can show you a bed and a window.',
+        'The Garden King is the room most guests book first and the one they ask for by name when they return. It is not our largest suite, and it is not the most dramatic.',
+        'Everything in the room is there because someone would miss it if it were gone. The desk faces the window rather than the wall, because we noticed guests kept turning the chair around.',
+        'The rooms differ more than the photographs let on. No two of the twelve are the same size, and each one catches the light differently depending on which side of the house it sits on.'
       ],
       list: [
         'Hand-made pocket-spring mattresses and a choice of three pillow firmnesses',
@@ -160,32 +160,32 @@ module.exports = {
         {
           icon: 'sunrise',
           title: 'The quiet',
-          text: 'We are on twelve acres with nothing between the house and the horizon, so the loudest thing at night is usually the wind in the native grass. Guests from the city mention the quiet more than anything else, and some of them take a night to get used to it.'
+          text: 'We are on twelve acres with nothing between the house and the horizon, so the loudest thing at night is usually the wind in the native grass.'
         },
         {
           icon: 'coffee',
           title: 'The smell of the kitchen at seven',
-          text: 'By the time the first guests come down, the hearth has been lit for an hour and the bread is already out of the oven. You will smell it in the corridor before you reach the dining room, and it is the reason breakfast here is not something people skip.'
+          text: 'By the time the first guests come down, the hearth has been lit for an hour and the bread is already out of the oven.'
         },
         {
           icon: 'hand-heart',
           title: 'The welcome note',
-          text: 'Geneviève still writes the note that goes into every room by hand, and it is not a template. If you told us on the phone that you were coming for an anniversary, the note will say so, because she wrote it knowing that.'
+          text: 'Genevi\u00e8ve still writes the note that goes into every room by hand, and it is not a template.'
         },
         {
           icon: 'users',
           title: 'The people who remember you',
-          text: 'More than half the team has been here five years or longer. The person who brings your coffee on the second morning is usually the person who brought it on the first, and by the third day they will have stopped asking how you take it.'
+          text: 'More than half the team has been here five years or longer.'
         },
         {
           icon: 'waves',
           title: 'The pool at seven in the morning',
-          text: 'The photograph shows the pool at dusk, but the pool is at its best before anyone else is up. Guests who swim early tell us it is the closest thing to having the whole house to themselves, which, for an hour, they do.'
+          text: 'The photograph shows the pool at dusk, but the pool is at its best before anyone else is up.'
         },
         {
           icon: 'sparkles',
           title: 'The way the prairie changes',
-          text: 'The same field looks like three different places across a year — green in May, chest-high and silver in August, burnt amber in November. A single photograph freezes one week of it. Guests who come back in a different season often say it feels like a different hotel.'
+          text: 'The same field looks like three different places across a year \u2014 green in May, chest-high and silver in August, burnt amber in November.'
         }
       ]
     },
@@ -215,7 +215,7 @@ module.exports = {
         },
         {
           q: 'Can I see the specific room I am booking?',
-          a: 'Yes. Tell the front desk which room or suite you are considering and we will send you the photographs we have of it, including any that show a less flattering angle. We would rather you see the real room than a flattering one.'
+          a: 'Yes. Tell the front desk which room or suite you are considering and we will send you the photographs we have of it, including any that show a less flattering angle.'
         },
         {
           q: 'Do the rooms really look like this?',
@@ -223,11 +223,11 @@ module.exports = {
         },
         {
           q: 'Which room has the best view?',
-          a: 'The six south-facing rooms look over the orchard and the prairie and get the most light. The courtyard rooms are quieter and darker in the morning, which guests who sleep late tend to prefer. Ask us which suits you and we will match you to it.'
+          a: 'The six south-facing rooms look over the orchard and the prairie and get the most light. The courtyard rooms are quieter and darker in the morning, which guests who sleep late tend to prefer.'
         },
         {
           q: 'Can I take photographs during my stay?',
-          a: 'Of course, and we would love to see them. Guests photograph the house constantly, and some of our favourite images have come from guests rather than professionals. Tag us or send them to the front desk and we may ask to use one.'
+          a: 'Of course, and we would love to see them. Guests photograph the house constantly, and some of our favourite images have come from guests rather than professionals.'
         },
         {
           q: 'Do you allow professional photo shoots?',

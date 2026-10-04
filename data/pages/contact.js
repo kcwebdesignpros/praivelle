@@ -42,22 +42,22 @@ module.exports = {
         {
           icon: 'calendar-check',
           title: 'Reservations · (816)' + ' 555-0147',
-          text: 'The line for booking a room, changing dates, checking availability or asking about a package. Staffed twenty-four hours, and always the best rate you will find. Email reservations@praivellehouse.com if you would rather write.'
+          text: 'The line for booking a room, changing dates, checking availability or asking about a package.'
         },
         {
           icon: 'bell',
           title: 'Concierge · (816)' + ' 555-0148',
-          text: 'For anything once you are here or on your way: dinner tables in town, a car to the airport, a spa treatment, a trail to walk, a place to eat that is not on any list. The concierge knows the city and will tell you honestly.'
+          text: 'For anything once you are here or on your way: dinner tables in town, a car to the airport, a spa treatment, a trail to walk, a place to eat that is not on any list.'
         },
         {
           icon: 'rings',
           title: 'Weddings & Events · (816)' + ' 555-0149',
-          text: 'Clara Whitfield and her team handle weddings, private dining, corporate retreats and full-property buyouts. Call for dates and availability, or email events@praivellehouse.com with an idea and a rough number of guests.'
+          text: 'Clara Whitfield and her team handle weddings, private dining, corporate retreats and full-property buyouts. Call for dates and availability, or email events@praivellehouse.'
         },
         {
           icon: 'mail',
           title: 'General enquiries',
-          text: 'For everything else, stay@praivellehouse.com reaches the front desk directly. Press, partnerships, lost property, gift vouchers and questions that do not fit anywhere else all land in the same inbox and are answered within a day.'
+          text: 'For everything else, stay@praivellehouse. com reaches the front desk directly.'
         }
       ]
     },
@@ -87,10 +87,10 @@ module.exports = {
       eyebrow: 'How we answer',
       h2: 'A Person, Not a Prompt',
       body: [
-        'Call any of our numbers and you will reach a person who works in the house, not a phone tree and not a call centre in another time zone. That is a deliberate choice and an expensive one, but it is the difference between a hotel that answers the phone and one that manages it. When you call at eleven at night to ask whether you can still get something to eat, the person who answers will know the answer and, if the kitchen is closed, will know what to do about it.',
-        'During the day we aim to return any call within the hour, and email within one business day. If you send the form on this page in the middle of the night, a member of the front desk will read it first thing the next morning and reply to you personally. Nobody is asked to hit a response-time target by a dashboard; we simply do not like leaving people waiting, so we do not.',
-        'It also means you get a straight answer rather than a polished one. If the room you want is booked, we will tell you which room is closest to it and why. If a package does not suit what you are trying to do, we will say so and suggest something better. If you ask whether the restaurant in town is worth the drive, the concierge will tell you honestly, even when the honest answer is no.',
-        'We keep a file on returning guests, and we use it in the ways that make a stay feel expected rather than processed: the room you preferred last time, the pillow you asked for, the fact that you do not drink. It is not surveillance and it is never shared. It is just the ordinary courtesy of remembering, which is harder to do at scale and one of the reasons we are glad to be small.'
+        'Call any of our numbers and you will reach a person who works in the house, not a phone tree and not a call centre in another time zone.',
+        'During the day we aim to return any call within the hour, and email within one business day.',
+        'It also means you get a straight answer rather than a polished one. If the room you want is booked, we will tell you which room is closest to it and why.',
+        'We keep a file on returning guests, and we use it in the ways that make a stay feel expected rather than processed: the room you preferred last time, the pillow you asked for, the fact that you do not drink.'
       ]
     },
     {
@@ -103,23 +103,23 @@ module.exports = {
       items: [
         {
           title: 'Tell us your dates and who is coming',
-          text: 'Call (816) 555-0147, email reservations@praivellehouse.com, or send the form below with your preferred dates. If your dates are flexible, say so, because a midweek night is often a different price from a Saturday and we will tell you which is which.'
+          text: 'Call (816) 555-0147, email reservations@praivellehouse. com, or send the form below with your preferred dates.'
         },
         {
           title: 'We check the house and come back with real options',
-          text: 'With only twelve rooms, we can tell you exactly what is free rather than pointing you at a generic calendar. If the room you wanted is taken, we will suggest the closest alternative and explain the difference, including which side of the house it is on and how the light falls.'
+          text: 'With only twelve rooms, we can tell you exactly what is free rather than pointing you at a generic calendar.'
         },
         {
           title: 'We hold the room and confirm the details',
-          text: 'Once you have chosen, we hold the room and send a single confirmation covering the room, the rate, breakfast, any package inclusions and the check-in time. Everything is in one place, in plain English rather than a wall of small print.'
+          text: 'Once you have chosen, we hold the room and send a single confirmation covering the room, the rate, breakfast, any package inclusions and the check-in time.'
         },
         {
           title: 'Tell us what you would like arranged',
-          text: 'This is the part most guests enjoy. A spa treatment, a table at the hearth, a bottle of something cold in the room on arrival, a car from the airport, a walk mapped through the prairie. Say it once and we will have it ready, and there is no charge for asking.'
+          text: 'This is the part most guests enjoy. A spa treatment, a table at the hearth, a bottle of something cold in the room on arrival, a car from the airport, a walk mapped through the prairie.'
         },
         {
           title: 'Change your mind if you need to',
-          text: 'Most bookings can be moved or cancelled free of charge up to seventy-two hours before arrival. If plans shift inside that window, call us and we will do what we can, particularly for midweek dates. We would always rather move a booking than lose it.'
+          text: 'Most bookings can be moved or cancelled free of charge up to seventy-two hours before arrival. If plans shift inside that window, call us and we will do what we can, particularly for midweek dates.'
         }
       ]
     },
@@ -131,10 +131,10 @@ module.exports = {
       image: '/img/gallery-terrace.webp',
       imageAlt: 'The terrace and grounds at Praivelle House in Kansas City at golden hour',
       body: [
-        'We are at 1200 Prairie Ridge Road, Kansas City, MO 64112, on twelve acres of prairie about ten minutes south of the Country Club Plaza. The drive in is deliberately understated: a low stone wall, a gravel approach under three old oaks, and the house at the end of it, which is a restored 1940s farmhouse rather than anything that announces itself as a hotel.',
-        'From the Plaza, take Ward Parkway south and follow the signs toward Prairie Ridge Road; the turn is a few minutes past the golf course and is easy to miss if you are watching the satnav rather than the road, so look for the stone wall on your right. From downtown, take I-35 south and follow the same approach. Kansas City International is 24 minutes north by car, and the drive is straightforward at almost any hour except the height of the morning rush.',
-        'Parking is complimentary and there are two ways to use it. Pull up to the porte-cochère on Prairie Ridge Road and the valet will take the car from you, which is free and the easiest option, particularly if you have luggage. If you would rather park yourself, the gated courtyard behind the house has spaces for every room, along with EV charging points for guests who need them. The walk from the courtyard to the front door is level and step-free.',
-        'The whole route, from the car to the lobby to the ground-floor rooms, is step-free, and we are happy to talk you through it before you arrive if you have particular access needs. If you are arriving late, reception is staffed twenty-four hours, so there is no window you can miss and no key code to hunt for in the dark. Someone will be at the desk with the lights on.'
+        'We are at 1200 Prairie Ridge Road, Kansas City, MO 64112, on twelve acres of prairie about ten minutes south of the Country Club Plaza.',
+        'From the Plaza, take Ward Parkway south and follow the signs toward Prairie Ridge Road; the turn is a few minutes past the golf course and is easy to miss if you are watching the satnav rather than the road, so look for the stone wall on your right.',
+        'Parking is complimentary and there are two ways to use it. Pull up to the porte-coch\u00e8re on Prairie Ridge Road and the valet will take the car from you, which is free and the easiest option, particularly if you have luggage.',
+        'The whole route, from the car to the lobby to the ground-floor rooms, is step-free, and we are happy to talk you through it before you arrive if you have particular access needs.'
       ],
       list: [
         '1200 Prairie Ridge Road, Kansas City, MO 64112',
@@ -157,27 +157,27 @@ module.exports = {
         {
           icon: 'clock',
           title: 'Check-in from 3:00 PM',
-          text: 'Check-out is by 11:00 AM. Reception is staffed around the clock, so early arrivals can leave luggage and late arrivals are never a problem. Late check-out is often possible and is included in some packages.'
+          text: 'Check-out is by 11:00 AM. Reception is staffed around the clock, so early arrivals can leave luggage and late arrivals are never a problem.'
         },
         {
           icon: 'key',
           title: 'Tell us your arrival time',
-          text: 'If you know roughly when you will arrive, say so when you book. It lets us have the room ready and the fire lit, and if you are running late, a quick call means we can keep dinner warm for you.'
+          text: 'If you know roughly when you will arrive, say so when you book.'
         },
         {
           icon: 'car',
           title: 'Valet is complimentary',
-          text: 'Pull up to the porte-cochère and leave the car with us, or park yourself in the gated courtyard. Both are free, and both leave you a level, step-free walk to the front door.'
+          text: 'Pull up to the porte-coch\u00e8re and leave the car with us, or park yourself in the gated courtyard.'
         },
         {
           icon: 'wifi',
           title: 'Wi-Fi and local calls are included',
-          text: 'Fibre Wi-Fi runs throughout the house and the grounds, and it is complimentary. Local calls from the room are free as well. There is nothing to log into and nothing to pay at checkout.'
+          text: 'Fibre Wi-Fi runs throughout the house and the grounds, and it is complimentary. Local calls from the room are free as well.'
         },
         {
           icon: 'utensils',
           title: 'Dinner is worth booking ahead',
-          text: 'The dining room is small and fills quickly on Friday and Saturday. Tell us when you book and we will hold a table at the hearth or by the window, whichever you prefer.'
+          text: 'The dining room is small and fills quickly on Friday and Saturday.'
         },
         {
           icon: 'accessibility',
@@ -203,7 +203,7 @@ module.exports = {
         },
         {
           q: 'Do you have a best-rate guarantee?',
-          a: 'Yes. Book direct and if you find a lower publicly available rate for the same room, dates and inclusions within twenty-four hours, we will match it and take a further ten per cent off. We do not pay commission to booking sites, so direct is where the value is.'
+          a: 'Yes. Book direct and if you find a lower publicly available rate for the same room, dates and inclusions within twenty-four hours, we will match it and take a further ten per cent off.'
         },
         {
           q: 'What is the best way to reach the concierge?',
@@ -211,7 +211,7 @@ module.exports = {
         },
         {
           q: 'Can I arrange a spa treatment or a dinner reservation before I arrive?',
-          a: 'Absolutely, and we recommend it. Say what you would like when you book, or send the form below, and we will offer you times that fit around your stay so nothing clashes. The spa and the dining room both fill up, particularly at weekends.'
+          a: 'Absolutely, and we recommend it. Say what you would like when you book, or send the form below, and we will offer you times that fit around your stay so nothing clashes.'
         },
         {
           q: 'How do I reach the weddings and events team?',
@@ -229,9 +229,9 @@ module.exports = {
       eyebrow: 'Send it in writing',
       h2: 'If You Would Rather Write Than Talk',
       body: [
-        'Not everyone wants to pick up the phone, and there is no reason you should have to. The form just below reaches the same front desk that answers the calls, and it is checked around the clock. Send it at any hour, day or night, and a person will read it and reply to you personally rather than an automated system acknowledging receipt.',
-        'Tell us what you are hoping for: the dates, the number of guests, whether you have stayed before, whether you are celebrating something, whether you need a step-free room, whether the dog is coming. The more you tell us, the more we can do before you arrive, and none of it is a commitment. You can send the form, get an answer, and decide afterwards.',
-        'If your enquiry is about a wedding, an event or a full-property buyout, the form will reach the events team as well as the front desk, and Clara or one of her colleagues will come back to you with dates and options. For anything genuinely urgent, a phone call is still the fastest way to reach us, because the front desk is staffed at every hour and will always pick up before too long.'
+        'Not everyone wants to pick up the phone, and there is no reason you should have to. The form just below reaches the same front desk that answers the calls, and it is checked around the clock.',
+        'Tell us what you are hoping for: the dates, the number of guests, whether you have stayed before, whether you are celebrating something, whether you need a step-free room, whether the dog is coming.',
+        'If your enquiry is about a wedding, an event or a full-property buyout, the form will reach the events team as well as the front desk, and Clara or one of her colleagues will come back to you with dates and options.'
       ]
     },
     {

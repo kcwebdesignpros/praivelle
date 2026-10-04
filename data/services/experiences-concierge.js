@@ -42,12 +42,12 @@ module.exports = {
       eyebrow: 'The concierge desk',
       h2: 'Someone who answers, at any hour',
       body: [
-        'The concierge desk at Praivelle House is staffed twenty-four hours a day, every day of the year, and it is the part of the house guests remember longest. It is not a screen and it is not a call centre. It is one or two people who know the city, know the kitchen and know the house, and who would rather solve your problem than hand you a brochure. They will book a table, find a pharmacy open at midnight, hold a forgotten charger, print a boarding pass, arrange a car, or quietly move your dinner because the flight was late. You can reach them from your room, from the lobby, or from the number in your welcome note. The desk also keeps a small stock of umbrellas, phone chargers and printed maps, because the things guests forget are always the same few.',
-        'Below The Dining Room is the Cellar Bar, and twice a week our sommelier runs a tasting at its long table. Six wines, poured blind to begin, with bread from the kitchen and a short explanation of why each one tastes the way it does. The list leans toward small producers and the Loire, but it also carries Missouri wine, because our state has been making it since the 1800s and some of it is very good. Private tastings can be arranged for a group of six or more, built around a region, a grape or a single question you have always wanted answered. We pour generously and answer honestly, and nobody at the table is made to feel they should already know the difference between two neighbouring villages.',
-        'Twelve acres of restored prairie begin at the front door, and a mown trail runs from the terrace to the tree line and back through the orchard. In June the bluestem is waist-high and the coneflowers are out; by October it has gone bronze and the seed heads catch the light. A guide can walk it with you and explain what was planted and why, or you can take the map from the desk and go alone. Four electric bicycles are kept in the barn, charged and ready, for the longer loop toward the creek and the back lanes. In late summer the monarchs come through, and in winter the same trail is best walked at noon, when the frost has lifted off the grass.',
-        'On Saturdays, and by arrangement on any day for a group, Executive Chef Julien Baptiste teaches a cooking class at the hearth in The Dining Room. Three hours, a small group, and a menu that changes with the market: bread from the wood oven, a whole fish cooked over embers, vegetables charred and dressed simply. You chop, you watch, you ask the questions you would never ask in a restaurant, and then you sit down and eat what you made with a glass of something chosen to match. Aprons and knives are provided. Couples book it as an anniversary afternoon, and companies book it as a team session that ends with everyone at one table eating together.',
-        'We keep a short list of days out that we have actually tested, not copied from a guidebook. The art day runs from the Nelson-Atkins to the Kemper and the Crossroads galleries, with a car and a driver who knows where to park. The barbecue day covers three pits in one afternoon — burnt ends, ribs and a sausage you will think about for a week — with the order of stops arranged so you are still hungry at the last one. We will tell you honestly which stops are worth your time and which are a tourist queue, and we will book the tables. If a place is closed, or overrated, or simply too far for the time you have, we will say so and hand you a better idea instead.',
-        'Children are welcome, and the desk keeps a list of what actually works for them: the picnic on the lawn, the pool, a cookie and a story at turndown, and a babysitter we have used for years. Pets are welcome in the ground-floor rooms, with a bed, bowls and a map of the walking route. Airport transfers run to and from Kansas City International in about thirty-five minutes. And if what you want is not on any list, that is the part of the job we like most. Tell us what you have in mind and we will build it, or tell you honestly if it cannot be done. Whatever it is, it starts with a sentence, and it usually ends with you wondering why you did not ask sooner.'
+        'The concierge desk at Praivelle House is staffed twenty-four hours a day, every day of the year, and it is the part of the house guests remember longest. It is not a screen and it is not a call centre.',
+        'Below The Dining Room is the Cellar Bar, and twice a week our sommelier runs a tasting at its long table. Six wines, poured blind to begin, with bread from the kitchen and a short explanation of why each one tastes the way it does.',
+        'Twelve acres of restored prairie begin at the front door, and a mown trail runs from the terrace to the tree line and back through the orchard.',
+        'On Saturdays, and by arrangement on any day for a group, Executive Chef Julien Baptiste teaches a cooking class at the hearth in The Dining Room.',
+        'We keep a short list of days out that we have actually tested, not copied from a guidebook. The art day runs from the Nelson-Atkins to the Kemper and the Crossroads galleries, with a car and a driver who knows where to park.',
+        'Children are welcome, and the desk keeps a list of what actually works for them: the picnic on the lawn, the pool, a cookie and a story at turndown, and a babysitter we have used for years.'
       ]
     },
     {
@@ -67,17 +67,17 @@ module.exports = {
         {
           icon: 'wine',
           title: 'Sommelier-led tastings',
-          text: 'Six wines at the Cellar Bar long table, twice a week, with bread from the kitchen. Private tastings for six or more, built around what you want to learn.'
+          text: 'Six wines at the Cellar Bar long table, twice a week, with bread from the kitchen.'
         },
         {
           icon: 'leaf',
           title: 'Prairie trail walks',
-          text: 'A mown trail from the terrace to the tree line and back through the orchard. Go alone with the desk map, or take a guide who planted half of it.'
+          text: 'A mown trail from the terrace to the tree line and back through the orchard.'
         },
         {
           icon: 'zap',
           title: 'Electric bicycles',
-          text: 'Four charged e-bikes in the barn for the longer loop to the creek. Helmets, a route map and a bottle of water included, free for guests.'
+          text: 'Four charged e-bikes in the barn for the longer loop to the creek.'
         },
         {
           icon: 'chef-hat',
@@ -92,7 +92,7 @@ module.exports = {
         {
           icon: 'map-pin',
           title: 'Barbecue and the city',
-          text: 'Three pits in one afternoon, ordered so you are still hungry at the last stop. We book the tables and tell you what to skip.'
+          text: 'Three pits in one afternoon, ordered so you are still hungry at the last stop.'
         },
         {
           icon: 'car',
@@ -102,7 +102,7 @@ module.exports = {
         {
           icon: 'hand-heart',
           title: 'Families and pets',
-          text: 'Picnics on the lawn, the pool, a cookie at turndown and a sitter we have used for years. Pets welcome downstairs, with a bed and bowls.'
+          text: 'Picnics on the lawn, the pool, a cookie at turndown and a sitter we have used for years.'
         }
       ]
     },
@@ -115,7 +115,7 @@ module.exports = {
       imageAlt: 'The Cellar Bar at Praivelle House set for a sommelier-led wine tasting with candles and bottles',
       body: [
         'The Cellar Bar sits below The Dining Room, brick and candlelight, with a long table and a wall of bottles from small producers. It is where the tastings happen, and it is the room guests ask about before they leave.',
-        'Our sommelier pours six wines, starting blind, and talks less about scores than about why a wine tastes the way it does: the soil, the vintage, the decision the winemaker made. The list carries the Loire and the Rhône, but it also carries Missouri wine, because some of it is genuinely good and almost nobody outside the state knows it.'
+        'Our sommelier pours six wines, starting blind, and talks less about scores than about why a wine tastes the way it does: the soil, the vintage, the decision the winemaker made.'
       ],
       list: [
         'Tastings twice a week, open to guests',
@@ -226,7 +226,7 @@ module.exports = {
         },
         {
           q: 'What are the prairie trail walks like?',
-          a: 'A mown trail runs from the terrace to the tree line and back through the orchard, about a mile and a half at an easy pace. Go alone with the map from the desk, or take a guide who can explain what was planted and why.'
+          a: 'A mown trail runs from the terrace to the tree line and back through the orchard, about a mile and a half at an easy pace.'
         },
         {
           q: 'Do you have electric bicycles?',
@@ -265,7 +265,7 @@ module.exports = {
     },
     {
       q: 'What are the prairie trail walks like?',
-      a: 'A mown trail runs from the terrace to the tree line and back through the orchard, about a mile and a half at an easy pace. Go alone with the map from the desk, or take a guide who can explain what was planted and why.'
+      a: 'A mown trail runs from the terrace to the tree line and back through the orchard, about a mile and a half at an easy pace.'
     },
     {
       q: 'Do you have electric bicycles?',

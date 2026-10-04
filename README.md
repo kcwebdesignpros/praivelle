@@ -69,7 +69,11 @@ gains a section — no template edits. Available types:
 `services-grid` · `rooms` · `testimonials` · `team-preview` · `team-grid` ·
 `blog-preview` · `blog-grid` · `amenity-strip` · `trust-bar` · `offer`
 
-All twenty-three routes carry **2,000+ words** of body copy inside `<main>`.
+Pages target a scannable **800–1,800 words** inside `<main>` — enough to rank,
+short enough to read. The cap is enforced in two places: `scripts/trim-content.js`
+shortens paragraph text at sentence boundaries, and `views/partials/blocks.ejs`
+caps how many items each block renders (`CAP`). Both are overridable per block
+with `b.limit`. Verified by `npm run check:seo`.
 
 ---
 
@@ -125,6 +129,21 @@ meta row, nightly price and orange CTA (`.room-card`).
 remaps the older names (`--blue`, `--teal`, `--cyan`, `--soft`, `--gold`,
 `--slate`) onto them, so every pre-existing rule keeps working. Section 18 is
 the brand layer — put visual overrides there rather than editing base rules.
+
+---
+
+## Content and readability
+
+Pages are written to be skimmed, not read end to end:
+
+- **Prose blocks show at most 2 paragraphs**, capped at 48 words each.
+- **FAQ blocks show at most 6 questions**, answers capped at 42 words.
+- Cards cap at 6, steps at 5, table rows at 8, checklist items at 8.
+- Every content page ends with a **"Where to go next"** row of 4 contextual
+  internal links, defined in `views/partials/related.ejs`.
+
+`scripts/trim-content.js` applies the text caps across `data/` in place, so the
+voice stays consistent and re-running it is safe.
 
 ---
 

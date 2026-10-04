@@ -16,8 +16,14 @@ data-driven (no database, no CMS), SEO-optimised, deployable to Netlify / Vercel
   `views/partials/blocks.ejs`.
 - **Static requires only** in `data/*/index.js`. A dynamic
   `require('./' + slug)` breaks the Netlify esbuild bundle and kills every page.
-- **Every content page needs 2,000+ words** inside `<main>` (client brief).
-  Verified by `npm run check:seo`.
+- **Pages target 800–1,800 words** inside `<main>` (revised brief — the original
+  2,000+ target made the pages too long to read). Two levers keep it there:
+  `scripts/trim-content.js` shortens paragraph text at sentence boundaries, and
+  the `CAP` map in `views/partials/blocks.ejs` caps how many items each block
+  renders. Both are overridable per block with `b.limit`. Verified by
+  `npm run check:seo` (floor is `MIN_WORDS`, default 800).
+- **Internal linking** lives in `views/partials/related.ejs` — an explicit
+  RELATED map, rendered as a "Where to go next" row on every content page.
 - **Brand palette:** indigo `#2E3C85`, orange `#ED7D3B` (text-safe `#B85415`),
   tint `#F5F8FF`, borders `#E8EBF2`. Tokens live in `public/css/style.css` §1.
   Legacy names (`--blue`, `--teal`, `--cyan`, `--soft`, `--gold`, `--slate`) are

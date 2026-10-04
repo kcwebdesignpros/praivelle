@@ -18,7 +18,7 @@ module.exports = {
   eyebrow: 'Questions & answers',
   h1: 'Everything Guests Ask Before They Book',
   heroIntro:
-    'Thirty questions and thirty plain answers, grouped so you can find what you need without reading the lot. If the thing you want to know is not here, the front desk is staffed around the clock and will tell you honestly.',
+    'Every question guests actually ask us, grouped so you can find what you need without reading the lot. If the thing you want to know is not here, the front desk is staffed around the clock and will tell you honestly.',
   heroImage: '/img/gallery-library.webp',
   heroImageAlt: 'A quiet library alcove at Praivelle House with an armchair and shelves of books',
   heroStats: [
@@ -36,8 +36,8 @@ module.exports = {
       eyebrow: 'Start here',
       h2: 'The Short Version, Before the Long One',
       body: [
-        'We get asked a great many questions, and most of them come down to a handful of practical things: what time can I arrive, where do I park, is breakfast included, can I bring the dog, what happens if I need to cancel. Those answers are below, written the way we would give them on the phone rather than the way a hotel usually writes them down.',
-        'Two things are true across almost every question on this page. The first is that reception is staffed twenty-four hours a day, so there is no hour at which you cannot reach a person. The second is that we would rather answer a question twice than have a guest guess and get it wrong, so if something is not covered here, call us on (816) 555-0147 or email stay@praivellehouse.com and we will give you a straight answer.',
+        'We get asked a great many questions, and most of them come down to a handful of practical things: what time can I arrive, where do I park, is breakfast included, can I bring the dog, what happens if I need to cancel.',
+        'Two things are true across almost every question on this page. The first is that reception is staffed twenty-four hours a day, so there is no hour at which you cannot reach a person.',
         'We have grouped the questions by topic, because the honest truth is that nobody reads a page like this from top to bottom. Skip to the heading that matches what you need. Booking and rates are first, arrival and parking second, and the rest follows from there.'
       ]
     },
@@ -62,22 +62,22 @@ module.exports = {
         {
           icon: 'utensils',
           title: 'Breakfast is included in most rates',
-          text: 'The Prairie Escape, the Midweek Rate and most packages include breakfast for two in The Dining Room. If your rate does not, breakfast is available to order from 7:00 AM.'
+          text: 'The Prairie Escape, the Midweek Rate and most packages include breakfast for two in The Dining Room.'
         },
         {
           icon: 'spa',
           title: 'The spa is open to guests and visitors',
-          text: 'The Spa runs from 9:00 AM to 8:00 PM daily and is open to non-residents as well as guests. Treatments are best booked in advance, especially at weekends.'
+          text: 'The Spa runs from 9:00 AM to 8:00 PM daily and is open to non-residents as well as guests.'
         },
         {
           icon: 'dog',
           title: 'Dogs are welcome',
-          text: 'Well-behaved dogs stay in the garden-level rooms and on the terrace for a one-off fee of $50. Tell us the breed and size and we will have a bed and bowls waiting.'
+          text: 'Well-behaved dogs stay in the garden-level rooms and on the terrace for a one-off fee of $50.'
         },
         {
           icon: 'percent',
           title: 'No resort fee, ever',
-          text: 'The price you see is the price you pay, plus tax. There is no resort fee, no service charge and no mandatory gratuity added at checkout, which we think should be standard.'
+          text: 'The price you see is the price you pay, plus tax.'
         }
       ]
     },
@@ -90,11 +90,11 @@ module.exports = {
       items: [
         {
           q: 'How do I book a room at Praivelle House?',
-          a: 'You can book online at any hour, call the front desk on (816) 555-0147, or email reservations@praivellehouse.com. Booking direct is always the best value, because we do not pay commission to booking sites and can be more flexible about upgrades and late check-out as a result.'
+          a: 'You can book online at any hour, call the front desk on (816) 555-0147, or email reservations@praivellehouse. com.'
         },
         {
           q: 'What is the best rate you offer?',
-          a: 'Our published best rate is the Midweek Rate, from $249 a night Sunday to Thursday, breakfast for two included. The Prairie Escape is $279 a night against a regular rate of $389 and adds a treatment each at The Spa, sparkling wine on arrival and a 2:00 PM check-out.'
+          a: 'Our published best rate is the Midweek Rate, from $249 a night Sunday to Thursday, breakfast for two included.'
         },
         {
           q: 'Do you charge a resort fee or a service charge?',
@@ -102,11 +102,11 @@ module.exports = {
         },
         {
           q: 'Is breakfast included in the room rate?',
-          a: 'It is included in the Prairie Escape, the Midweek Rate and most of our packages. If your rate does not include it, breakfast is served in The Dining Room from 7:00 AM and can be ordered a la carte or added to your room.'
+          a: 'It is included in the Prairie Escape, the Midweek Rate and most of our packages.'
         },
         {
           q: 'How far ahead should I book?',
-          a: 'For a midweek night, a week or two is usually plenty. For weekends, holidays and October, we recommend booking a month or more ahead. With only twelve rooms, we sell out sooner than a larger hotel, particularly on the first weekend of December.'
+          a: 'For a midweek night, a week or two is usually plenty. For weekends, holidays and October, we recommend booking a month or more ahead.'
         }
       ]
     },
@@ -127,7 +127,7 @@ module.exports = {
         },
         {
           q: 'How do I get to you from Kansas City International Airport?',
-          a: 'Kansas City International (MCI) is 24 minutes north of us by car. Take I-29 south, then I-35 south and follow the signs toward the Country Club Plaza. We are about ten minutes from the Plaza and can arrange a car if you would rather not drive.'
+          a: 'Kansas City International (MCI) is 24 minutes north of us by car. Take I-29 south, then I-35 south and follow the signs toward the Country Club Plaza.'
         },
         {
           q: 'Can I arrive after midnight?',
@@ -135,7 +135,7 @@ module.exports = {
         },
         {
           q: 'Do you offer airport transfers?',
-          a: 'We can arrange a car to or from MCI on request, and we will add it to your reservation. Give the front desk your flight details at least twenty-four hours ahead and we will confirm the time and the driver with you before you travel.'
+          a: 'We can arrange a car to or from MCI on request, and we will add it to your reservation.'
         }
       ]
     },
@@ -148,11 +148,11 @@ module.exports = {
       items: [
         {
           q: 'How many rooms do you have, and are they all the same?',
-          a: 'We have twelve, and no two are alike. The rooms were fitted into a restored 1940s farmhouse rather than a template, so each one is a different size and shape and catches the light differently. That is also why we can tell you exactly which room suits how you sleep.'
+          a: 'We have twelve, and no two are alike. The rooms were fitted into a restored 1940s farmhouse rather than a template, so each one is a different size and shape and catches the light differently.'
         },
         {
           q: 'What is the difference between a room and a suite?',
-          a: 'Suites have a separate sitting area and are generally larger, with the biggest ones looking south over the orchard and the prairie. Our one garden room is smaller and opens directly onto the terrace. All twelve have a king or queen bed and a deep soaking tub or walk-in shower.'
+          a: 'Suites have a separate sitting area and are generally larger, with the biggest ones looking south over the orchard and the prairie. Our one garden room is smaller and opens directly onto the terrace.'
         },
         {
           q: 'Is Wi-Fi free and fast enough to work on?',
@@ -164,7 +164,7 @@ module.exports = {
         },
         {
           q: 'Are the rooms air-conditioned and heated?',
-          a: 'Every room has individually controlled heating and cooling, so you can set the temperature you actually want rather than the one a central system has decided on. The house is warmed and cooled by ground-source pumps, which keeps it quiet as well as comfortable.'
+          a: 'Every room has individually controlled heating and cooling, so you can set the temperature you actually want rather than the one a central system has decided on.'
         }
       ]
     },
@@ -177,7 +177,7 @@ module.exports = {
       items: [
         {
           q: 'What are The Dining Room hours?',
-          a: 'The Dining Room is open from 7:00 AM to 10:00 PM daily. Breakfast runs from 7:00, lunch from noon and dinner from 5:30. Almost everything is cooked over the wood-fired hearth, and the menu changes four or five times a year rather than weekly.'
+          a: 'The Dining Room is open from 7:00 AM to 10:00 PM daily. Breakfast runs from 7:00, lunch from noon and dinner from 5:30.'
         },
         {
           q: 'Do I need to reserve a table for dinner?',
@@ -185,11 +185,11 @@ module.exports = {
         },
         {
           q: 'Can you cater for dietary requirements and allergies?',
-          a: 'Yes, and we would rather know in advance than on the night. Tell us when you book and the kitchen will plan around it, whether that is a vegetarian main, a gluten-free tasting menu or a longer list of restrictions. A chef who has sourced within ninety miles is rarely caught out.'
+          a: 'Yes, and we would rather know in advance than on the night. Tell us when you book and the kitchen will plan around it, whether that is a vegetarian main, a gluten-free tasting menu or a longer list of restrictions.'
         },
         {
           q: 'What is the Cellar Bar?',
-          a: 'The Cellar Bar occupies the old root cellar and is open from 4:00 PM to midnight. It holds around four hundred labels, weighted toward small Missouri and French growers, with a by-the-glass list that follows the kitchen and a short menu of small plates.'
+          a: 'The Cellar Bar occupies the old root cellar and is open from 4:00 PM to midnight.'
         },
         {
           q: 'Is there a dress code in the dining room?',
@@ -206,7 +206,7 @@ module.exports = {
       items: [
         {
           q: 'What are The Spa opening hours?',
-          a: 'The Spa is open from 9:00 AM to 8:00 PM daily. It has five treatment rooms, a sauna, a steam room, a private couples suite and a heated indoor pool. The pool is available to guests outside spa hours, from early morning until late.'
+          a: 'The Spa is open from 9:00 AM to 8:00 PM daily. It has five treatment rooms, a sauna, a steam room, a private couples suite and a heated indoor pool.'
         },
         {
           q: 'Do I need to book treatments in advance?',
@@ -218,7 +218,7 @@ module.exports = {
         },
         {
           q: 'Is there a minimum age for the spa?',
-          a: 'The spa is for guests aged sixteen and over, except during designated family hours, when younger guests can use the pool with adult supervision. If you are travelling with children and want to swim together, ask the front desk which hours apply during your stay.'
+          a: 'The spa is for guests aged sixteen and over, except during designated family hours, when younger guests can use the pool with adult supervision.'
         }
       ]
     },
@@ -231,15 +231,15 @@ module.exports = {
       items: [
         {
           q: 'Can we hold our wedding at Praivelle House?',
-          a: 'Yes. We run more than forty weddings a year, from twelve-guest elopements in the orchard to receptions for around two hundred and forty on the south lawn. Clara Whitfield, our Director of Weddings and Events, handles all of it and can be reached on (816) 555-0149.'
+          a: 'Yes. We run more than forty weddings a year, from twelve-guest elopements in the orchard to receptions for around two hundred and forty on the south lawn.'
         },
         {
           q: 'How far ahead should we book a wedding?',
-          a: 'For a peak-season Saturday between May and October, twelve to eighteen months ahead is sensible. For a smaller midweek wedding or an elopement, three to six months is often enough. We never run two weddings on the same day, so dates are genuinely exclusive.'
+          a: 'For a peak-season Saturday between May and October, twelve to eighteen months ahead is sensible. For a smaller midweek wedding or an elopement, three to six months is often enough.'
         },
         {
           q: 'Do you host corporate meetings and retreats?',
-          a: 'We do. The boardroom seats eighteen and is properly equipped for presentations and video calls, and we take full-property retreats in the quieter months. Breaks are catered from the same kitchen as the dining room, which tends to be the part guests remember.'
+          a: 'We do. The boardroom seats eighteen and is properly equipped for presentations and video calls, and we take full-property retreats in the quieter months.'
         },
         {
           q: 'Can we book the whole house for a private event?',
@@ -268,7 +268,7 @@ module.exports = {
         },
         {
           q: 'Are assistance dogs welcome?',
-          a: 'Assistance dogs are always welcome and are not subject to the pet fee that applies to other dogs. If you let us know in advance, we will make sure the room and the route to the dining room suit you and your dog.'
+          a: 'Assistance dogs are always welcome and are not subject to the pet fee that applies to other dogs.'
         }
       ]
     },
@@ -281,7 +281,7 @@ module.exports = {
       items: [
         {
           q: 'Do you allow dogs?',
-          a: 'Well-behaved dogs are welcome in the garden-level rooms and on the terrace, for a one-off fee of $50 per stay. Tell us the breed and size when you book and we will have a bed and bowls in the room before you arrive. Dogs are not permitted in the dining room or the spa.'
+          a: 'Well-behaved dogs are welcome in the garden-level rooms and on the terrace, for a one-off fee of $50 per stay.'
         },
         {
           q: 'Are children welcome?',
@@ -306,19 +306,19 @@ module.exports = {
       items: [
         {
           q: 'What is your cancellation policy?',
-          a: 'Most bookings can be moved or cancelled free of charge up to seventy-two hours before arrival. Inside seventy-two hours, the first night is charged, which is what it costs us to hold a room we could otherwise have sold. The exact terms are on your confirmation in plain English.'
+          a: 'Most bookings can be moved or cancelled free of charge up to seventy-two hours before arrival. Inside seventy-two hours, the first night is charged, which is what it costs us to hold a room we could otherwise have sold.'
         },
         {
           q: 'Can I move my booking to different dates?',
-          a: 'Yes, and we would always rather move a booking than lose it. Changes made more than seventy-two hours before arrival are free. Inside that window we will do what we can, particularly if the new date is midweek, and we will tell you honestly what is possible.'
+          a: 'Yes, and we would always rather move a booking than lose it. Changes made more than seventy-two hours before arrival are free.'
         },
         {
           q: 'What if I need to cancel a spa treatment?',
-          a: 'Treatments cancelled more than twenty-four hours ahead are refunded in full. Inside twenty-four hours the treatment is charged, because the therapist has set that hour aside for you and cannot easily fill it. If you are unwell, talk to us and we will find a fair solution.'
+          a: 'Treatments cancelled more than twenty-four hours ahead are refunded in full. Inside twenty-four hours the treatment is charged, because the therapist has set that hour aside for you and cannot easily fill it.'
         },
         {
           q: 'What happens if I have to cancel for an emergency?',
-          a: 'Call us and tell us what has happened. Our written terms are the baseline, not the ceiling, and we have waived charges more than once for a genuine emergency. We would rather have a conversation than apply a rule blindly to someone having a difficult week.'
+          a: 'Call us and tell us what has happened. Our written terms are the baseline, not the ceiling, and we have waived charges more than once for a genuine emergency.'
         },
         {
           q: 'Do you recommend travel insurance?',
@@ -334,9 +334,9 @@ module.exports = {
       image: '/img/about-lobby.webp',
       imageAlt: 'The front desk and lobby at Praivelle House in Kansas City',
       body: [
-        'This page covers the thirty questions we are asked most, but it cannot cover everything. Someone once called to ask whether we could store a grandfather clock during a stay, and the answer was yes, because we found a corner for it. Someone else asked whether the prairie path was firm enough for a walking frame, and the answer was that it is in summer and less so after rain, which is exactly the sort of thing a website cannot tell you.',
-        'The front desk is staffed twenty-four hours a day, so there is no hour at which you cannot reach a person. Call (816) 555-0147 for reservations and general questions, (816) 555-0148 for the concierge and the spa, and (816) 555-0149 for weddings and events. If you would rather write than talk, stay@praivellehouse.com reaches the team directly and reservations@praivellehouse.com reaches the desk that handles bookings.',
-        'We would rather answer a question twice than have a guest arrive unsure of something. Nothing is too small to ask, and the questions people are most hesitant about — whether a room is genuinely accessible, whether the dog will be welcome, whether a child will be looked after — are usually the ones worth asking. Call us and we will tell you straight.'
+        'This page covers the thirty questions we are asked most, but it cannot cover everything. Someone once called to ask whether we could store a grandfather clock during a stay, and the answer was yes, because we found a corner for it.',
+        'The front desk is staffed twenty-four hours a day, so there is no hour at which you cannot reach a person. Call (816) 555-0147 for reservations and general questions, (816) 555-0148 for the concierge and the spa, and (816) 555-0149 for weddings and events.',
+        'We would rather answer a question twice than have a guest arrive unsure of something.'
       ],
       list: [
         'Reception is staffed twenty-four hours, every day of the year',

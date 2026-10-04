@@ -44,12 +44,12 @@ module.exports = {
       eyebrow: 'How this works',
       h2: 'We Read All of Them, Including the Hard Ones',
       body: [
-        'There are two ways to run reviews at a hotel. The first is to chase them, filter them and bury the ones that hurt. The second is to read every one, answer every one, and let the whole thing stand. We have always done the second, and it has cost us the occasional point of rating and taught us more than any consultant ever has.',
-        'The rules are simple and they have not changed since we opened. We do not offer a free drink, a discount or an entry into a draw in exchange for a review, because a bought review is not a review. We do not ask guests to leave one while they are standing at the desk with the card machine in front of them. We do not delete anything, on any platform, even when we disagree with it. And we do not write reviews about ourselves, which sounds like an obvious thing to say until you learn how common it is.',
-        'Our rating is 4.9 out of 5 across more than 3,500 reviews, split between Google, where we hold roughly 2,400, and Tripadvisor, where we hold about 1,100. We are proud of that number, but we are more proud that it has been earned slowly and without a single review we had to buy. A hotel that opens in a farmhouse and gets reviewed by word of mouth has to be good on the night, not good at marketing. There is no other way to build a number like that, and we would not want there to be.',
-        'The reviews we learn the most from are rarely the five-star ones. A guest who writes three warm paragraphs about the food and then mentions, almost in passing, that the corridor light outside room four kept them awake has given us something no mystery shopper could. We read for the small complaint inside the long compliment, because that is almost always where the real information is. The five-star reviews tell us we are doing the big things right. The others tell us where to spend next Tuesday.',
-        'Every review gets a reply, and a person writes it rather than a template. If a guest names a member of the team, we pass the review to that person the same day, because the reason people write them is often to say thank you to someone specific. If a guest raises a problem, Geneviève reads it herself, and if it is something we can fix before the next guest arrives, it is fixed before the next guest arrives. We keep a running list of things reviews have changed, and it is longer than most people would guess.',
-        'We know that a review is a public document and that a reply is public too. We try to answer the way we would answer a guest standing in front of us: honestly, without defensiveness, and without the corporate throat-clearing that turns a simple apology into a paragraph about how much we value feedback. If we got something wrong, we say so. If we think a guest has misunderstood something, we explain it once, politely, and move on. The reply is not written for the reviewer. It is written for the next person reading, who is trying to work out whether this is a place that tells the truth.'
+        'There are two ways to run reviews at a hotel. The first is to chase them, filter them and bury the ones that hurt. The second is to read every one, answer every one, and let the whole thing stand.',
+        'The rules are simple and they have not changed since we opened. We do not offer a free drink, a discount or an entry into a draw in exchange for a review, because a bought review is not a review.',
+        'Our rating is 4. 9 out of 5 across more than 3,500 reviews, split between Google, where we hold roughly 2,400, and Tripadvisor, where we hold about 1,100.',
+        'The reviews we learn the most from are rarely the five-star ones. A guest who writes three warm paragraphs about the food and then mentions, almost in passing, that the corridor light outside room four kept them awake has given us something no mystery shopper could.',
+        'Every review gets a reply, and a person writes it rather than a template. If a guest names a member of the team, we pass the review to that person the same day, because the reason people write them is often to say thank you to someone specific.',
+        'We know that a review is a public document and that a reply is public too.'
       ]
     },
     {
@@ -73,10 +73,10 @@ module.exports = {
       image: '/img/gallery-library.webp',
       imageAlt: 'A quiet library alcove at Praivelle House with an armchair and shelves of books',
       body: [
-        'In 2019 a guest gave us three stars and wrote a review that took us apart in about four hundred words. He had enjoyed his stay, mostly. The food was excellent, the room was beautiful, the staff were kind. But he said the house felt as though it was resting on its reputation, and that the small things had started to slip: a scuffed skirting board in the corridor, a slow drain in the bathroom, a breakfast that arrived at the table a few minutes later than it should have. He ended by saying he would come back, but not for a while.',
-        'It was the fairest review we have ever received, and it landed harder than a one-star one would have, because it was right. We had grown quickly between 2017 and 2019, added the final suites and the cellar bar, and somewhere in the middle of all that we had taken our eye off the maintenance list that Geneviève walks every morning. We printed the review out and pinned it to the staff-room wall, where it stayed for two years.',
-        'What followed was unglamorous and effective. We started a proper rolling maintenance schedule, one room a month, so that every room in the house gets a full going-over twice a year. We rebuilt the breakfast service so that a cooked dish leaves the pass within nine minutes of the order. We fixed the drain, and then we checked every other drain in the building, and found two more that were heading the same way. None of it was exciting. All of it came from one guest who took the trouble to write honestly.',
-        'He came back in 2021, which we only know because he mentioned it in a later review. That one had five stars, and the line we remember is that the house felt like it had been looked after again. If you are reading this before your first stay, that is the version of Praivelle you are booking: the one that got taken down a peg by a guest, listened, and did the work.'
+        'In 2019 a guest gave us three stars and wrote a review that took us apart in about four hundred words. He had enjoyed his stay, mostly. The food was excellent, the room was beautiful, the staff were kind.',
+        'It was the fairest review we have ever received, and it landed harder than a one-star one would have, because it was right.',
+        'What followed was unglamorous and effective. We started a proper rolling maintenance schedule, one room a month, so that every room in the house gets a full going-over twice a year.',
+        'He came back in 2021, which we only know because he mentioned it in a later review. That one had five stars, and the line we remember is that the house felt like it had been looked after again.'
       ],
       list: [
         'A rolling maintenance schedule so every room is fully checked twice a year',
@@ -97,17 +97,17 @@ module.exports = {
         {
           icon: 'hand-heart',
           title: 'That someone remembered their name',
-          text: 'The single most common line in our reviews is some version of: somebody knew who we were by the second day. Guests notice when the front desk remembers their coffee order, their dog, or the reason they came. It is the one thing we cannot fake and the one thing we work hardest at, because it is a matter of hiring and time rather than a system.'
+          text: 'The single most common line in our reviews is some version of: somebody knew who we were by the second day.'
         },
         {
           icon: 'chef-hat',
           title: 'That the food was better than expected',
-          text: 'Almost every long review mentions a meal. Guests arrive expecting hotel food and get a wood-fired dining room that sources within ninety miles, and they say so at length. The nightly market plate and the tasting menu come up most, but so does something as simple as the bread, which we make ourselves and which guests ask about constantly.'
+          text: 'Almost every long review mentions a meal.'
         },
         {
           icon: 'moon',
           title: 'That they slept better than they have in months',
-          text: 'Guests write about the quiet more than any amenity. We are on twelve acres with nothing between the house and the horizon, the walls are thick because the building is old, and the curtains actually hold back the light. People who live in cities tell us they slept through the night for the first time in weeks, and that is the compliment we are proudest of.'
+          text: 'Guests write about the quiet more than any amenity.'
         }
       ]
     },
@@ -124,11 +124,11 @@ module.exports = {
       eyebrow: 'The other side',
       h2: 'What Happens When a Stay Goes Wrong',
       body: [
-        'Not every stay is perfect, and a page of nothing but five-star reviews would tell you less about us than one honest account of a bad night. So here is what actually happens when something goes wrong at Praivelle, because it is the thing prospective guests most want to know and the thing hotels least want to explain.',
-        'The first rule is that we want to hear about it while you are still here. A slow drain, a noisy extractor, a dish that is not right, a room that is too warm — almost everything is fixable within the hour if we know about it. Reception is staffed twenty-four hours precisely so that there is always someone to tell. The guests who leave without saying anything and write it up a week later are the ones we can no longer help, and we would much rather have the awkward conversation at half past nine than read about it online a fortnight later.',
-        'If we cannot fix something, we do not charge for it. That is not a policy written in a manual; it is a rule Geneviève set on the first day and has applied ever since. A guest who could not use their shower because the pressure failed does not pay for that night, and nobody has to argue for it at checkout. We would rather absorb the cost than have someone leave feeling they had to fight for fairness.',
-        'When a problem reaches us after a guest has gone home, we take it seriously and we take it personally. Geneviève reads every review that mentions a fault, and she writes the reply herself. If a member of the team was at the centre of it, they are part of the conversation rather than the subject of it, because blame without a fix is just theatre. And if the same complaint appears twice, it goes on the maintenance list and gets solved for good, which is how most of our improvements have actually come about.',
-        'We are not asking for your patience as a favour. We are telling you that a house of this size, run by people rather than a head office, has a shorter distance between a problem and a person who can solve it than any chain you have stayed in. That is one of the real advantages of being small, and we would rather you knew it before you arrived than discovered it after something went wrong.'
+        'Not every stay is perfect, and a page of nothing but five-star reviews would tell you less about us than one honest account of a bad night.',
+        'The first rule is that we want to hear about it while you are still here. A slow drain, a noisy extractor, a dish that is not right, a room that is too warm \u2014 almost everything is fixable within the hour if we know about it.',
+        'If we cannot fix something, we do not charge for it. That is not a policy written in a manual; it is a rule Genevi\u00e8ve set on the first day and has applied ever since.',
+        'When a problem reaches us after a guest has gone home, we take it seriously and we take it personally. Genevi\u00e8ve reads every review that mentions a fault, and she writes the reply herself.',
+        'We are not asking for your patience as a favour.'
       ]
     },
     {
@@ -144,7 +144,7 @@ module.exports = {
         },
         {
           q: 'Do you offer anything in exchange for a review?',
-          a: 'No. No free drinks, no discounts, no prize draws and no asking guests to leave a review while they are standing at the desk. A review that was bought is not worth reading, and we would rather have a smaller number we can trust.'
+          a: 'No. No free drinks, no discounts, no prize draws and no asking guests to leave a review while they are standing at the desk.'
         },
         {
           q: 'Why do you show reviews that are not five stars?',
@@ -156,7 +156,7 @@ module.exports = {
         },
         {
           q: 'What should I do if something is wrong during my stay?',
-          a: 'Tell us while you are here, at any hour. Reception is staffed twenty-four hours and almost everything is fixable within the hour. If we cannot fix it, we do not charge you for it, and nobody has to argue for that at checkout.'
+          a: 'Tell us while you are here, at any hour. Reception is staffed twenty-four hours and almost everything is fixable within the hour.'
         },
         {
           q: 'Where can I leave a review?',
@@ -164,7 +164,7 @@ module.exports = {
         },
         {
           q: 'Has a review ever changed how you run the house?',
-          a: 'More than once. A three-star review in 2019 led to a rolling maintenance schedule, a rebuilt breakfast service and a house-wide check of every drain in the building. Most of what we have improved has come from a guest taking the trouble to write honestly.'
+          a: 'More than once. A three-star review in 2019 led to a rolling maintenance schedule, a rebuilt breakfast service and a house-wide check of every drain in the building.'
         }
       ]
     },

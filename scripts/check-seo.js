@@ -16,7 +16,9 @@
  */
 
 const BASE = (process.env.BASE || 'http://localhost:3000').replace(/\/+$/, '');
-const MIN_WORDS = Number(process.env.MIN_WORDS || 2000);
+/* Content floor. The pages used to run 2,000+ words each, which was too long
+   to read and no better for search; they now target a scannable 800+. */
+const MIN_WORDS = Number(process.env.MIN_WORDS || 800);
 
 const ROUTES = [
   { path: '/', words: true, types: ['Hotel', 'WebSite', 'ItemList', 'FAQPage', 'HowTo'] },
