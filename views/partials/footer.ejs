@@ -99,7 +99,9 @@
         <% }); %>
       </ul>
       <p class="footer__credit">
-        <%= site.credit.prefix %><a href="<%= site.credit.url %>" target="_blank" rel="noopener"><%= site.credit.label %></a>
+        <span class="footer__credit-text"><%= site.credit.prefix %></span>
+        <span class="footer__credit-heart" aria-hidden="true"><%- icon('heart-fill', 15) %></span>
+        <a href="<%= site.credit.url %>" target="_blank" rel="noopener"><%= site.credit.label %></a>
       </p>
     </div>
 
