@@ -27,8 +27,17 @@ const SITE = {
   logo: '/img/logo.webp',
   logoLight: '/img/logo-light.webp',
   logoMark: '/img/logo-mark.webp',
+  logoMarkLight: '/img/logo-mark-light.webp',
   logoWidth: 760,
   logoHeight: 200,
+  /* The header and footer set the wordmark as live text in Poppins rather than
+     using a bitmap lockup, so it stays crisp at any size and matches the
+     display face exactly. */
+  wordmark: {
+    lead: 'Praivelle',
+    accent: 'House',
+    tagline: 'Boutique Hotel'
+  },
   ogImage: '/img/og-image.jpg',
   founded: 2008,
   priceRange: '$$$',

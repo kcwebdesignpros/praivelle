@@ -125,23 +125,44 @@ function writeIco(pngBuffer, dest, size) {
 }
 
 /**
- * Build the circular PH monogram from the raw emblem render.
+ * Build the brand mark from the raw monogram render.
  *
- * The source is a gold monogram on a solid navy field with a thin gold ring.
- * We crop to the ring, mask it to a perfect circle, then remap the two anchor
- * colours (old navy -> new indigo, old gold -> brand orange) with a luminance
- * duotone so the mark lands on the new palette without re-generating it.
+ * The source is an indigo disc carrying an orange interlocking P/H in a fine
+ * double ring. We auto-crop to the disc, mask it to a true circle, and emit
+ * two forms: the mark as drawn (for light surfaces) and a keyed-out version
+ * with the indigo field removed so the ring and letterforms sit directly on
+ * the navy footer without a disc-shaped hole.
  */
 async function buildMark() {
-  const src = rawPath('src-logo-emblem');
+  const src = rawPath('src-logo-mark');
   if (!src) return null;
 
+  /* ---- 1. auto-crop to the circle -------------------------------------- */
+  const { data: probe, info: pInfo } = await sharp(src).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const pch = pInfo.channels;
+  let minX = pInfo.width, minY = pInfo.height, maxX = 0, maxY = 0;
+  for (let y = 0; y < pInfo.height; y++) {
+    for (let x = 0; x < pInfo.width; x++) {
+      const i = (y * pInfo.width + x) * pch;
+      // anything that is not the near-white page background
+      if (probe[i] < 235 || probe[i + 1] < 235 || probe[i + 2] < 235) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
+        if (y < minY) minY = y;
+        if (y > maxY) maxY = y;
+      }
+    }
+  }
+  const side = Math.max(maxX - minX + 1, maxY - minY + 1);
+  const cx = Math.round((minX + maxX) / 2);
+  const cy = Math.round((minY + maxY) / 2);
+  const left = Math.max(0, cx - Math.round(side / 2));
+  const top = Math.max(0, cy - Math.round(side / 2));
+  const w = Math.min(side, pInfo.width - left);
+  const h = Math.min(side, pInfo.height - top);
+
   const size = 512;
-  const cropped = await sharp(src)
-    .extract({ left: 112, top: 112, width: 800, height: 800 })
-    .resize(size, size, { fit: 'cover' })
-    .png()
-    .toBuffer();
+  const cropped = await sharp(src).extract({ left, top, width: w, height: h }).resize(size, size, { fit: 'cover' }).png().toBuffer();
 
   const mask = Buffer.from(
     `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">` +
@@ -153,32 +174,32 @@ async function buildMark() {
     .png()
     .toBuffer();
 
-  // ---- duotone remap -----------------------------------------------------
-  const lum = (r, g, b) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  const OLD_DARK = [11, 31, 58];
-  const OLD_LIGHT = [201, 162, 75];
-  const NEW_DARK = [46, 60, 133];
-  const NEW_LIGHT = [237, 125, 59];
-  const lo = lum.apply(null, OLD_DARK);
-  const hi = lum.apply(null, OLD_LIGHT);
+  /* ---- 2. dark-on-light variant: the mark as drawn --------------------- */
+  await sharp(circle).webp({ quality: 92, effort: 6 }).toFile(path.join(IMG, 'logo-mark.webp'));
+  fs.writeFileSync(path.join(IMG, 'logo-mark.png'), circle);
+  console.log('  \u2713 logo-mark.webp + .png (indigo disc, orange monogram)');
 
+  /* ---- 3. light-on-dark variant: key the indigo out -------------------- */
+  // On the navy footer the indigo disc would disappear, so the mark ships a
+  // second form: the ring and letterforms in brand orange on transparency.
   const { data, info } = await sharp(circle).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const ch = info.channels;
   for (let i = 0; i < data.length; i += ch) {
     if (data[i + 3] === 0) continue;
-    const t = Math.min(1, Math.max(0, (lum(data[i], data[i + 1], data[i + 2]) - lo) / (hi - lo)));
-    for (let c = 0; c < 3; c++) {
-      data[i + c] = Math.round(NEW_DARK[c] + (NEW_LIGHT[c] - NEW_DARK[c]) * t);
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+    const dNavy = Math.hypot(r - 46, g - 60, b - 133);
+    const dOrange = Math.hypot(r - 237, g - 125, b - 59);
+    if (dNavy < dOrange) {
+      data[i + 3] = 0; // indigo field -> transparent
+    } else {
+      data[i] = 237; data[i + 1] = 125; data[i + 2] = 59; // snap to brand orange
     }
   }
-  const recoloured = await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
-    .png()
-    .toBuffer();
+  const light = await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } }).png().toBuffer();
+  await sharp(light).webp({ quality: 92, effort: 6 }).toFile(path.join(IMG, 'logo-mark-light.webp'));
+  console.log('  \u2713 logo-mark-light.webp (orange ring + monogram on transparency)');
 
-  await sharp(recoloured).webp({ quality: 92, effort: 6 }).toFile(path.join(IMG, 'logo-mark.webp'));
-  fs.writeFileSync(path.join(IMG, 'logo-mark.png'), recoloured);
-  console.log('  \u2713 logo-mark.webp (circular monogram, recoloured to indigo + orange)');
-  return recoloured;
+  return { dark: circle, light };
 }
 
 /** Horizontal lockup for schema.org and the OG card: mark + spaced wordmark. */
@@ -244,8 +265,8 @@ async function buildFavicons(circle) {
   console.log('  \u2713 favicons (16/32/48/180/192/512 + favicon.ico)');
 }
 
-/** 1200x630 Open Graph card built from the hero + brand lockup. */
-async function buildOgImage() {
+/** 1200x630 Open Graph card built from the hero + the brand mark. */
+async function buildOgImage(mark) {
   const hero = path.join(IMG, 'hero.webp');
   if (!fs.existsSync(hero)) return;
 
@@ -258,25 +279,25 @@ async function buildOgImage() {
        <defs>
          <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
            <stop offset="0%" stop-color="${NAVY_DEEP}" stop-opacity="0.95"/>
-           <stop offset="55%" stop-color="${NAVY}" stop-opacity="0.8"/>
-           <stop offset="100%" stop-color="${NAVY}" stop-opacity="0.2"/>
+           <stop offset="58%" stop-color="${NAVY}" stop-opacity="0.82"/>
+           <stop offset="100%" stop-color="${NAVY}" stop-opacity="0.22"/>
          </linearGradient>
        </defs>
        <rect width="${W}" height="${H}" fill="url(#g)"/>
        <rect x="0" y="0" width="10" height="${H}" fill="${ORANGE}"/>
-       <text x="78" y="300" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="62" font-weight="700" letter-spacing="-1.5" fill="#FFFFFF">Praivelle <tspan fill="${ORANGE}">House</tspan></text>
-       <text x="80" y="348" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="20" font-weight="600" letter-spacing="6" fill="#A9B4E8">BOUTIQUE HOTEL \u00b7 KANSAS CITY</text>
-       <text x="80" y="452" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="27" fill="#E4E8F7">Twelve suites, a private spa and a table worth travelling for.</text>
-       <text x="80" y="494" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="27" fill="#E4E8F7">(816) 555-0147  \u00b7  praivellehouse.com</text>
+       <text x="198" y="120" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="50" font-weight="700" letter-spacing="-1.2" fill="#FFFFFF">Praivelle <tspan fill="${ORANGE}">House</tspan></text>
+       <text x="200" y="158" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="17" font-weight="600" letter-spacing="5.4" fill="#A9B4E8">BOUTIQUE HOTEL \u00b7 KANSAS CITY</text>
+       <text x="80" y="378" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#FFFFFF">Twelve suites, a private spa and</text>
+       <text x="80" y="436" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#FFFFFF">a table worth travelling for.</text>
+       <text x="82" y="524" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="25" fill="#E4E8F7">(816) 555-0147  \u00b7  praivellehouse.com</text>
      </svg>`
   );
 
-  const logoBuf = fs.existsSync(path.join(IMG, 'logo-light.webp'))
-    ? await sharp(path.join(IMG, 'logo-light.webp')).resize({ width: 300 }).png().toBuffer()
-    : null;
-
   const composite = [{ input: overlay, top: 0, left: 0 }];
-  if (logoBuf) composite.push({ input: logoBuf, top: 58, left: 70 });
+  if (mark && mark.light) {
+    const badge = await sharp(mark.light).resize(100, 100).png().toBuffer();
+    composite.push({ input: badge, top: 62, left: 74 });
+  }
 
   await sharp(base)
     .composite(composite)
@@ -304,14 +325,14 @@ async function importSources() {
     imported++;
   }
 
-  const circle = await buildMark();
-  if (circle) {
-    await buildLockup(circle, 'dark');
-    await buildLockup(circle, 'light');
-    await buildFavicons(circle);
+  const mark = await buildMark();
+  if (mark) {
+    await buildLockup(mark.dark, 'dark');
+    await buildLockup(mark.light, 'light');
+    await buildFavicons(mark.dark);
   }
 
-  await buildOgImage();
+  await buildOgImage(mark);
 
   console.log(`Phase 1 complete \u2014 ${imported} masters imported.`);
 }

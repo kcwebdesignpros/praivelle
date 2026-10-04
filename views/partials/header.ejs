@@ -31,12 +31,12 @@
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"><span></span></div>
   <div class="header__inner container">
     <a class="brand" href="/" aria-label="<%= site.name %> — home">
-      <img class="brand__logo" src="<%= site.logo %>" width="<%= site.logoWidth %>" height="<%= site.logoHeight %>" alt="<%= site.name %> logo" fetchpriority="high" decoding="async">
+      <%- include('lockup', { eager: true }) %>
     </a>
 
     <nav class="nav" id="primaryNav" aria-label="Primary navigation">
       <div class="nav__head">
-        <img class="nav__logo" src="<%= site.logo %>" width="<%= site.logoWidth %>" height="<%= site.logoHeight %>" alt="<%= site.name %>" decoding="async">
+        <a class="brand brand--drawer" href="/" aria-label="<%= site.name %> — home"><%- include('lockup') %></a>
         <button class="nav__close" type="button" data-nav-close aria-label="Close menu"><%- icon('close', 22) %></button>
       </div>
 

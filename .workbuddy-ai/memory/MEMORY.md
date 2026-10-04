@@ -30,6 +30,14 @@ data-driven (no database, no CMS), SEO-optimised, deployable to Netlify / Vercel
   **aliases** remapped onto the new palette — keep that indirection when editing.
 - **Type:** Poppins (display headings, `--font-display`) + Plus Jakarta Sans
   (UI, `--font`). Both self-hosted in `public/fonts`; no CDN anywhere.
+- **Brand mark:** an interlocked P/H monogram in a double ring, generated from
+  `img/raw/src-logo-mark.png`. `scripts/generate-image-variants.js` auto-crops
+  it to a circle and emits two forms — `logo-mark.webp` (indigo disc, for light
+  surfaces) and `logo-mark-light.webp` (indigo keyed out, for the navy footer).
+- **The lockup is live text, not a bitmap.** `views/partials/lockup.ejs` renders
+  the mark plus the wordmark as HTML in Poppins, driven by
+  `site.wordmark = { lead, accent, tagline }`. Pass `light: true` on dark
+  surfaces. Used in the header, the mobile drawer and the footer.
 - **Visual language** (per the client reference): rounded hero card with a
   centred overlay and an overlapping booking bar; centred `.section__head` with
   an icon eyebrow; navy icon-circle category cards (`.svc-card`); image listing

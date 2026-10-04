@@ -3,8 +3,8 @@
 
   <div class="container footer__main">
     <div class="footer__brand">
-      <a class="footer__logo" href="/" aria-label="<%= site.name %> — home">
-        <img src="<%= site.logoLight %>" width="<%= site.logoWidth %>" height="<%= site.logoHeight %>" alt="<%= site.name %> logo" loading="lazy" decoding="async">
+      <a class="brand brand--light" href="/" aria-label="<%= site.name %> — home">
+        <%- include('lockup', { light: true }) %>
       </a>
       <p class="footer__about"><%= site.description %></p>
 
