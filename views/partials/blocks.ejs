@@ -469,7 +469,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
     <ul class="team-grid team-grid--<%= b.limit || 3 %>">
       <% site.team.filter(function (t) { return t.image; }).slice(0, b.limit || 3).forEach(function (t, i) { %>
       <li class="person reveal" style="--d:<%= stepDelay(i) %>ms">
-        <a class="person__link" href="/doctors#<%= t.slug %>">
+        <a class="person__link" href="/team#<%= t.slug %>">
           <span class="person__media">
             <%- imgTag(t.image, t.imageAlt, { sizes: '(min-width:1040px) 31vw, (min-width:700px) 47vw, 92vw', cls: 'person__img' }) %>
           </span>
@@ -572,7 +572,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       </div>
       <div class="offer__right">
         <h3 class="offer__includes">Everything included</h3>
-        <ul class="tick-list tick-list--light">
+        <ul class="tick-list">
           <% site.signatureOffer.includes.forEach(function (i) { %>
           <li><%- icon('check-circle', 19) %><span><%= i %></span></li>
           <% }); %>
