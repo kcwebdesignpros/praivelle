@@ -50,6 +50,17 @@ module.exports = {
       intro: 'Each one is run by its own department and its own director, and every one of them is available to every guest in the house.',
       cta: { label: 'Talk to the front desk', path: '/contact' }
     },
+    /* ------------------------------------------------- room listing cards */
+    {
+      type: 'rooms',
+      id: 'rooms',
+      eyebrow: 'Rooms & suites',
+      h2: 'Somewhere to Sleep It Off',
+      intro:
+        'Twelve rooms across six room types, from a quiet library room to an 800-square-foot loft under the rafters. Every rate includes breakfast for two, valet parking and the spa.',
+      limit: 3,
+      cta: { label: 'All rooms and rates', path: '/services/rooms-suites' }
+    },
     {
       type: 'cards',
       id: 'why',

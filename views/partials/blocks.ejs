@@ -12,6 +12,12 @@ var TONE = {
 };
 
 function esc(v) { return v == null ? '' : String(v); }
+/* Section eyebrows carry a small orange icon, as in the reference design. */
+function eyebrow(text, light, ico) {
+  if (!text) return '';
+  return '<p class="eyebrow' + (light ? ' eyebrow--light' : '') + '">' +
+    '<span class="eyebrow__ico">' + icon(ico || 'sparkles', 15) + '</span>' + esc(text) + '</p>';
+}
 function asList(list) { return Array.isArray(list) ? list : []; }
 function stepDelay(i) { return Math.min(i * 70, 420); }
 
@@ -28,7 +34,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container container--narrow">
     <div class="prose reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
       <% if (asList(b.list).length) { %>
@@ -51,7 +57,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -74,7 +80,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -120,7 +126,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -146,7 +152,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
         <%- imgTag(b.image, b.imageAlt || '', { sizes: SIZES_WIDE, cls: 'split__img' }) %>
       </div>
       <div class="split__content reveal" style="--d:120ms">
-        <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+        <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
         <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
         <% asList(b.body).forEach(function (p) { %><p><%= esc(p) %></p><% }); %>
         <% if (asList(b.list).length) { %>
@@ -168,7 +174,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container container--wide">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -199,7 +205,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -218,7 +224,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container container--narrow">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -253,7 +259,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -312,11 +318,57 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
   </div>
 </section>
 
+<% } else if (b.type === 'rooms') { %>
+<%
+  /* Image listing cards: badge, meta row, nightly price and an orange CTA. */
+  var roomList = typeof rooms !== 'undefined' && rooms ? rooms.slice() : [];
+  if (b.slugs && b.slugs.length) {
+    roomList = roomList.filter(function (r) { return b.slugs.indexOf(r.slug) !== -1; });
+  }
+  if (b.limit) roomList = roomList.slice(0, b.limit);
+%>
+<section class="<%= sectionCls %>" id="<%= id %>">
+  <div class="container">
+    <header class="section__head reveal">
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
+      <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
+      <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
+    </header>
+    <ul class="room-grid">
+      <% roomList.forEach(function (r, i) { %>
+      <li class="room-card reveal" style="--d:<%= stepDelay(i) %>ms">
+        <a class="room-card__link" href="<%= r.path %>">
+          <div class="room-card__media">
+            <%- imgTag(r.image, r.imageAlt || r.name, { sizes: SIZES_CARD, cls: 'room-card__img' }) %>
+            <% if (r.badge) { %><span class="room-card__badge"><%= esc(r.badge) %></span><% } %>
+          </div>
+          <div class="room-card__body">
+            <h3 class="room-card__title"><%= esc(r.name) %></h3>
+            <p class="room-card__where"><%= esc(r.where) %></p>
+            <ul class="room-card__meta">
+              <% asList(r.meta).forEach(function (m) { %>
+              <li><%- icon(m.icon, 16) %><span><%= esc(m.label) %></span></li>
+              <% }); %>
+            </ul>
+            <div class="room-card__foot">
+              <p class="room-card__price"><small>From</small><strong><%= esc(r.price) %></strong><em>/ night</em></p>
+              <span class="room-card__cta">View room</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+    <% if (b.cta) { %>
+    <p class="section__foot reveal"><a class="btn btn--outline" href="<%= b.cta.path %>"><%= esc(b.cta.label) %> <%- icon('arrow-right', 17) %></a></p>
+    <% } %>
+  </div>
+</section>
 <% } else if (b.type === 'services-grid') { %>
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -324,15 +376,10 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
       <% services.forEach(function (s, i) { %>
       <li class="svc-card reveal" style="--d:<%= stepDelay(i) %>ms">
         <a class="svc-card__link" href="/services/<%= s.slug %>">
-          <span class="svc-card__media">
-            <%- imgTag(s.image, s.imageAlt || s.name, { sizes: SIZES_CARD, cls: 'svc-card__img' }) %>
-          </span>
-          <span class="svc-card__body">
-            <span class="svc-card__ico"><%- icon(s.icon, 24) %></span>
-            <span class="svc-card__title"><%= s.shortName %></span>
-            <span class="svc-card__text"><%= s.tagline %></span>
-            <span class="svc-card__more">Explore this service <%- icon('arrow-right', 16) %></span>
-          </span>
+          <span class="svc-card__ico"><%- icon(s.icon, 26) %></span>
+          <span class="svc-card__title"><%= s.shortName %></span>
+          <span class="svc-card__text"><%= s.tagline %></span>
+          <span class="svc-card__more">Explore <%- icon('arrow-right', 16) %></span>
         </a>
       </li>
       <% }); %>
@@ -347,7 +394,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -395,7 +442,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -425,7 +472,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -493,7 +540,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
   <div class="container">
     <div class="offer reveal">
       <div class="offer__left">
-        <p class="eyebrow eyebrow--light"><%= b.eyebrow || 'Signature package' %></p>
+        <%- eyebrow(b.eyebrow || 'Signature package', true, 'gift') %>
         <h2 class="offer__title"><%= b.h2 || site.signatureOffer.title %></h2>
         <p class="offer__price">
           <strong><%= site.signatureOffer.price %></strong>
@@ -519,7 +566,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>
@@ -560,7 +607,7 @@ var SIZES_FULL = '(min-width: 1240px) 1140px, 92vw';
 <section class="<%= sectionCls %>" id="<%= id %>">
   <div class="container">
     <header class="section__head reveal">
-      <% if (b.eyebrow) { %><p class="eyebrow"><%= esc(b.eyebrow) %></p><% } %>
+      <% if (b.eyebrow) { %><%- eyebrow(b.eyebrow) %><% } %>
       <% if (b.h2) { %><h2 class="section__title"><%= esc(b.h2) %></h2><% } %>
       <% if (b.intro) { %><p class="section__intro"><%= esc(b.intro) %></p><% } %>
     </header>

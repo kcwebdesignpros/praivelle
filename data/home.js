@@ -52,9 +52,28 @@ module.exports = {
   },
 
   blocks: [
-    /* ------------------------------------------------------------ trust bar */
-    { type: 'trust-bar' },
+    /* ------------------------------------------------- category icon cards */
+    {
+      type: 'services-grid',
+      id: 'explore',
+      eyebrow: 'What we do',
+      h2: 'Explore the House',
+      intro:
+        'Rooms and suites, a spa, a wood-fired dining room, weddings, corporate meetings and a concierge desk that will build you a day out. You book once and never leave the property unless you want to.',
+      cta: { label: 'See all six services', path: '/services' }
+    },
 
+    /* ---------------------------------------------- featured room listings */
+    {
+      type: 'rooms',
+      id: 'rooms',
+      eyebrow: 'Rooms & suites',
+      h2: 'Featured Rooms and Suites',
+      intro:
+        'Twelve rooms, no two laid out the same, from a quiet library room to an 800-square-foot loft under the rafters. Every rate includes breakfast for two, valet parking and the run of the spa, the pool and the gym.',
+      limit: 6,
+      cta: { label: 'See all rooms and rates', path: '/services/rooms-suites' }
+    },
     /* ------------------------------------------------------------ who we are */
     {
       type: 'split',
@@ -79,15 +98,9 @@ module.exports = {
       cta: { label: 'Read our story', path: '/about' }
     },
 
-    /* ---------------------------------------------------------- services grid */
-    {
-      type: 'services-grid',
-      eyebrow: 'What we do',
-      h2: 'Six reasons to stay, all under one prairie roof',
-      intro:
-        'Rooms and suites, a spa, a wood-fired dining room, weddings, corporate meetings and a concierge desk that will build you a day out. You book once and never leave the property unless you want to — which, on a good weekend, you will not.',
-      cta: { label: 'See all six services', path: '/services' }
-    },
+
+    /* ------------------------------------------------------------ trust bar */
+    { type: 'trust-bar' },
 
     /* ----------------------------------------------------------- why book direct */
     {

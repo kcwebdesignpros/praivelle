@@ -36,6 +36,16 @@ module.exports = {
     'Free cancellation up to 48 hours before arrival'
   ],
   blocks: [
+    /* ------------------------------------------------- room listing cards */
+    {
+      type: 'rooms',
+      id: 'rooms',
+      eyebrow: 'Rooms & suites',
+      h2: 'Choose Your Room',
+      intro:
+        'Six room types, twelve rooms in total, and no two laid out the same. Every rate includes breakfast for two, valet parking and the run of the spa, the pool and the gym.',
+      limit: 6
+    },
     {
       type: 'prose',
       id: 'the-house',

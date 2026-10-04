@@ -66,7 +66,7 @@ gains a section — no template edits. Available types:
 
 `prose` · `cards` · `steps` · `stats` · `timeline` · `split` · `table` ·
 `checklist` · `faq` · `quote` · `gallery` · `marquee` · `cta` · `text` ·
-`services-grid` · `testimonials` · `team-preview` · `team-grid` ·
+`services-grid` · `rooms` · `testimonials` · `team-preview` · `team-grid` ·
 `blog-preview` · `blog-grid` · `amenity-strip` · `trust-bar` · `offer`
 
 All twenty-three routes carry **2,000+ words** of body copy inside `<main>`.
@@ -97,6 +97,34 @@ All twenty-three routes carry **2,000+ words** of body copy inside `<main>`.
 | `/careers` | Careers |
 | `/privacy-policy` · `/terms` · `/accessibility` | Legal |
 | `/sitemap` · `/sitemap.xml` · `/robots.txt` · `/search` | System |
+
+---
+
+## Design system
+
+The visual language follows the supplied reference: indigo primary, orange
+accent, tinted section bands, centred section heads and two families of card.
+
+| Token | Value | Used for |
+|---|---|---|
+| `--navy` | `#2E3C85` | Header, footer, headings, icon circles, badges |
+| `--orange` | `#ED7D3B` | Buttons, links, active states, accents |
+| `--orange-700` | `#B85415` | Text-safe orange (links, eyebrows on light) |
+| `--tint` | `#F5F8FF` | Alternate section backgrounds |
+| `--line` | `#E8EBF2` | Card and divider borders |
+
+**Type:** Poppins (display headings, `--font-display`) + Plus Jakarta Sans
+(body and UI, `--font`). Both self-hosted in `public/fonts` — no CDN anywhere.
+
+**Structure:** rounded hero card with a centred overlay and an overlapping
+booking bar; centred `.section__head` blocks with an icon eyebrow; navy
+icon-circle category cards (`.svc-card`); image listing cards with a badge,
+meta row, nightly price and orange CTA (`.room-card`).
+
+**Legacy aliases.** Section 1 of the stylesheet defines the new tokens and then
+remaps the older names (`--blue`, `--teal`, `--cyan`, `--soft`, `--gold`,
+`--slate`) onto them, so every pre-existing rule keeps working. Section 18 is
+the brand layer — put visual overrides there rather than editing base rules.
 
 ---
 

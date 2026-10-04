@@ -4,8 +4,8 @@
  * and self-hosts them in public/fonts so the site makes ZERO third-party
  * requests at runtime. Committed output: public/fonts/*.woff2 + fonts.css
  *
- *   • Plus Jakarta Sans  — UI, body copy, buttons, navigation
- *   • Playfair Display   — display headings, section titles, pull quotes
+ *   • Plus Jakarta Sans  — body copy, UI, navigation
+ *   • Poppins            — display headings, section titles, buttons
  *
  * Run once: node scripts/fetch-fonts.js
  */
@@ -26,9 +26,9 @@ const FAMILIES = [
     style: 'normal'
   },
   {
-    css: 'Playfair+Display',
-    label: 'Playfair Display',
-    file: 'playfair-display',
+    css: 'Poppins',
+    label: 'Poppins',
+    file: 'poppins',
     weights: [500, 600, 700],
     style: 'normal'
   }

@@ -19,6 +19,7 @@ const services = require('./data/services');
 const { pages, bySlug } = require('./data/pages');
 const { posts, bySlug: postBySlug, categories } = require('./data/posts');
 const home = require('./data/home');
+const rooms = require('./data/rooms');
 const { icon } = require('./lib/icons');
 const { imgTag, srcset, width: imgWidth, height: imgHeight } = require('./lib/img');
 const S = require('./lib/schema');
@@ -132,6 +133,7 @@ app.use((req, res, next) => {
   res.locals.posts = posts;
   res.locals.categories = categories;
   res.locals.home = home;
+  res.locals.rooms = rooms;
   res.locals.icon = icon;
   res.locals.imgTag = imgTag;
   res.locals.srcset = srcset;
@@ -152,6 +154,15 @@ app.use((req, res, next) => {
 
 /* ----------------------------------------------------------- search index */
 const SEARCH_INDEX = []
+  .concat(
+    rooms.map((r) => ({
+      title: r.name,
+      path: r.path,
+      type: 'Room',
+      text: r.where + ' · from ' + r.price + ' per night',
+      keys: [r.name, r.badge, r.where].concat((r.meta || []).map((m) => m.label)).join(' ')
+    }))
+  )
   .concat(
     services.map((s) => ({
       title: s.name,

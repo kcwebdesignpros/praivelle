@@ -1,48 +1,75 @@
+<%
+  /* Sensible default dates for the booking bar. */
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var iso = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+  var now = new Date();
+  var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  var threeNights = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 4);
+%>
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 
 <main id="main">
   <section class="hero">
-    <div class="hero__media">
-      <%- imgTag(home.hero.image, home.hero.imageAlt, { sizes: '100vw', cls: 'hero__img', eager: true }) %>
-      <span class="hero__scrim" aria-hidden="true"></span>
-    </div>
-
-    <div class="container hero__inner">
-      <p class="eyebrow eyebrow--light"><%= home.hero.eyebrow %></p>
-      <h1 class="hero__title"><%= home.hero.h1 %></h1>
-      <p class="hero__intro"><%= home.hero.intro %></p>
-
-      <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="<%= home.hero.primaryCta.path %>"><%- icon('calendar-check', 19) %> <%= home.hero.primaryCta.label %></a>
-        <a class="btn btn--outline-light btn--lg" href="<%= home.hero.secondaryCta.path %>"><%- icon('phone', 19) %> <%= home.hero.secondaryCta.label %></a>
+    <div class="hero__card">
+      <div class="hero__media">
+        <%- imgTag(home.hero.image, home.hero.imageAlt, { sizes: '100vw', cls: 'hero__img', eager: true }) %>
+        <span class="hero__scrim" aria-hidden="true"></span>
       </div>
 
-      <ul class="hero__points">
-        <li><%- icon('check-circle', 18) %> <span>Twelve rooms and suites</span></li>
-        <li><%- icon('check-circle', 18) %> <span>Breakfast and valet included</span></li>
-        <li><%- icon('check-circle', 18) %> <span>Reception open 24 hours</span></li>
-      </ul>
+      <div class="hero__inner">
+        <p class="eyebrow eyebrow--light">
+          <span class="eyebrow__ico"><%- icon('sparkles', 15) %></span><%= home.hero.eyebrow %>
+        </p>
+        <h1 class="hero__title"><%= home.hero.h1 %></h1>
+        <p class="hero__intro"><%= home.hero.intro %></p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="<%= home.hero.primaryCta.path %>"><%- icon('calendar-check', 19) %> <%= home.hero.primaryCta.label %></a>
+          <a class="btn btn--outline-light btn--lg" href="<%= home.hero.secondaryCta.path %>"><%- icon('phone', 19) %> <%= home.hero.secondaryCta.label %></a>
+        </div>
+
+        <ul class="hero__points">
+          <li><%- icon('check-circle', 18) %> <span>Twelve rooms and suites</span></li>
+          <li><%- icon('check-circle', 18) %> <span>Breakfast and valet included</span></li>
+          <li><%- icon('check-circle', 18) %> <span>Reception open 24 hours</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container booking-wrap">
+      <form class="booking-bar" method="get" action="/contact#book" role="search" aria-label="Check availability">
+        <div class="booking-bar__field">
+          <label for="checkin">Check in</label>
+          <input type="date" id="checkin" name="checkin" value="<%= iso(tomorrow) %>" min="<%= iso(now) %>">
+        </div>
+        <div class="booking-bar__field">
+          <label for="checkout">Check out</label>
+          <input type="date" id="checkout" name="checkout" value="<%= iso(threeNights) %>" min="<%= iso(tomorrow) %>">
+        </div>
+        <div class="booking-bar__field">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option>1 guest</option>
+            <option selected>2 guests</option>
+            <option>3 guests</option>
+            <option>4 guests</option>
+            <option>5 or more</option>
+          </select>
+        </div>
+        <div class="booking-bar__field">
+          <label for="room">Room type</label>
+          <select id="room" name="room">
+            <option selected>Any room</option>
+            <% rooms.forEach(function (r) { %>
+            <option><%= r.name %></option>
+            <% }); %>
+          </select>
+        </div>
+        <button class="btn btn--primary booking-bar__submit" type="submit"><%- icon('search', 18) %> Check availability</button>
+      </form>
     </div>
   </section>
-
-  <div class="container hero__quick">
-    <ul class="quick">
-      <% home.hero.quickCards.forEach(function (c, i) { %>
-      <li class="quick__item reveal" style="--d:<%= i * 90 %>ms">
-        <a class="quick__link" href="<%= c.path %>">
-          <span class="quick__ico"><%- icon(c.icon, 24) %></span>
-          <span class="quick__body">
-            <strong class="quick__title"><%= c.title %></strong>
-            <span class="quick__text"><%= c.text %></span>
-            <span class="quick__meta"><%= c.meta %></span>
-          </span>
-          <span class="quick__arrow" aria-hidden="true"><%- icon('arrow-right', 18) %></span>
-        </a>
-      </li>
-      <% }); %>
-    </ul>
-  </div>
 
   <%- include('partials/blocks', { blocks: home.blocks }) %>
 

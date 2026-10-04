@@ -18,14 +18,24 @@ data-driven (no database, no CMS), SEO-optimised, deployable to Netlify / Vercel
   `require('./' + slug)` breaks the Netlify esbuild bundle and kills every page.
 - **Every content page needs 2,000+ words** inside `<main>` (client brief).
   Verified by `npm run check:seo`.
-- **Brand palette:** navy `#0B1F3A`, gold `#C9A24B`, cream `#F3ECDC`, ivory
-  `#FBF8F2`. Tokens are defined in `public/css/style.css` §1. Legacy token names
-  (`--blue`, `--teal`, `--cyan`, `--soft`, `--slate`) are **aliases** pointing at
-  the new palette — keep that indirection when editing.
-- **Type:** Playfair Display (headings, `--font-display`) + Plus Jakarta Sans
+- **Brand palette:** indigo `#2E3C85`, orange `#ED7D3B` (text-safe `#B85415`),
+  tint `#F5F8FF`, borders `#E8EBF2`. Tokens live in `public/css/style.css` §1.
+  Legacy names (`--blue`, `--teal`, `--cyan`, `--soft`, `--gold`, `--slate`) are
+  **aliases** remapped onto the new palette — keep that indirection when editing.
+- **Type:** Poppins (display headings, `--font-display`) + Plus Jakarta Sans
   (UI, `--font`). Both self-hosted in `public/fonts`; no CDN anywhere.
-- **Section 18** of the stylesheet is the "brand refinements" layer. Put
-  brand-level visual overrides there rather than editing base rules.
+- **Visual language** (per the client reference): rounded hero card with a
+  centred overlay and an overlapping booking bar; centred `.section__head` with
+  an icon eyebrow; navy icon-circle category cards (`.svc-card`); image listing
+  cards with badge + meta row + price + orange CTA (`.room-card`).
+- **Rooms** are a first-class data set: `data/rooms.js` (6 room types) rendered
+  by the `rooms` block, exposed to templates as `rooms` via `res.locals`.
+- **Section 18** of the stylesheet is the brand layer. Put brand-level visual
+  overrides there rather than editing base rules.
+- **Watch the base `max-width` traps.** `.hero__title` is capped at `17ch` in
+  §8 and `.hero__inner` shrink-wraps as a centred grid item — both silently
+  defeat a later `max-width`. Set `width: 100%` and `max-width: none` in §18
+  when you want the hero text to use the full column.
 - **Footer credit is mandatory:** "Web and Marketing By KC Web Design Pros"
   linking to https://kansascitywebdesignpros.com/
 

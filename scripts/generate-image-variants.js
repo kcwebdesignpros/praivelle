@@ -25,10 +25,10 @@ const MANIFEST = path.join(IMG, 'manifest.json');
 
 /* --------------------------------------------------------------- palette */
 
-const NAVY = '#0B1F3A';
-const NAVY_DEEP = '#07162B';
-const GOLD = '#C9A24B';
-const CREAM = '#F5EFE3';
+const NAVY = '#2E3C85';
+const NAVY_DEEP = '#1B2559';
+const ORANGE = '#ED7D3B';
+const TINT = '#F5F8FF';
 
 /* ------------------------------------------------------------------ config */
 
@@ -49,6 +49,12 @@ const IMPORT = [
   { match: 'src-gallery-terrace', as: 'gallery-terrace' },
   { match: 'src-gallery-bath', as: 'gallery-bath' },
   { match: 'src-gallery-library', as: 'gallery-library' },
+  { match: 'src-svc-rooms-suites', as: 'room-garden-king' },
+  { match: 'src-room-prairie-suite', as: 'room-prairie-suite' },
+  { match: 'src-room-orchard-suite', as: 'room-orchard-suite' },
+  { match: 'src-room-spa-suite', as: 'room-spa-suite' },
+  { match: 'src-room-the-loft', as: 'room-the-loft' },
+  { match: 'src-room-library-room', as: 'room-library-room' },
   { match: 'src-team-gm', as: 'team-genevieve-marchand' },
   { match: 'src-team-chef', as: 'team-julien-baptiste' },
   { match: 'src-team-spa', as: 'team-amara-osei' },
@@ -72,6 +78,12 @@ const VARIANTS = {
   'gallery-terrace': [420, 700, 1000, 1400],
   'gallery-bath': [420, 700, 1000, 1400],
   'gallery-library': [420, 700, 1000, 1400],
+  'room-garden-king': [420, 700, 1000, 1400],
+  'room-prairie-suite': [420, 700, 1000, 1400],
+  'room-orchard-suite': [420, 700, 1000, 1400],
+  'room-spa-suite': [420, 700, 1000, 1400],
+  'room-the-loft': [420, 700, 1000, 1400],
+  'room-library-room': [420, 700, 1000, 1400],
   'team-genevieve-marchand': [240, 360, 480, 720],
   'team-julien-baptiste': [240, 360, 480, 720],
   'team-amara-osei': [240, 360, 480, 720],
@@ -114,8 +126,11 @@ function writeIco(pngBuffer, dest, size) {
 
 /**
  * Build the circular PH monogram from the raw emblem render.
- * The source is a gold monogram on a solid navy field with a thin gold ring;
- * we crop to the ring and mask it to a perfect circle.
+ *
+ * The source is a gold monogram on a solid navy field with a thin gold ring.
+ * We crop to the ring, mask it to a perfect circle, then remap the two anchor
+ * colours (old navy -> new indigo, old gold -> brand orange) with a luminance
+ * duotone so the mark lands on the new palette without re-generating it.
  */
 async function buildMark() {
   const src = rawPath('src-logo-emblem');
@@ -138,32 +153,55 @@ async function buildMark() {
     .png()
     .toBuffer();
 
-  await sharp(circle).webp({ quality: 92, effort: 6 }).toFile(path.join(IMG, 'logo-mark.webp'));
-  fs.writeFileSync(path.join(IMG, 'logo-mark.png'), circle);
-  console.log('  \u2713 logo-mark.webp (circular monogram, 512x512)');
-  return circle;
+  // ---- duotone remap -----------------------------------------------------
+  const lum = (r, g, b) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  const OLD_DARK = [11, 31, 58];
+  const OLD_LIGHT = [201, 162, 75];
+  const NEW_DARK = [46, 60, 133];
+  const NEW_LIGHT = [237, 125, 59];
+  const lo = lum.apply(null, OLD_DARK);
+  const hi = lum.apply(null, OLD_LIGHT);
+
+  const { data, info } = await sharp(circle).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const ch = info.channels;
+  for (let i = 0; i < data.length; i += ch) {
+    if (data[i + 3] === 0) continue;
+    const t = Math.min(1, Math.max(0, (lum(data[i], data[i + 1], data[i + 2]) - lo) / (hi - lo)));
+    for (let c = 0; c < 3; c++) {
+      data[i + c] = Math.round(NEW_DARK[c] + (NEW_LIGHT[c] - NEW_DARK[c]) * t);
+    }
+  }
+  const recoloured = await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
+    .png()
+    .toBuffer();
+
+  await sharp(recoloured).webp({ quality: 92, effort: 6 }).toFile(path.join(IMG, 'logo-mark.webp'));
+  fs.writeFileSync(path.join(IMG, 'logo-mark.png'), recoloured);
+  console.log('  \u2713 logo-mark.webp (circular monogram, recoloured to indigo + orange)');
+  return recoloured;
 }
 
-/** Horizontal lockup: circular monogram + serif wordmark + spaced tagline. */
+/** Horizontal lockup for schema.org and the OG card: mark + spaced wordmark. */
 async function buildLockup(circle, variant) {
   const isLight = variant === 'light';
-  const wordColor = isLight ? CREAM : NAVY;
-  const tagColor = isLight ? GOLD : '#6B7C99';
+  const wordColor = isLight ? '#FFFFFF' : NAVY;
+  const tagColor = isLight ? '#A9B4E8' : '#6E7AA8';
 
   const W = 760;
   const H = 200;
   const markSize = 156;
   const markX = 6;
   const markY = Math.round((H - markSize) / 2);
+  const textX = markX + markSize + 34;
 
   const svg = Buffer.from(
     `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
-       <text x="${markX + markSize + 34}" y="96"
-             font-family="Georgia, 'Times New Roman', serif" font-size="62"
-             letter-spacing="-0.5" fill="${wordColor}">Praivelle House</text>
-       <text x="${markX + markSize + 38}" y="138"
-             font-family="Arial, Helvetica, sans-serif" font-size="19"
-             letter-spacing="6.5" fill="${tagColor}">BOUTIQUE HOTEL</text>
+       <text x="${textX}" y="98"
+             font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="62"
+             font-weight="700" letter-spacing="-1.5" fill="${wordColor}">Praivelle <tspan fill="${ORANGE}">House</tspan></text>
+       <text x="${textX + 4}" y="140"
+             font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="19"
+             font-weight="600" letter-spacing="6.5" fill="${tagColor}">BOUTIQUE HOTEL</text>
      </svg>`
   );
 
@@ -220,16 +258,16 @@ async function buildOgImage() {
        <defs>
          <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
            <stop offset="0%" stop-color="${NAVY_DEEP}" stop-opacity="0.95"/>
-           <stop offset="55%" stop-color="${NAVY}" stop-opacity="0.78"/>
-           <stop offset="100%" stop-color="${NAVY}" stop-opacity="0.18"/>
+           <stop offset="55%" stop-color="${NAVY}" stop-opacity="0.8"/>
+           <stop offset="100%" stop-color="${NAVY}" stop-opacity="0.2"/>
          </linearGradient>
        </defs>
        <rect width="${W}" height="${H}" fill="url(#g)"/>
-       <rect x="0" y="0" width="10" height="${H}" fill="${GOLD}"/>
-       <text x="78" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="${CREAM}">Praivelle House</text>
-       <text x="80" y="348" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="6" fill="${GOLD}">BOUTIQUE HOTEL \u00b7 KANSAS CITY</text>
-       <text x="80" y="452" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#E8E2D6">Twelve suites, a private spa and a table worth travelling for.</text>
-       <text x="80" y="494" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#E8E2D6">(816) 555-0147  \u00b7  praivellehouse.com</text>
+       <rect x="0" y="0" width="10" height="${H}" fill="${ORANGE}"/>
+       <text x="78" y="300" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="62" font-weight="700" letter-spacing="-1.5" fill="#FFFFFF">Praivelle <tspan fill="${ORANGE}">House</tspan></text>
+       <text x="80" y="348" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="20" font-weight="600" letter-spacing="6" fill="#A9B4E8">BOUTIQUE HOTEL \u00b7 KANSAS CITY</text>
+       <text x="80" y="452" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="27" fill="#E4E8F7">Twelve suites, a private spa and a table worth travelling for.</text>
+       <text x="80" y="494" font-family="Segoe UI, Arial, Helvetica, sans-serif" font-size="27" fill="#E4E8F7">(816) 555-0147  \u00b7  praivellehouse.com</text>
      </svg>`
   );
 

@@ -164,6 +164,72 @@
     ],
     "bytes": 279734
   },
+  "room-garden-king.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 231582
+  },
+  "room-prairie-suite.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 244308
+  },
+  "room-orchard-suite.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 273046
+  },
+  "room-spa-suite.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 223298
+  },
+  "room-the-loft.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 244050
+  },
+  "room-library-room.webp": {
+    "natural": 1536,
+    "height": 1024,
+    "variants": [
+      420,
+      700,
+      1000,
+      1400
+    ],
+    "bytes": 304826
+  },
   "team-genevieve-marchand.webp": {
     "natural": 1024,
     "height": 1024,

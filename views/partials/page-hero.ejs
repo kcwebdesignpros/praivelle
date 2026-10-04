@@ -27,7 +27,7 @@ var cr = crumbs || [];
     </nav>
     <% } %>
 
-    <% if (h.eyebrow) { %><p class="eyebrow eyebrow--light"><%= h.eyebrow %></p><% } %>
+    <% if (h.eyebrow) { %><p class="eyebrow eyebrow--light"><span class="eyebrow__ico"><%- icon('sparkles', 15) %></span><%= h.eyebrow %></p><% } %>
     <h1 class="page-hero__title"><%= h.h1 || h.title || h.name %></h1>
     <% if (h.heroIntro) { %><p class="page-hero__intro"><%= h.heroIntro %></p><% } %>
 

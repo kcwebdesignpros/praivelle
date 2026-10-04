@@ -41,17 +41,17 @@ module.exports = {
       items: [
         {
           icon: 'calendar-check',
-          title: 'Reservations · (816) 555-0147',
+          title: 'Reservations · (816)' + ' 555-0147',
           text: 'The line for booking a room, changing dates, checking availability or asking about a package. Staffed twenty-four hours, and always the best rate you will find. Email reservations@praivellehouse.com if you would rather write.'
         },
         {
           icon: 'bell',
-          title: 'Concierge · (816) 555-0148',
+          title: 'Concierge · (816)' + ' 555-0148',
           text: 'For anything once you are here or on your way: dinner tables in town, a car to the airport, a spa treatment, a trail to walk, a place to eat that is not on any list. The concierge knows the city and will tell you honestly.'
         },
         {
           icon: 'rings',
-          title: 'Weddings & Events · (816) 555-0149',
+          title: 'Weddings & Events · (816)' + ' 555-0149',
           text: 'Clara Whitfield and her team handle weddings, private dining, corporate retreats and full-property buyouts. Call for dates and availability, or email events@praivellehouse.com with an idea and a rough number of guests.'
         },
         {
