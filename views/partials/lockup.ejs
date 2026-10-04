@@ -1,16 +1,12 @@
 <%
-  /* The brand lockup: monogram mark + wordmark set as live text.
-     Live text means it renders in Poppins at any size and stays crisp, instead
-     of being baked into a bitmap with a fallback system font.
-     Pass `light: true` on dark surfaces to swap in the keyed-out mark. */
+  /* The brand lockup. The client supplies one horizontal logo, so this is a
+     single image in two colourways rather than a mark plus live text.
+     Pass `light: true` on dark surfaces for the keyed-out version. */
   var _light = typeof light !== 'undefined' && light;
   var _eager = typeof eager !== 'undefined' && eager;
-  var _wm = site.wordmark;
 %>
-<img class="brand__mark"
-     src="<%= _light ? site.logoMarkLight : site.logoMark %>"
-     width="512" height="512" alt="" decoding="async"<% if (_eager) { %> fetchpriority="high"<% } %>>
-<span class="brand__text">
-  <span class="brand__name"><%= _wm.lead %> <em><%= _wm.accent %></em></span>
-  <span class="brand__tag"><%= _wm.tagline %></span>
-</span>
+<img class="brand__logo"
+     src="<%= _light ? site.logoLight : site.logo %>"
+     width="<%= site.logoWidth %>" height="<%= site.logoHeight %>"
+     alt="<%= site.name %> — <%= site.taglineShort %>"
+     decoding="async"<% if (_eager) { %> fetchpriority="high"<% } %>>

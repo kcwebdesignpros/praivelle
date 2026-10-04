@@ -24,20 +24,14 @@ const SITE = {
   description:
     'Praivelle House is an independent twelve-suite boutique hotel on the Kansas City prairie, with a private spa, a wood-fired dining room and a cellar bar. Quietly luxurious, genuinely personal, and ten minutes from everything the city does well.',
   url: SITE_URL,
+  /* The client's own lockup, trimmed and exported by scripts/generate-image-variants.js.
+     logoLight is the same artwork with the brand navy keyed to white, for the
+     navy footer where the navy half would otherwise disappear. */
   logo: '/img/logo.webp',
   logoLight: '/img/logo-light.webp',
-  logoMark: '/img/logo-mark.webp',
-  logoMarkLight: '/img/logo-mark-light.webp',
-  logoWidth: 760,
-  logoHeight: 200,
-  /* The header and footer set the wordmark as live text in Poppins rather than
-     using a bitmap lockup, so it stays crisp at any size and matches the
-     display face exactly. */
-  wordmark: {
-    lead: 'Praivelle',
-    accent: 'House',
-    tagline: 'Boutique Hotel'
-  },
+  logoWidth: 480,
+  logoHeight: 157,
+  taglineShort: 'Boutique Hotel',
   ogImage: '/img/og-image.jpg',
   founded: 2008,
   priceRange: '$$$',

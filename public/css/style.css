@@ -2559,49 +2559,25 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 600; }
 
 
 /* ----------------------------------------------------------- brand lockup --
-   Monogram mark + wordmark as live text, so it renders in Poppins at any
-   size and stays crisp. `.brand--light` swaps to the keyed-out mark and
-   light type for the navy footer. */
+   The client's own horizontal logo, in two colourways. logo-light.webp has
+   the brand navy keyed to white so it stays legible on the navy footer. */
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
   color: inherit;
 }
-.brand__mark {
-  width: 46px;
-  height: 46px;
+.brand__logo {
+  width: 196px;
+  height: auto;
   flex: none;
-  border-radius: 50%;
 }
-.brand__text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-.brand__name {
-  font-family: var(--font-display);
-  font-size: 1.24rem;
-  font-weight: 600;
-  letter-spacing: -.015em;
-  line-height: 1.06;
-  color: var(--navy);
-  white-space: nowrap;
-}
-.brand__name em { font-style: normal; color: var(--orange); }
-.brand__tag {
-  font-size: .56rem;
-  font-weight: 700;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--ink-400);
-  white-space: nowrap;
-}
-.brand--light .brand__name { color: #fff; }
-.brand--light .brand__tag { color: rgba(255, 255, 255, .52); }
 .brand--drawer { padding: 0; }
 
 /* --- brand lockup: responsive sizing -------------------------------- */
-@media (max-width: 1200px) { .brand__mark { width: 42px; height: 42px; } .brand__name { font-size: 1.16rem; } }
-@media (max-width: 1080px) { .brand__mark { width: 40px; height: 40px; } .brand__name { font-size: 1.12rem; } }
-@media (max-width: 760px) { .brand__mark { width: 38px; height: 38px; } .brand__name { font-size: 1.08rem; } .brand__tag { font-size: .52rem; } .brand { gap: 9px; } }
-@media (max-width: 380px) { .brand__mark { width: 34px; height: 34px; } .brand__name { font-size: .98rem; } .brand__tag { display: none; } }
+@media (max-width: 1200px) { .brand__logo { width: 178px; } }
+@media (max-width: 1080px) { .brand__logo { width: 168px; } }
+@media (max-width: 760px) { .brand__logo { width: 158px; } }
+@media (max-width: 380px) { .brand__logo { width: 138px; } }
 
 /* Respect reduced motion: keep the heart, drop the pulse. */
 @media (prefers-reduced-motion: reduce) {

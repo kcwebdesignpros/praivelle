@@ -30,14 +30,17 @@ data-driven (no database, no CMS), SEO-optimised, deployable to Netlify / Vercel
   **aliases** remapped onto the new palette — keep that indirection when editing.
 - **Type:** Poppins (display headings, `--font-display`) + Plus Jakarta Sans
   (UI, `--font`). Both self-hosted in `public/fonts`; no CDN anywhere.
-- **Brand mark:** an interlocked P/H monogram in a double ring, generated from
-  `img/raw/src-logo-mark.png`. `scripts/generate-image-variants.js` auto-crops
-  it to a circle and emits two forms — `logo-mark.webp` (indigo disc, for light
-  surfaces) and `logo-mark-light.webp` (indigo keyed out, for the navy footer).
-- **The lockup is live text, not a bitmap.** `views/partials/lockup.ejs` renders
-  the mark plus the wordmark as HTML in Poppins, driven by
-  `site.wordmark = { lead, accent, tagline }`. Pass `light: true` on dark
-  surfaces. Used in the header, the mobile drawer and the footer.
+- **Brand assets are the client's own** and live in `img/`:
+  `Praivelle House Logo.webp` (horizontal lockup) and
+  `Praivelle House Fav Icon.webp`. `scripts/generate-image-variants.js` trims
+  them, exports `logo.webp` (light surfaces) and `logo-light.webp` (brand navy
+  keyed to white for the navy footer), and builds the whole favicon set.
+- **Client's real brand colours are `#00094F` navy and `#CB4B0B` orange** —
+  deeper than the site palette (`#2E3C85` / `#ED7D3B`), which came from the
+  reference screenshot. Flagged to the client; **not aligned unless asked**.
+- **The lockup is one image**, not a mark plus live text:/n  `views/partials/lockup.ejs` renders a single `<img>` and takes
+  `light: true` for dark surfaces. Used in the header, the mobile drawer and the
+  footer. Header size 196px (157/480 aspect → 64px tall in an 84px bar).
 - **Visual language** (per the client reference): rounded hero card with a
   centred overlay and an overlapping booking bar; centred `.section__head` with
   an icon eyebrow; navy icon-circle category cards (`.svc-card`); image listing
