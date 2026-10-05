@@ -248,7 +248,6 @@ async function buildFavicons() {
   ]) {
     await sharp(squared).resize(size, size).png({ compressionLevel: 9 }).toFile(path.join(IMG, name));
   }
-  await sharp(squared).resize(512, 512).webp({ quality: 92, effort: 6 }).toFile(path.join(IMG, 'favicon.webp'));
 
   /* Opaque versions: iOS and Android maskable icons must not be transparent. */
   await sharp({
